@@ -629,7 +629,7 @@ export default function Home() {
       opacity-0"
           >
             <div className="flex flex-col">
-              <p className="text-sm font-bold text-[#121212] dark:text-[#e3dac9] flex items-center gap-2 whitespace-nowrap">
+              <p className="text-xs font-bold text-[#121212] dark:text-[#e3dac9] flex items-center gap-2 whitespace-nowrap uppercase tracking-[0.1em]">
                 Message Sent <FaCheck className="text-emerald-500" />
               </p>
             </div>
@@ -644,7 +644,6 @@ export default function Home() {
               Contact
             </h1>
           </div>
-
           {/* Content Wrapper - Using Form as the grid container */}
           <form
             className="grid grid-cols-1 lg:grid-cols-2 gap-16"
