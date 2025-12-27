@@ -9,6 +9,7 @@ import { Skiper47 } from "@/components/ui/skiper-ui/skiper47";
 import { ShineBorder } from "@/components/ui/shine-border";
 import { Marquee } from "@/components/ui/marquee";
 import { IoIosArrowDropright } from "react-icons/io";
+import { FaCheck } from "react-icons/fa6";
 
 import Link from "next/link";
 
@@ -101,16 +102,44 @@ export default function Home() {
     };
   }, [isOpen]);
 
-  // This function handles the logic
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
     setShowToast(true);
 
-    // Auto-hide after 3 seconds
+    // Wait for toast to mount, then animate IN
+    requestAnimationFrame(() => {
+      if (toastRef.current) {
+        gsap.fromTo(
+          toastRef.current,
+          {
+            opacity: 0,
+            y: 10,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.4,
+            ease: "power3.out",
+          }
+        );
+      }
+    });
+
+    // Hold, then animate OUT
     setTimeout(() => {
-      setShowToast(false);
+      if (toastRef.current) {
+        gsap.to(toastRef.current, {
+          opacity: 0,
+          y: 10,
+          duration: 0.4,
+          ease: "power3.in",
+          onComplete: () => setShowToast(false),
+        });
+      }
     }, 3000);
   };
+  gsap.killTweensOf(toastRef.current);
 
   return (
     <div
@@ -593,26 +622,20 @@ export default function Home() {
         {showToast && (
           <div
             ref={toastRef}
-            className="fixed bottom-10 right-10 z-[100] flex items-center gap-3 px-6 py-4 
-      rounded-2xl backdrop-blur-xl bg-white/10 dark:bg-[#171717]/80 
-      border border-white/20 dark:border-emerald-500/30 
-      shadow-[0_20px_50px_rgba(0,0,0,0.3)] animate-in slide-in-from-right-10 fade-in duration-500"
+            className="fixed bottom-10 right-10 z-[100] flex items-center gap-3 px-6 py-4
+      backdrop-blur-xl rounded-lg bg-white/10 dark:bg-[#171717]/50
+      border border-black/10 dark:border-white/10
+      shadow-[0_20px_50px_rgba(0,0,0,0.3)]
+      opacity-0"
           >
-            {/* Success Icon */}
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500/20">
-              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            </div>
-
             <div className="flex flex-col">
-              <p className="text-sm font-bold text-[#121212] dark:text-[#e3dac9]">
-                Message Sent
-              </p>
-              <p className="text-xs opacity-60 dark:text-[#e3dac9]">
-                I'll get back to you shortly!
+              <p className="text-sm font-bold text-[#121212] dark:text-[#e3dac9] flex items-center gap-2 whitespace-nowrap">
+                Message Sent <FaCheck className="text-emerald-500" />
               </p>
             </div>
           </div>
         )}
+
         <div className="max-w-6xl mx-auto px-4">
           {/* Header */}
           <div className="w-full flex justify-start text-left text-3xl mb-12">
