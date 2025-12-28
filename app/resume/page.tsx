@@ -228,11 +228,15 @@ export default function Projects() {
       </div>
 
       {/* MAIN CONTENT HERE */}
-      <main
+      {/*<main
         ref={containerRef}
         className="flex-1 flex flex-col items-center gap- mt-10 px-4 py-1 m-auto"
-      >
+      > */}
+      <main ref={containerRef} className="flex-1 flex flex-col mt-10 px-4 py-1">
+        {/* 
         <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col py-20 md:py-32 px-4">
+        */}
+        <section className="opacity-0 fade-in w-full flex flex-col py-20 md:py-32 px-4 md:px-12">
           <div className="w-full flex flex-col gap-4">
             {/* Heading Logic: Kept the dot-indicator style */}
             <h1 className="flex items-center gap-3 text-3xl">
@@ -255,6 +259,10 @@ export default function Projects() {
                 className="relative flex items-start gap-6 mb-16 group"
               >
                 {/* Logo / Node (Left) */}
+                <span className="opacity-0 fade-in relative flex h-2 w-2 inline-flex mt-6">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
                 <div
                   className="relative z-10 flex items-center justify-center
                 w-14 h-14 md:w-16 md:h-16 shrink-0
