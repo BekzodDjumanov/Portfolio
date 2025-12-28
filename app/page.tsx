@@ -146,8 +146,8 @@ export default function Home() {
       className="
     flex min-h-screen flex-col 
     font-sans gap-8
-    bg-white text-[#121212]
-    dark:bg-[#121212] dark:text-[#e3dac9]
+    bg-white text-[#000000]
+    dark:bg-[#000000] dark:text-[#ffffff]
   "
     >
       {isOpen && (
@@ -167,10 +167,9 @@ export default function Home() {
     backdrop-blur-xl
     bg-white/5 dark:bg-[#171717]/50
     border border-white/20 dark:border-white/10
-    shadow-lg z-50
-    text-[#121212] dark:text-[#e3dac9]
+    shadow-lg z-50 opacity-0
+    text-[#000000] dark:text-[#ffffff]
     flex flex-col items-center
-    transition-all duration-300
     ${isOpen ? "w-[90%] md:w-[400px]" : "w-fit"}
   `}
       >
@@ -190,31 +189,31 @@ export default function Home() {
           <nav className="hidden lg:flex gap-8 text-sm opacity-80">
             <Link
               href="/"
-              className="hover:text-[#e3dac9] dark:hover:text-white transition-all duration-300 flex items-center"
+              className="hover:text-[#ffffff] dark:hover:text-white transition-all duration-300 flex items-center"
             >
               <RollingText>Home</RollingText>
             </Link>
             <Link
               href="/about"
-              className="hover:text-[#e3dac9] dark:hover:text-white transition-all duration-300"
+              className="hover:text-[#ffffff] dark:hover:text-white transition-all duration-300"
             >
               <RollingText>About</RollingText>
             </Link>
             <Link
               href="/projects"
-              className="hover:text-[#e3dac9] dark:hover:text-white transition-all duration-300"
+              className="hover:text-[#ffffff] dark:hover:text-white transition-all duration-300"
             >
               <RollingText>Projects</RollingText>
             </Link>
             <Link
               href="/reviews"
-              className="hover:text-[#e3dac9] dark:hover:text-white transition-all duration-300"
+              className="hover:text-[#ffffff] dark:hover:text-white transition-all duration-300"
             >
               <RollingText>Reviews</RollingText>
             </Link>
             <Link
               href="/contact"
-              className="hover:text-[#e3dac9] dark:hover:text-white transition-all duration-300"
+              className="hover:text-[#ffffff] dark:hover:text-white transition-all duration-300"
             >
               <RollingText>Contact</RollingText>
             </Link>
@@ -228,35 +227,35 @@ export default function Home() {
               <Link
                 href="/"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-[#e3dac9] transition-colors"
+                className="hover:text-[#ffffff] transition-colors"
               >
                 <RollingText>Home</RollingText>
               </Link>
               <Link
                 href="/about"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-[#e3dac9] transition-colors"
+                className="hover:text-[#ffffff] transition-colors"
               >
                 <RollingText>About</RollingText>
               </Link>
               <Link
                 href="/projects"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-[#e3dac9] transition-colors"
+                className="hover:text-[#ffffff] transition-colors"
               >
                 <RollingText>Projects</RollingText>
               </Link>
               <Link
                 href="/reviews"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-[#e3dac9] transition-colors"
+                className="hover:text-[#ffffff] transition-colors"
               >
                 <RollingText>Reviews</RollingText>
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-[#e3dac9] transition-colors"
+                className="hover:text-[#ffffff] transition-colors"
               >
                 <RollingText>Contact</RollingText>
               </Link>
@@ -302,7 +301,7 @@ export default function Home() {
 
               {/* Forced to one line with whitespace-nowrap */}
               <div className="text-4xl">
-                <h1>Full Stack Developer.</h1>
+                <h1>Self-Proclaimed Developer.</h1>
               </div>
             </div>
 
@@ -324,7 +323,22 @@ export default function Home() {
                 (badge) => (
                   <span
                     key={badge}
-                    className="px-5 py-2 rounded-full dark:bg-[#171717]/50 border border-white/20 dark:border-white/10 text-[10px] font-bold tracking-widest uppercase bg-white/5 backdrop-blur-md shadow-sm"
+                    className="
+                    px-5 py-2 rounded-full
+                    text-[10px] font-bold tracking-widest uppercase
+                  
+                    dark:text-purple-300
+                    dark:bg-white/5
+                    bg-white/5 backdrop-blur-md
+                  
+                    border border-white/5
+                    dark:border-white/5
+                  
+                    shadow-sm
+                    dark:shadow-[inset_0_0_4px_rgba(168,85,247,0.18)]
+                  
+                    transition-all duration-300 ease-in-out
+                  "
                   >
                     {badge}
                   </span>
@@ -334,33 +348,32 @@ export default function Home() {
             <div className="flex justify-center md:justify-center lg:justify-start gap-4 w-full pt-4 -mt-4">
               <div
                 className="group flex items-center justify-center w-11 h-11 
-    rounded-full bg-white/5 dark:bg-[#171717]/40 
+    rounded-full bg-white/5 dark:bg-[#000000]/40 
     backdrop-blur-md border border-white/20 dark:border-white/10 
-    shadow-lg transition-all duration-500 ease-out hover:border-black/40
-    hover:-translate-y-1 dark:hover:border-white/40 dark:hover:border-white/30 
-    hover:shadow-black/10 cursor-pointer"
+    shadow-lg transition-all duration-500 ease-out dark:hover:border-purple-500
+    hover:-translate-y-1 hover:border-black/40 dark:hover:shadow-none hover:shadow-black/10 cursor-pointer"
               >
                 <FaGithub
                   size={20}
-                  className="text-black dark:text-[#e3dac9] opacity-70 
+                  className="text-black dark:text-[#ffffff] opacity-70 
     transition-all duration-300 
-    group-hover:text-black dark:group-hover:text-white 
+    group-hover:text-black dark:group-hover:text-purple-400
     group-hover:opacity-100 group-hover:scale-110"
                 />
               </div>
 
               <div
                 className="group flex items-center justify-center w-11 h-11 
-    rounded-full bg-white/5 dark:bg-[#171717]/40 
+    rounded-full bg-white/5 dark:bg-[#000000]/40 
     backdrop-blur-md border border-white/20 dark:border-white/10 
-    shadow-lg transition-all duration-500 ease-out dark:hover:border-white/40
-    hover:-translate-y-1 hover:border-[#0077b5]/50 dark:hover:shadow-none hover:shadow-[#0077b5]/20 cursor-pointer"
+    shadow-lg transition-all duration-500 ease-out dark:hover:border-purple-500
+    hover:-translate-y-1 hover:border-black/40 dark:hover:shadow-none hover:shadow-black/10 cursor-pointer"
               >
                 <FaLinkedin
                   size={20}
-                  className="text-black dark:text-[#e3dac9] opacity-70 
-    transition-all duration-300 dark:group-hover:text-white 
-    group-hover:text-[#0077b5] group-hover:opacity-100 group-hover:scale-110"
+                  className="text-black dark:text-[#ffffff] opacity-70 
+    transition-all duration-300 dark:group-hover:text-purple-400
+    group-hover:text-[#000000] group-hover:opacity-100 group-hover:scale-110"
                 />
               </div>
             </div>
@@ -369,13 +382,13 @@ export default function Home() {
           <div className="flex-1 order-1 md:order-2 flex justify-center md:justify-end w-full">
             {/* 1. Ensure overflow-visible so the badge can 'hang' outside the box */}
             <div className="relative group w-[90%] sm:w-full max-w-[320px] md:max-w-[400px] lg:max-w-[480px] xl:max-w-[520px] transition-all duration-700 ease-in-out overflow-visible">
-              <div className="absolute -inset-4 bg-[#e3dac9]/5 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+              <div className="absolute -inset-4 bg-[#ffffff]/5 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-1000" />
 
               <Skiper47 />
-              <div className="absolute -bottom-6 -right-4 z-50 bg-white/90 dark:bg-[#0d0d0d]/90 backdrop-blur-md px-4 py-3 sm:px-5 sm:py-3 rounded-2xl shadow-2xl border border-black/5 dark:border-white/10 block transform transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-1">
+              <div className="absolute -bottom-6 -right-4 z-50 bg-white/90 dark:bg-[#000000]/90 backdrop-blur-md px-4 py-3 sm:px-5 sm:py-3 rounded-2xl shadow-2xl border border-black/5 dark:border-white/10 block transform transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-1">
                 <div className="flex flex-col gap-1">
                   <ShineBorder
-                    shineColor={["#e3dac9", "#ffffff", "#c9bda3"]}
+                    shineColor={["#a855f7", "#e879f9", "#4c1d95"]}
                     duration={20}
                     borderWidth={2}
                     className="absolute inset-0 rounded-2xl"
@@ -383,7 +396,7 @@ export default function Home() {
                   <p className="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] opacity-40 font-black dark:text-white">
                     Currently
                   </p>
-                  <p className="text-xs sm:text-sm text-[#121212] dark:text-[#e3dac9] whitespace-nowrap">
+                  <p className="text-xs sm:text-sm text-[#000000] dark:text-[#ffffff] whitespace-nowrap">
                     working. 🤫
                   </p>
                 </div>
@@ -393,7 +406,7 @@ export default function Home() {
         </section>
 
         <h1 className="flex items-center gap-3 text-2xl">
-          <span className="w-[4px] h-8 dark:bg-[#e3dac9] bg-[#121212] rounded-full inline-block" />
+          <span className="w-[4px] h-8 dark:bg-[#ffffff] bg-[#000000] rounded-full inline-block" />
           Articles & Posts
         </h1>
         <p className="opacity-40 uppercase tracking-[.1em] text-sm mt-1 -mb-3">
@@ -402,7 +415,7 @@ export default function Home() {
       </main>
       <div className="relative w-full">
         {/* Black bar */}
-        <div className="w-full h-40 dark:bg-[#e3dac9] bg-[#121212]"></div>
+        <div className="w-full h-40 dark:bg-[#0a0a0a] bg-[#000000] border-y border-[#4c1d95]/20 shadow-[inset_0_20px_30px_-20px_rgba(76,29,149,0.35),inset_0_-20px_30px_-20px_rgba(76,29,149,0.35)]"></div>
 
         {/* Marquee content */}
         <Marquee className="absolute top-0 left-0 w-full h-full flex items-center gap-4 px-4">
@@ -429,30 +442,36 @@ export default function Home() {
           ].map((article, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-64 h-32 p-4 bg-white dark:bg-[#171717] rounded-xl shadow-lg flex flex-col justify-between"
+              className="flex-shrink-0 w-64 h-32 p-4 
+          bg-white dark:bg-[#4c1d95]/20
+          backdrop-blur-md 
+          rounded-xl shadow-lg 
+          border border-black/5 dark:border-[#7c3aed]/20 
+          hover:border-[#7c3aed]/50 
+          group/card transition-all duration-500
+          flex flex-col justify-between"
             >
-              <span className="text-xs text-gray-500 dark:text-gray-400">
+              <span className="text-xs text-gray-500 dark:text-[#a855f7]/60 font-medium tracking-widest">
                 {article.date}
               </span>
-              <h2 className="text-sm text-[#121212] dark:text-[#e3dac9]">
+              <h2 className="text-sm text-[#000000] dark:text-[#f3e8ff] transition-colors">
                 {article.title}
               </h2>
-              <p className="text-[10px] text-gray-700 dark:text-gray-300">
+              <p className="text-[10px] text-gray-700 dark:text-zinc-400">
                 {article.description}
               </p>
+
               <a
                 href={article.link}
-                className="relative group/link w-fit text-xs font-bold text-[#121212] dark:text-white mt-2 flex items-center gap-1 transition-all duration-500 ease-in-out hover:gap-2"
+                className="relative group/link w-fit text-xs font-bold text-[#000000] dark:text-[#c084fc] mt-2 flex items-center gap-1 transition-all duration-500 ease-in-out hover:gap-2"
               >
-                {/* The Text */}
                 <span className="relative">
                   Read Article
-                  {/* The Animated Underline */}
-                  <span className="absolute left-0 -bottom-1 w-0 h-[1.5px] bg-[#121212] dark:bg-white transition-all duration-500 ease-in-out group-hover/link:w-full"></span>
+                  {/* The Underline: Now Vampire Purple */}
+                  <span className="absolute left-0 -bottom-1 w-0 h-[1.5px] dark:bg-[#7c3aed] bg-[#000000] transition-all duration-500 ease-in-out group-hover/link:w-full"></span>
                 </span>
 
-                {/* The Animated Arrow (Elite touch) */}
-                <IoIosArrowDropright />
+                <IoIosArrowDropright className="group-hover/link:translate-x-1 transition-transform" />
               </a>
             </div>
           ))}
@@ -464,7 +483,7 @@ export default function Home() {
           {/* SECTION HEADER - Now inside the section */}
           <div className="w-full flex justify-start text-left text-3xl mb-12">
             <h1 className="flex items-center gap-3">
-              <span className="w-[4px] h-8 dark:bg-[#e3dac9] bg-[#121212] rounded-full inline-block" />
+              <span className="w-[4px] h-8 dark:bg-[#ffffff] bg-[#000000] rounded-full inline-block" />
               Experience & Skills
             </h1>
           </div>
@@ -495,7 +514,19 @@ export default function Home() {
                   ].map((skill) => (
                     <div
                       key={skill}
-                      className="px-4 py-2 rounded-lg dark:bg-[#171717]/50 border border-black/10 dark:border-white/10 text-sm font-medium hover:border-[#e3dac9]/50 transition-colors"
+                      className="
+                      px-4 py-2 rounded-lg 
+                      text-zinc-500 dark:text-zinc-400 
+                      
+                      bg-zinc-100/50 dark:bg-white/[0.03] 
+                      
+                      border border-black/5 dark:border-white/10 
+                      
+                      text-sm font-medium 
+                      
+                      dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5
+                      transition-all duration-300 ease-in-out
+                    "
                     >
                       {skill}
                     </div>
@@ -519,7 +550,19 @@ export default function Home() {
                   ].map((skill) => (
                     <div
                       key={skill}
-                      className="px-4 py-2 rounded-lg dark:bg-[#171717]/50 border border-black/10 dark:border-white/10 text-sm font-medium hover:border-[#e3dac9]/50 transition-colors"
+                      className="
+                      px-4 py-2 rounded-lg 
+                      text-zinc-500 dark:text-zinc-400 
+                      
+                      bg-zinc-100/50 dark:bg-white/[0.03] 
+                      
+                      border border-black/5 dark:border-white/10 
+                      
+                      text-sm font-medium 
+                      
+                      dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5
+                      transition-all duration-300 ease-in-out
+                    "
                     >
                       {skill}
                     </div>
@@ -529,7 +572,7 @@ export default function Home() {
             </div>
 
             {/* RIGHT SIDE: WORK HISTORY */}
-            <div className="flex-1 space-y-10 dark:bg-[#171717] border border-black/10 dark:border-white/10 px-5 py-5 rounded-xl backdrop-blur-sm shadow-lg">
+            <div className="flex-1 space-y-10 dark:bg-[#000000] border border-black/10 dark:border-white/10 px-5 py-5 rounded-xl backdrop-blur-sm shadow-lg">
               <div className="flex items-center gap-2 mb-4">
                 <h2 className="text-xs uppercase tracking-[0.3em] font-bold opacity-40">
                   Work History
@@ -549,7 +592,7 @@ export default function Home() {
                     </div>
 
                     <div>
-                      <h3 className="text-lg leading-none">
+                      <h3 className="lg:text-lg leading-none sm:text-sm">
                         Cloud Software Developer Intern
                       </h3>
                       <p className="text-sm opacity-60 mt-2">
@@ -573,7 +616,7 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg leading-none">
+                      <h3 className="lg:text-lg leading-none sm:text-sm">
                         Software Engineer Intern
                       </h3>
                       <p className="text-sm opacity-60 mt-2">
@@ -596,7 +639,7 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg leading-none">
+                      <h3 className="lg:text-lg leading-none sm:text-sm">
                         IT Administrator Intern
                       </h3>
                       <p className="text-sm opacity-60 mt-2">
@@ -610,7 +653,23 @@ export default function Home() {
                 </div>
               </div>
 
-              <button className="w-full mt-6 py-3 px-4 rounded-xl bg-white/5 border border-black/10 dark:border-white/10 text-sm font-bold flex items-center justify-center gap-2 hover:bg-[#e3dac9] hover:text-[#121212] transition-all duration-300 ease-in-out cursor-pointer">
+              <button
+                className="
+  w-full mt-6 py-3 px-4 rounded-xl
+  bg-white/5
+  border border-black/10 dark:border-white/10
+  text-sm font-bold
+  flex items-center justify-center gap-2
+  dark:text-zinc-500
+  
+  hover:bg-black/10
+  hover:text-black/90 dark:hover:text-white dark:hover:bg-white/10
+  
+  transition-all duration-300 ease-in-out
+  cursor-pointer
+  shadow-lg
+"
+              >
                 A more detailed look <IoIosArrowForward />
               </button>
             </div>
@@ -618,18 +677,18 @@ export default function Home() {
         </section>
       </main>
 
-      <section className="w-full dark:bg-[#020403] bg-[#F2F3F4] py-20 border-t border-b border-black/5 dark:border-white/20 shadow-[0_4px_6px_-2px_rgba(0,0,0,0.1),0_-4px_6px_-2px_rgba(0,0,0,0.1)]">
+      <section className="w-full dark:bg-[#060010] bg-[#F2F3F4] py-20 border-t border-b border-black/5 dark:border-white/20 shadow-[0_4px_6px_-2px_rgba(0,0,0,0.1),0_-4px_6px_-2px_rgba(0,0,0,0.1)]">
         {showToast && (
           <div
             ref={toastRef}
             className="fixed bottom-10 right-10 z-[100] flex items-center gap-3 px-6 py-4
-      backdrop-blur-xl rounded-lg bg-white/10 dark:bg-[#171717]/50
+      backdrop-blur-xl rounded-lg bg-white/10 dark:bg-[#000000]/50
       border border-black/10 dark:border-white/10
       shadow-[0_20px_50px_rgba(0,0,0,0.3)]
       opacity-0"
           >
             <div className="flex flex-col">
-              <p className="text-xs font-bold text-[#121212] dark:text-[#e3dac9] flex items-center gap-2 whitespace-nowrap uppercase tracking-[0.1em]">
+              <p className="text-xs font-bold text-[#000000] dark:text-[#ffffff] flex items-center gap-2 whitespace-nowrap uppercase tracking-[0.1em]">
                 Message Sent <FaCheck className="text-emerald-500" />
               </p>
             </div>
@@ -639,8 +698,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           {/* Header */}
           <div className="w-full flex justify-start text-left text-3xl mb-12">
-            <h1 className="flex items-center gap-3 dark:text-[#e3dac9] text-[#121212]">
-              <span className="w-[4px] h-8 dark:bg-[#e3dac9] bg-[#121212] rounded-full inline-block" />
+            <h1 className="flex items-center gap-3 dark:text-[#ffffff] text-[#000000]">
+              <span className="w-[4px] h-8 dark:bg-[#ffffff] bg-[#000000] rounded-full inline-block" />
               Contact
             </h1>
           </div>
@@ -653,7 +712,7 @@ export default function Home() {
             <div className="space-y-6">
               {/* Name */}
               <div>
-                <label className="block text-xs uppercase tracking-widest dark:text-[#e3dac9]/60 text-black/50 mb-2">
+                <label className="block text-xs uppercase tracking-widest dark:text-[#ffffff]/60 text-black/50 mb-2">
                   Name
                 </label>
                 <input
@@ -661,14 +720,14 @@ export default function Home() {
                   type="text"
                   placeholder="Your full name"
                   className="w-full bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-lg rounded-xl px-4 py-3
-              text-zinc-800 dark:text-[#e3dac9] placeholder-zinc-400 dark:placeholder-[#e3dac9]/40
-              focus:outline-none focus:border-[#121212] dark:focus:border-[#e3dac9]/60 transition-colors"
+              text-zinc-800 dark:text-[#ffffff] placeholder-zinc-400 dark:placeholder-[#ffffff]/40
+              focus:outline-none focus:border-[#000000] dark:focus:border-[#ffffff]/60 transition-colors"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label className="block text-xs uppercase tracking-widest dark:text-[#e3dac9]/60 text-black/50 mb-2">
+                <label className="block text-xs uppercase tracking-widest dark:text-[#ffffff]/60 text-black/50 mb-2">
                   Email
                 </label>
                 <input
@@ -676,14 +735,14 @@ export default function Home() {
                   type="email"
                   placeholder="you@example.com"
                   className="w-full bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-lg rounded-xl px-4 py-3
-              text-zinc-800 dark:text-[#e3dac9] placeholder-zinc-400 dark:placeholder-[#e3dac9]/40
-              focus:outline-none focus:border-[#121212] dark:focus:border-[#e3dac9]/60 transition-colors"
+              text-zinc-800 dark:text-[#ffffff] placeholder-zinc-400 dark:placeholder-[#ffffff]/40
+              focus:outline-none focus:border-[#000000] dark:focus:border-[#ffffff]/60 transition-colors"
                 />
               </div>
 
               {/* Subject */}
               <div>
-                <label className="block text-xs uppercase tracking-widest dark:text-[#e3dac9]/60 text-black/50 mb-2">
+                <label className="block text-xs uppercase tracking-widest dark:text-[#ffffff]/60 text-black/50 mb-2">
                   Subject
                 </label>
                 <input
@@ -691,22 +750,22 @@ export default function Home() {
                   type="text"
                   placeholder="Subject"
                   className="w-full bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-lg rounded-xl px-4 py-3
-              text-zinc-800 dark:text-[#e3dac9] placeholder-zinc-400 dark:placeholder-[#e3dac9]/40
-              focus:outline-none focus:border-[#121212] dark:focus:border-[#e3dac9]/60 transition-colors"
+              text-zinc-800 dark:text-[#ffffff] placeholder-zinc-400 dark:placeholder-[#ffffff]/40
+              focus:outline-none focus:border-[#000000] dark:focus:border-[#ffffff]/60 transition-colors"
                 />
               </div>
 
               {/* Phone */}
               <div>
-                <label className="block text-xs uppercase tracking-widest dark:text-[#e3dac9]/60 text-black/50 mb-2">
+                <label className="block text-xs uppercase tracking-widest dark:text-[#ffffff]/60 text-black/50 mb-2">
                   Phone
                 </label>
                 <input
                   type="tel"
                   placeholder="+1 (555) 123-4567"
                   className="w-full bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-lg rounded-xl px-4 py-3
-              text-zinc-800 dark:text-[#e3dac9] placeholder-zinc-400 dark:placeholder-[#e3dac9]/40
-              focus:outline-none focus:border-[#121212] dark:focus:border-[#e3dac9]/60 transition-colors"
+              text-zinc-800 dark:text-[#ffffff] placeholder-zinc-400 dark:placeholder-[#ffffff]/40
+              focus:outline-none focus:border-[#000000] dark:focus:border-[#ffffff]/60 transition-colors"
                 />
               </div>
             </div>
@@ -714,7 +773,7 @@ export default function Home() {
             {/* RIGHT — Message Textarea + Submit */}
             <div className="flex flex-col justify-between gap-6">
               <div>
-                <label className="block text-xs uppercase tracking-widest dark:text-[#e3dac9]/60 text-black/50 mb-2">
+                <label className="block text-xs uppercase tracking-widest dark:text-[#ffffff]/60 text-black/50 mb-2">
                   Message
                 </label>
                 <textarea
@@ -722,27 +781,42 @@ export default function Home() {
                   rows={10}
                   placeholder="Write your message here..."
                   className="w-full bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-lg rounded-xl px-4 py-3
-              text-zinc-800 dark:text-[#e3dac9] placeholder-zinc-400 dark:placeholder-[#e3dac9]/40
-              focus:outline-none focus:border-[#121212] dark:focus:border-[#e3dac9]/60 transition-colors resize-none"
+              text-zinc-800 dark:text-[#ffffff] placeholder-zinc-400 dark:placeholder-[#ffffff]/40
+              focus:outline-none focus:border-[#000000] dark:focus:border-[#ffffff]/60 transition-colors resize-none"
                 />
               </div>
 
               <button
-                className="group relative flex flex-col items-center justify-center w-[180px] h-[50px] transition-transform active:scale-95 cursor-pointer outline-none rounded-lg bg-black/5 dark:bg-white/5 border-none p-0"
+                className="group relative flex items-center justify-center w-[150px] h-[52px] 
+      transition-all duration-500 active:scale-95 cursor-pointer outline-none 
+      rounded-xl overflow-hidden dark:bg-[#0A0118] border dark:border-[#4c1d95]/40 border-black/10
+      hover:border-[#a855f7]/60 hover:shadow-[0_0_30px_rgba(76,29,149,0.3)] shadow-lg"
                 type="submit"
               >
-                {/* Animated Layers (Same as before) */}
-                <div className="absolute inset-0 pointer-events-none transition-opacity ease-in-out duration-[1200ms] opacity-100 group-hover:opacity-0 rounded-lg blur-[15px] bg-[radial-gradient(15%_50%_at_50%_100%,_rgba(0,0,0,0.2)_0%,_rgba(0,0,0,0)_100%)] dark:bg-[radial-gradient(15%_50%_at_50%_100%,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0)_100%)]"></div>
-                <div className="absolute inset-0 pointer-events-none transition-opacity ease-in-out duration-[1200ms] opacity-0 group-hover:opacity-100 rounded-lg blur-[18px] bg-[radial-gradient(60.6%_50%_at_50%_100%,_rgba(0,0,0,0.4)_0%,_rgba(0,0,0,0)_100%)] dark:bg-[radial-gradient(60.6%_50%_at_50%_100%,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0)_100%)]"></div>
-                <div className="absolute inset-0 pointer-events-none transition-opacity ease-in-out duration-[1200ms] opacity-100 group-hover:opacity-0 rounded-lg bg-[radial-gradient(10.7%_50%_at_50%_100%,_rgba(0,0,0,0.3)_0%,_rgba(0,0,0,0)_100%)] dark:bg-[radial-gradient(10.7%_50%_at_50%_100%,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0)_100%)]"></div>
-                <div className="absolute inset-0 pointer-events-none transition-opacity ease-in-out duration-[1200ms] opacity-0 group-hover:opacity-100 rounded-lg bg-[radial-gradient(60.1%_50%_at_50%_100%,_rgba(0,0,0,0.5)_0%,_rgba(0,0,0,0)_100%)] dark:bg-[radial-gradient(60.1%_50%_at_50%_100%,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0)_100%)]"></div>
+                {/* Radiant Background Glow */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500
+      bg-[radial-gradient(circle_at_center,_rgba(124,58,237,0.15)_0%,_transparent_70%)]"
+                />
 
-                <div className="absolute inset-[1px] pointer-events-none z-10 rounded-lg bg-white dark:bg-black shadow-lg border border-black/5 dark:border-white/10"></div>
+                {/* Bottom Energy Line */}
+                <div
+                  className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#a855f7] to-transparent 
+      translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"
+                />
 
-                <div className="relative z-20 flex flex-col items-center justify-center">
-                  <p className="m-0 p-0 font-sans text-[15px] font-medium text-black dark:text-white tracking-wide antialiased transition-colors duration-300">
+                {/* Centered Text Container */}
+                <div className="relative z-20 flex items-center justify-center w-full">
+                  <p
+                    className="m-0 p-0 text-[14px] font-bold tracking-[0.2em] uppercase
+        dark:text-[#F3E8FF] group-hover:text-white transition-colors duration-300
+        group-hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.6)]"
+                  >
                     Submit
                   </p>
+
+                  {/* Absolute Icon - Doesn't affect text centering */}
+                  <IoIosArrowForward className="absolute right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#a855f7]" />
                 </div>
               </button>
             </div>
@@ -751,8 +825,8 @@ export default function Home() {
       </section>
 
       <footer
-        className="dark:bg-[#0d0d0d] dark:text-[#e3dac9] px-8 py-12 md:py-16 flex flex-wrap justify-between items-start gap-y-8 w-full relative 
-  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none"
+        className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-wrap justify-between items-start gap-y-8 w-full relative 
+  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
       >
         {/* Brand Section */}
         <div className="footer-brand">
@@ -775,7 +849,7 @@ export default function Home() {
               <a
                 key={i}
                 href="#"
-                className="relative inline-block pb-1 dark:text-[#e3dac9] dark:hover:text-white transition-colors duration-300 ease-in-out hover:text-[#e3dac9]"
+                className="relative inline-block pb-1 dark:text-[#ffffff] dark:hover:text-white transition-colors duration-300 ease-in-out hover:text-[#ffffff]"
               >
                 {link}
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-current transition-all duration-300 ease-in-out group-hover:w-full"></span>
@@ -785,22 +859,22 @@ export default function Home() {
         </div>
 
         {/* Social Section */}
-        <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#e3dac9]">
+        <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
           <a
             href="#"
-            className="dark:hover:text-white transition-colors duration-300 ease-in-out hover:text-[#e3dac9]"
+            className="dark:hover:text-white transition-colors duration-300 ease-in-out hover:text-[#ffffff]"
           >
             <FaGithub />
           </a>
           <a
             href="#"
-            className="dark:hover:text-white transition-colors duration-300 ease-in-out hover:text-[#e3dac9]"
+            className="dark:hover:text-white transition-colors duration-300 ease-in-out hover:text-[#ffffff]"
           >
             <FaDiscord />
           </a>
           <a
             href="https://www.instagram.com/projectlift.umd/"
-            className="dark:hover:text-white transition-colors duration-300 ease-in-out hover:text-[#e3dac9]"
+            className="dark:hover:text-white transition-colors duration-300 ease-in-out hover:text-[#ffffff]"
           >
             <FaInstagram />
           </a>
