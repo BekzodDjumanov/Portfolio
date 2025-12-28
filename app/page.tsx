@@ -6,6 +6,7 @@ import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { RollingText } from "@/components/ui/skiper-ui/skiper58";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { Skiper47 } from "@/components/ui/skiper-ui/skiper47";
+import { Link001 } from "@/components/ui/skiper-ui/skiper40";
 import { ShineBorder } from "@/components/ui/shine-border";
 import { Marquee } from "@/components/ui/marquee";
 import { IoIosArrowDropright } from "react-icons/io";
@@ -143,6 +144,14 @@ export default function Home() {
     }, 3000);
   };
   gsap.killTweensOf(toastRef.current);
+
+  const footerLinks = [
+    { label: "Home", href: "/" },
+    { label: "Resume", href: "/resume" },
+    { label: "Projects", href: "/projects" },
+    { label: "Reviews", href: "/reviews" },
+    { label: "Contacts", href: "/contact" },
+  ];
 
   return (
     <div
@@ -839,18 +848,15 @@ export default function Home() {
 
         {/* Navigation Section */}
         <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-22.5 text-sm">
-          {["Home", "Resume", "Projects", "Reviews", "Contacts"].map(
-            (link, i) => (
-              <a
-                key={i}
-                href="#"
-                className="relative inline-block pb-1 dark:text-[#ffffff] dark:hover:text-purple-400 hover:text-purple-400 transition-colors duration-300 ease-in-out"
-              >
-                {link}
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-current transition-all duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
-            )
-          )}
+          {footerLinks.map((link, i) => (
+            <Link001
+              key={i}
+              href={link.href}
+              className="dark:text-white hover:text-purple-400"
+            >
+              {link.label}
+            </Link001>
+          ))}
         </div>
 
         {/* Social Section */}

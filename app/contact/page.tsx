@@ -6,6 +6,7 @@ import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { RollingText } from "@/components/ui/skiper-ui/skiper58";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { FaChevronDown } from "react-icons/fa6";
+import { Link001 } from "@/components/ui/skiper-ui/skiper40";
 
 import Link from "next/link";
 
@@ -63,6 +64,14 @@ export default function Projects() {
       }
     );
   }, []);
+
+  const footerLinks = [
+    { label: "Home", href: "/" },
+    { label: "Resume", href: "/resume" },
+    { label: "Projects", href: "/projects" },
+    { label: "Reviews", href: "/reviews" },
+    { label: "Contacts", href: "/contact" },
+  ];
 
   return (
     <div
@@ -195,20 +204,20 @@ export default function Projects() {
       {/* MAIN CONTENT HERE */}
       <main
         ref={containerRef}
-        className="flex-1 flex flex-col items-center gap- mt-10 px-4 py-1 m-auto"
+        className="flex-1 flex flex-col items-center justify-center mt-10 px-4 py-1 m-auto"
       >
-        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 py-20 md:py-32 px-4">
-          <div className="text-center text-sm text-[#121212] dark:text-[#ffffff] tracking-[.2em]">
-            CONTACT
+        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex items-center justify-center py-20 md:py-32 px-4">
+          <div className="text-sm text-[#121212] dark:text-[#ffffff] tracking-[.2em]">
+            SOON
           </div>
         </section>
       </main>
 
-      <footer
+      {/*<footer
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-wrap justify-between items-start gap-y-8 w-full relative 
   shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
       >
-        {/* Brand Section */}
+
         <div className="footer-brand">
           <div className="mt-2 flex gap-2 items-center">
             <ShinyButton className="flex items-center gap-2">
@@ -222,23 +231,19 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Navigation Section */}
         <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-22.5 text-sm">
-          {["Home", "Resume", "Projects", "Reviews", "Contacts"].map(
-            (link, i) => (
-              <a
-                key={i}
-                href="#"
-                className="relative inline-block pb-1 dark:text-[#ffffff] dark:hover:text-purple-400 hover:text-purple-400 transition-colors duration-300 ease-in-out"
-              >
-                {link}
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-current transition-all duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
-            )
-          )}
+          {footerLinks.map((link, i) => (
+            <Link001
+              key={i}
+              href={link.href}
+              className="dark:text-white hover:text-purple-400"
+            >
+              {link.label}
+            </Link001>
+          ))}
         </div>
 
-        {/* Social Section */}
+
         <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
           <a
             href="#"
@@ -246,6 +251,7 @@ export default function Projects() {
           >
             <FaGithub />
           </a>
+
           <a
             href="#"
             className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
@@ -254,15 +260,15 @@ export default function Projects() {
           </a>
         </div>
 
-        {/* Line */}
+
         <div className="footer-line w-full h-[1px] bg-white/10 my-4"></div>
 
-        {/* Ending Credit */}
         <div className="ending-credit w-full text-center text-[#7b7c8c] text-xs">
           Curated with Next.js, React, Tailwind CSS, Framer Motion, GSAP, &
           Figma.
         </div>
       </footer>
+      */}
     </div>
   );
 }

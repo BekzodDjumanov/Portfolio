@@ -6,6 +6,7 @@ import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { RollingText } from "@/components/ui/skiper-ui/skiper58";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { FaChevronDown } from "react-icons/fa6";
+import { Link001 } from "@/components/ui/skiper-ui/skiper40";
 
 import Link from "next/link";
 
@@ -13,6 +14,7 @@ import { FaGithub } from "react-icons/fa";
 import { AiFillSketchCircle } from "react-icons/ai";
 import { FiGlobe } from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
+import { FiLink, FiTrendingUp } from "react-icons/fi";
 
 export default function Projects() {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -64,6 +66,14 @@ export default function Projects() {
     );
   }, []);
 
+  const footerLinks = [
+    { label: "Home", href: "/" },
+    { label: "Resume", href: "/resume" },
+    { label: "Projects", href: "/projects" },
+    { label: "Reviews", href: "/reviews" },
+    { label: "Contacts", href: "/contact" },
+  ];
+
   const timeline = [
     {
       date: "Jan 2020 - Present",
@@ -92,7 +102,7 @@ export default function Projects() {
     {
       date: "Jan 2024 — May 2024",
       role: "IT Administrator Intern",
-      company: "First Financial Federal Credit Union",
+      company: "First Financial Credit Union",
       logo: "/images/fffcu.png",
       description:
         "Built internal dashboards and supported legacy systems during migration.",
@@ -259,10 +269,9 @@ export default function Projects() {
                 className="relative flex items-start gap-6 mb-16 group"
               >
                 {/* Logo / Node (Left) */}
-                <span className="opacity-0 fade-in relative flex h-2 w-2 inline-flex mt-6">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
+                {/*HERE */}
+                <div className="w-px h-30 bg-zinc-800"></div>
+
                 <div
                   className="relative z-10 flex items-center justify-center
                 w-14 h-14 md:w-16 md:h-16 shrink-0
@@ -295,6 +304,55 @@ export default function Projects() {
                     {item.description}
                   </p>
                 </div>
+                <div className="flex flex-col lg:flex-row gap-5">
+                  <div
+                    className="
+                        px-4 py-2 rounded-lg inline-flex items-center gap-2
+                        text-zinc-500 dark:text-zinc-400 
+                        
+                        bg-zinc-100/50 dark:bg-white/[0.03] 
+                        
+                        border border-black/5 dark:border-white/10 
+                        
+                        text-xs font-normal
+                        
+                        md:text-sm
+                        
+                        whitespace-nowrap
+                        
+                        dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5
+                        transition-all duration-300 ease-in-out
+                        
+                        cursor-pointer
+                      "
+                  >
+                    <FiLink className="text-sm md:text-base flex-shrink-0" />
+                    Website Link
+                  </div>
+
+                  <div
+                    className="
+                        px-4 py-2 rounded-lg inline-flex items-center gap-2
+                        text-violet-600 dark:text-violet-400
+
+                        bg-violet-100/70 dark:bg-violet-500/10
+
+                        border border-violet-300/60 dark:border-violet-400/30
+
+                        text-xs font-medium md:text-sm
+                        whitespace-nowrap
+
+                        hover:bg-violet-200/70 dark:hover:bg-violet-500/20
+                        hover:border-violet-400 dark:hover:border-violet-400
+                        transition-all duration-300 ease-in-out
+
+                        cursor-pointer
+                      "
+                  >
+                    <FiTrendingUp className="text-sm md:text-base flex-shrink-0" />
+                    Stock Price
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -303,7 +361,7 @@ export default function Projects() {
 
       <footer
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-wrap justify-between items-start gap-y-8 w-full relative 
-  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -mt-25"
+  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -my-40"
       >
         {/* Brand Section */}
         <div className="footer-brand">
@@ -321,18 +379,15 @@ export default function Projects() {
 
         {/* Navigation Section */}
         <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-22.5 text-sm">
-          {["Home", "Resume", "Projects", "Reviews", "Contacts"].map(
-            (link, i) => (
-              <a
-                key={i}
-                href="#"
-                className="relative inline-block pb-1 dark:text-[#ffffff] dark:hover:text-purple-400 hover:text-purple-400 transition-colors duration-300 ease-in-out"
-              >
-                {link}
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-current transition-all duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
-            )
-          )}
+          {footerLinks.map((link, i) => (
+            <Link001
+              key={i}
+              href={link.href}
+              className="dark:text-white hover:text-purple-400"
+            >
+              {link.label}
+            </Link001>
+          ))}
         </div>
 
         {/* Social Section */}
@@ -343,6 +398,7 @@ export default function Projects() {
           >
             <FaGithub />
           </a>
+
           <a
             href="#"
             className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
