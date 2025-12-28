@@ -37,7 +37,7 @@ const Skiper47 = () => {
       alt: "Illustrations by my fav AarzooAly",
     },
     {
-      src: "/",
+      src: "/images/bateman.png",
       alt: "Illustrations by my fav AarzooAly",
     },
     {
