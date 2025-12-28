@@ -13,7 +13,7 @@ import { FaCheck } from "react-icons/fa6";
 
 import Link from "next/link";
 
-import { FaGithub, FaDiscord, FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
 import { AiFillSketchCircle } from "react-icons/ai";
 import { FiGlobe } from "react-icons/fi";
@@ -28,6 +28,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const toastRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     if (!headerRef.current) return;
@@ -56,14 +57,14 @@ export default function Home() {
 
     gsap.fromTo(
       containerRef.current.querySelectorAll(".fade-in"),
-      { opacity: 0, y: -20, filter: "blur(10px)" },
+      { opacity: 0, y: -10, filter: "blur(10px)" },
       {
         opacity: 1,
         y: 0,
         filter: "blur(0px)",
         duration: 1,
         ease: "power3.out",
-        stagger: 0.1,
+        stagger: 0.05,
         delay: 0.2,
       }
     );
@@ -84,14 +85,15 @@ export default function Home() {
 
     gsap.fromTo(
       containerRef2.current.querySelectorAll(".fade-in"),
-      { opacity: 0, y: -20, filter: "blur(10px)" },
+      { opacity: 0, y: -10, filter: "blur(10px)" },
       {
         opacity: 1,
         y: 0,
         filter: "blur(0px)",
         duration: 1,
         ease: "power3.out",
-        delay: 0.7,
+        stagger: 0.05,
+        delay: 0.8,
       }
     );
   }, []);
@@ -125,6 +127,7 @@ export default function Home() {
         );
       }
     });
+    formRef.current?.reset();
 
     // Hold, then animate OUT
     setTimeout(() => {
@@ -189,32 +192,20 @@ export default function Home() {
           <nav className="hidden lg:flex gap-8 text-sm opacity-80">
             <Link
               href="/"
-              className="hover:text-[#ffffff] dark:hover:text-white transition-all duration-300 flex items-center"
+              className="transition-all duration-300 flex items-center"
             >
               <RollingText>Home</RollingText>
             </Link>
-            <Link
-              href="/about"
-              className="hover:text-[#ffffff] dark:hover:text-white transition-all duration-300"
-            >
-              <RollingText>About</RollingText>
+            <Link href="/resume" className="transition-all duration-300">
+              <RollingText>Resume</RollingText>
             </Link>
-            <Link
-              href="/projects"
-              className="hover:text-[#ffffff] dark:hover:text-white transition-all duration-300"
-            >
+            <Link href="/projects" className="transition-all duration-300">
               <RollingText>Projects</RollingText>
             </Link>
-            <Link
-              href="/reviews"
-              className="hover:text-[#ffffff] dark:hover:text-white transition-all duration-300"
-            >
+            <Link href="/reviews" className="transition-all duration-300">
               <RollingText>Reviews</RollingText>
             </Link>
-            <Link
-              href="/contact"
-              className="hover:text-[#ffffff] dark:hover:text-white transition-all duration-300"
-            >
+            <Link href="/contact" className="transition-all duration-300">
               <RollingText>Contact</RollingText>
             </Link>
           </nav>
@@ -227,35 +218,35 @@ export default function Home() {
               <Link
                 href="/"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-[#ffffff] transition-colors"
+                className="transition-colors"
               >
                 <RollingText>Home</RollingText>
               </Link>
               <Link
-                href="/about"
+                href="/resume"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-[#ffffff] transition-colors"
+                className="transition-colors"
               >
-                <RollingText>About</RollingText>
+                <RollingText>Resume</RollingText>
               </Link>
               <Link
                 href="/projects"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-[#ffffff] transition-colors"
+                className="transition-colors"
               >
                 <RollingText>Projects</RollingText>
               </Link>
               <Link
                 href="/reviews"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-[#ffffff] transition-colors"
+                className="transition-colors"
               >
                 <RollingText>Reviews</RollingText>
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-[#ffffff] transition-colors"
+                className="transition-colors"
               >
                 <RollingText>Contact</RollingText>
               </Link>
@@ -282,35 +273,34 @@ export default function Home() {
       </div>
 
       {/* MAIN CONTENT HERE */}
-
       <main
         ref={containerRef}
         className="flex-1 flex flex-col items-center gap- mt-10 px-4 py-1 m-auto"
       >
-        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 py-20 md:py-32 px-4">
+        <section className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 py-20 md:py-32 px-4">
           {/* Left Column: Text Content */}
           <div className="flex-[1.5] space-y-8 order-2 md:order-1 text-center md:text-left">
             <div className="space-y-4">
               <div className="flex items-center justify-center md:justify-start gap-2 text-sm font-medium tracking-[0.2em] uppercase opacity-60">
-                <span className="relative flex h-2 w-2">
+                <span className="opacity-0 fade-in relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                Washington, DC
+                <div className="opacity-0 fade-in">Washington, DC</div>
               </div>
 
               {/* Forced to one line with whitespace-nowrap */}
-              <div className="text-4xl">
-                <h1>Self-Proclaimed Developer.</h1>
+              <div className="opacity-0 fade-in text-4xl">
+                <h1>self-proclaimed developer.</h1>
               </div>
             </div>
 
-            <div className="space-y-4 max-w-xl mx-auto md:mx-0">
+            <div className="space-y-4 max-w-xl mx-auto md:mx-0 opacity-0 fade-in">
               <p className="text-lg md:text-xl leading-relaxed opacity-90 -mt-2">
                 Current student at the University of Maryland, specializing in
                 Computer Engineering.
               </p>
-              <p className="text-sm md:text-base opacity-60 leading-relaxed">
+              <p className="text-sm md:text-base opacity-60 leading-relaxed opacity-0 fade-in">
                 Carroll Community College Summa Cum Laude Alumni,{" "}
                 <br className="hidden md:block" /> holding an Associate of Arts
                 in Computer Science.
@@ -318,7 +308,7 @@ export default function Home() {
             </div>
 
             {/* Luxury Style Badges */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-3 pt-2 -mt-4">
+            <div className="opacity-0 fade-in flex flex-wrap justify-center md:justify-start gap-3 pt-2 -mt-4">
               {["Frontend Developer", "UI/UX Specialist", "Full Ride"].map(
                 (badge) => (
                   <span
@@ -345,7 +335,7 @@ export default function Home() {
                 )
               )}
             </div>
-            <div className="flex justify-center md:justify-center lg:justify-start gap-4 w-full pt-4 -mt-4">
+            <div className="opacity-0 fade-in flex justify-center md:justify-center lg:justify-start gap-4 w-full pt-4 -mt-4">
               <div
                 className="group flex items-center justify-center w-11 h-11 
     rounded-full bg-white/5 dark:bg-[#000000]/40 
@@ -379,7 +369,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex-1 order-1 md:order-2 flex justify-center md:justify-end w-full">
+          <div className="opacity-0 fade-in flex-1 order-1 md:order-2 flex justify-center md:justify-end w-full">
             {/* 1. Ensure overflow-visible so the badge can 'hang' outside the box */}
             <div className="relative group w-[90%] sm:w-full max-w-[320px] md:max-w-[400px] lg:max-w-[480px] xl:max-w-[520px] transition-all duration-700 ease-in-out overflow-visible">
               <div className="absolute -inset-4 bg-[#ffffff]/5 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-1000" />
@@ -405,20 +395,20 @@ export default function Home() {
           </div>
         </section>
 
-        <h1 className="flex items-center gap-3 text-2xl">
+        <h1 className="opacity-0 fade-in flex items-center gap-3 text-2xl">
           <span className="w-[4px] h-8 dark:bg-[#ffffff] bg-[#000000] rounded-full inline-block" />
-          Articles & Posts
+          articles & posts
         </h1>
-        <p className="opacity-40 uppercase tracking-[.1em] text-sm mt-1 -mb-3">
+        <p className="opacity-0 fade-in text-zinc-500 uppercase tracking-[.1em] text-sm mt-1 -mb-3">
           Up to date info
         </p>
       </main>
-      <div className="relative w-full">
+      <div ref={containerRef2} className="relative w-full">
         {/* Black bar */}
-        <div className="w-full h-40 dark:bg-[#0a0a0a] bg-[#000000] border-y border-[#4c1d95]/20 shadow-[inset_0_20px_30px_-20px_rgba(76,29,149,0.35),inset_0_-20px_30px_-20px_rgba(76,29,149,0.35)]"></div>
+        <div className="w-full h-40 dark:bg-[#0a0a0a] dark:bg-gradient-to-br from-[#0b0b12] via-[#0f1020] to-[#1a103d] border-y dark:border-[#4c1d95]/20 dark:shadow-[inset_0_20px_30px_-20px_rgba(76,29,149,0.35),inset_0_-20px_30px_-20px_rgba(76,29,149,0.35)]"></div>
 
         {/* Marquee content */}
-        <Marquee className="absolute top-0 left-0 w-full h-full flex items-center gap-4 px-4">
+        <Marquee className="opacity-0 fade-in absolute top-0 left-0 w-full h-full flex items-center gap-4 px-4">
           {/* Example articles */}
           {[
             {
@@ -443,10 +433,12 @@ export default function Home() {
             <div
               key={index}
               className="flex-shrink-0 w-64 h-32 p-4 
-          bg-white dark:bg-[#4c1d95]/20
+          bg-white/10
+  border
+  border-white/20 dark:bg-[#4c1d95]/20
           backdrop-blur-md 
           rounded-xl shadow-lg 
-          border border-black/5 dark:border-[#7c3aed]/20 
+          border dark:border-[#7c3aed]/20 
           hover:border-[#7c3aed]/50 
           group/card transition-all duration-500
           flex flex-col justify-between"
@@ -484,7 +476,7 @@ export default function Home() {
           <div className="w-full flex justify-start text-left text-3xl mb-12">
             <h1 className="flex items-center gap-3">
               <span className="w-[4px] h-8 dark:bg-[#ffffff] bg-[#000000] rounded-full inline-block" />
-              Experience & Skills
+              experience & skills
             </h1>
           </div>
 
@@ -572,7 +564,7 @@ export default function Home() {
             </div>
 
             {/* RIGHT SIDE: WORK HISTORY */}
-            <div className="flex-1 space-y-10 dark:bg-[#000000] border border-black/10 dark:border-white/10 px-5 py-5 rounded-xl backdrop-blur-sm shadow-lg">
+            <div className="flex-1 space-y-10 dark:bg-[#000000] border border-black/10 dark:border-white/10 px-5 py-5 backdrop-blur-sm shadow-lg">
               <div className="flex items-center gap-2 mb-4">
                 <h2 className="text-xs uppercase tracking-[0.3em] font-bold opacity-40">
                   Work History
@@ -653,7 +645,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <button
+              <Link
+                href="/resume"
                 className="
   w-full mt-6 py-3 px-4 rounded-xl
   bg-white/5
@@ -662,8 +655,9 @@ export default function Home() {
   flex items-center justify-center gap-2
   dark:text-zinc-500
   
-  hover:bg-black/10
-  hover:text-black/90 dark:hover:text-white dark:hover:bg-white/10
+  hover:bg-[#4c1d95]/20
+  hover:text-black/90 dark:hover:text-white
+  backdrop-blur-md
   
   transition-all duration-300 ease-in-out
   cursor-pointer
@@ -671,7 +665,7 @@ export default function Home() {
 "
               >
                 A more detailed look <IoIosArrowForward />
-              </button>
+              </Link>
             </div>
           </div>
         </section>
@@ -700,11 +694,12 @@ export default function Home() {
           <div className="w-full flex justify-start text-left text-3xl mb-12">
             <h1 className="flex items-center gap-3 dark:text-[#ffffff] text-[#000000]">
               <span className="w-[4px] h-8 dark:bg-[#ffffff] bg-[#000000] rounded-full inline-block" />
-              Contact
+              contact
             </h1>
           </div>
           {/* Content Wrapper - Using Form as the grid container */}
           <form
+            ref={formRef}
             className="grid grid-cols-1 lg:grid-cols-2 gap-16"
             onSubmit={handleFormSubmit}
           >
@@ -844,12 +839,12 @@ export default function Home() {
 
         {/* Navigation Section */}
         <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-22.5 text-sm">
-          {["Home", "About", "Projects", "Reviews", "Contacts"].map(
+          {["Home", "Resume", "Projects", "Reviews", "Contacts"].map(
             (link, i) => (
               <a
                 key={i}
                 href="#"
-                className="relative inline-block pb-1 dark:text-[#ffffff] dark:hover:text-white transition-colors duration-300 ease-in-out hover:text-[#ffffff]"
+                className="relative inline-block pb-1 dark:text-[#ffffff] dark:hover:text-purple-400 hover:text-purple-400 transition-colors duration-300 ease-in-out"
               >
                 {link}
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-current transition-all duration-300 ease-in-out group-hover:w-full"></span>
@@ -862,21 +857,16 @@ export default function Home() {
         <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
           <a
             href="#"
-            className="dark:hover:text-white transition-colors duration-300 ease-in-out hover:text-[#ffffff]"
+            className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
           >
             <FaGithub />
           </a>
+
           <a
             href="#"
-            className="dark:hover:text-white transition-colors duration-300 ease-in-out hover:text-[#ffffff]"
+            className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
           >
-            <FaDiscord />
-          </a>
-          <a
-            href="https://www.instagram.com/projectlift.umd/"
-            className="dark:hover:text-white transition-colors duration-300 ease-in-out hover:text-[#ffffff]"
-          >
-            <FaInstagram />
+            <FaLinkedin />
           </a>
         </div>
 

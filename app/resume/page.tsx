@@ -13,7 +13,6 @@ import { FaGithub } from "react-icons/fa";
 import { AiFillSketchCircle } from "react-icons/ai";
 import { FiGlobe } from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
-import { IoMdStar } from "react-icons/io";
 
 export default function Projects() {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -26,7 +25,7 @@ export default function Projects() {
 
     gsap.fromTo(
       headerRef.current,
-      { opacity: 0, filter: "blur(10px)", y: -20 },
+      { opacity: 0, filter: "blur(10px)", y: -10 },
       {
         opacity: 1,
         filter: "blur(0px)",
@@ -65,60 +64,38 @@ export default function Projects() {
     );
   }, []);
 
-  const testimonials = [
+  const timeline = [
     {
-      name: "Alex Morgan",
-      image: "/images/ebay.png",
-      review:
-        "Working with you was seamless. The attention to detail and polish exceeded expectations.",
+      date: "Jan 2020 - Present",
+      role: "Entrepreneur",
+      company: "eBay Enterprise",
+      logo: "/images/ebay.png",
+      description:
+        "Pursuing a B.S. in Computer Engineering with a focus on embedded systems and software architecture.",
     },
     {
-      name: "Jamie Lee",
-      image: "/images/ebay.png",
-      review:
-        "Extremely professional and creative. Delivered exactly what we needed and more.",
+      date: "May 2026 — UNKNOWN",
+      role: "Cloud Software Developer Intern",
+      company: "CACI International",
+      logo: "/images/caci.png",
+      description:
+        "Worked on frontend systems, internal tooling, and performance optimizations.",
     },
     {
-      name: "Taylor Smith",
-      image: "/images/ebay.png",
-      review:
-        "One of the best collaborations I've had. Clear communication and great design sense.",
+      date: "May 2025 — Sep 2025",
+      role: "Software Engineer Intern",
+      company: "Cummings & Co. Realtors",
+      logo: "/images/cummings.png",
+      description:
+        "Built internal dashboards and supported legacy systems during migration.",
     },
     {
-      name: "Jamie Lee",
-      image: "/images/ebay.png",
-      review:
-        "Extremely professional and creative. Delivered exactly what we needed and more.",
-    },
-    {
-      name: "Taylor Smith",
-      image: "/images/ebay.png",
-      review:
-        "One of the best collaborations I've had. Clear communication and great design sense.",
-    },
-    {
-      name: "Jamie Lee",
-      image: "/images/ebay.png",
-      review:
-        "Extremely professional and creative. Delivered exactly what we needed and more.",
-    },
-    {
-      name: "Taylor Smith",
-      image: "/images/ebay.png",
-      review:
-        "One of the best collaborations I've had. Clear communication and great design sense.",
-    },
-    {
-      name: "Jamie Lee",
-      image: "/images/ebay.png",
-      review:
-        "Extremely professional and creative. Delivered exactly what we needed and more.",
-    },
-    {
-      name: "Taylor Smith",
-      image: "/images/ebay.png",
-      review:
-        "One of the best collaborations I've had. Clear communication and great design sense.",
+      date: "Jan 2024 — May 2024",
+      role: "IT Administrator Intern",
+      company: "First Financial Federal Credit Union",
+      logo: "/images/fffcu.png",
+      description:
+        "Built internal dashboards and supported legacy systems during migration.",
     },
   ];
 
@@ -255,83 +232,70 @@ export default function Projects() {
         ref={containerRef}
         className="flex-1 flex flex-col items-center gap- mt-10 px-4 py-1 m-auto"
       >
-        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center gap-12 py-20 md:py-32 px-4">
-          <div className="w-full flex flex-col gap-4 ml-8">
+        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col py-20 md:py-32 px-4">
+          <div className="w-full flex flex-col gap-4">
             {/* Heading Logic: Kept the dot-indicator style */}
             <h1 className="flex items-center gap-3 text-3xl">
               <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
-              reviews & references
+              resume & roadmap
             </h1>
 
             {/* Subtext Logic: Kept your specific alignment and opacity */}
             <p className="text-md text-zinc-500 max-w-prose">
-              A comprehensive list of buyers who have engaged in business
-              exchanges throughout my time as an entrepreneur. I've had the
-              absolute pleasure to maintain a five star rating with over 100+
-              reviews.
+              My journey through employment and each role I had the pleasure of
+              taking, where I had the opportunity to contribute to innovative
+              projects and designs.
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto px-4">
-            <div
-              className="grid gap-4 place-items-center
-                          grid-cols-1
-                          sm:grid-cols-2
-                          md:grid-cols-3
-                          lg:grid-cols-4
-                        "
-            >
-              {testimonials.map((item, index) => (
+          <div className="relative max-w-4xl py-12 md:mx-0">
+            {timeline.map((item, index) => (
+              <div
+                key={index}
+                className="relative flex items-start gap-6 mb-16 group"
+              >
+                {/* Logo / Node (Left) */}
                 <div
-                  key={index}
-                  className="
-          lg:px-3 lg:py-4 py-5 px-4 rounded-3xl
-          text-zinc-500 dark:text-zinc-400
-          bg-zinc-100/50 dark:bg-white/[0.03]
-          border border-black/5 dark:border-white/10
-          text-sm font-medium
-          dark:hover:border-[#7c3aed]/40
-          dark:hover:text-[#c084fc]
-          dark:hover:bg-[#7c3aed]/5
-          transition-all duration-300 ease-in-out
-          lg:max-w-[260px] w-full
-        "
+                  className="relative z-10 flex items-center justify-center
+                w-14 h-14 md:w-16 md:h-16 shrink-0
+                rounded-full bg-white dark:bg-[#0A0A0B]
+                border-[3px] border-zinc-200 dark:border-zinc-800
+                group-hover:border-purple-500/50 transition-all duration-500
+                shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:shadow-[0_0_20px_rgba(0,0,0,0.5)]
+                overflow-hidden p-2"
                 >
-                  {/* Avatar */}
-                  <div className="flex flex-col items-center text-center gap-3">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-12 h-12 rounded-full object-cover border border-black/10"
-                    />
-
-                    {/* Name */}
-                    <h4 className="text-sm dark:text-[#ffffff] text-[#000000]">
-                      {item.name}
-                    </h4>
-
-                    {/* Stars */}
-                    <div className="flex gap-1 text-[#f5c26b]">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <IoMdStar key={i} className="w-4 h-4" />
-                      ))}
-                    </div>
-
-                    {/* Review */}
-                    <p className="text-xs leading-relaxed pt-2 font-normal">
-                      {item.review}
-                    </p>
-                  </div>
+                  <img
+                    src={item.logo}
+                    alt={item.company}
+                    className="w-full h-full object-contain rounded-full"
+                  />
                 </div>
-              ))}
-            </div>
+
+                {/* Stacked Content (Right) */}
+                <div className="flex flex-col gap-1 text-left max-w-md">
+                  <span className="text-xs font-medium opacity-40 whitespace-nowrap">
+                    {item.date}
+                  </span>
+
+                  <h3 className="text-lg dark:text-white">{item.role}</h3>
+
+                  <p className="text-xs font-medium whitespace-nowrap dark:text-purple-300 dark:bg-white/5 inline-block w-fit px-2 py-0.5 rounded-md">
+                    {item.company}
+                  </p>
+
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400 pt-2">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </main>
 
       <footer
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-wrap justify-between items-start gap-y-8 w-full relative 
-  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -mt-5"
+  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -mt-25"
       >
         {/* Brand Section */}
         <div className="footer-brand">

@@ -13,7 +13,6 @@ import { FaGithub } from "react-icons/fa";
 import { AiFillSketchCircle } from "react-icons/ai";
 import { FiGlobe } from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
-import { IoMdStar } from "react-icons/io";
 
 export default function Projects() {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -52,7 +51,7 @@ export default function Projects() {
 
     gsap.fromTo(
       containerRef.current.querySelectorAll(".fade-in"),
-      { opacity: 0, y: -10, filter: "blur(10px)" },
+      { opacity: 0, y: -20, filter: "blur(10px)" },
       {
         opacity: 1,
         y: 0,
@@ -64,63 +63,6 @@ export default function Projects() {
       }
     );
   }, []);
-
-  const testimonials = [
-    {
-      name: "Alex Morgan",
-      image: "/images/ebay.png",
-      review:
-        "Working with you was seamless. The attention to detail and polish exceeded expectations.",
-    },
-    {
-      name: "Jamie Lee",
-      image: "/images/ebay.png",
-      review:
-        "Extremely professional and creative. Delivered exactly what we needed and more.",
-    },
-    {
-      name: "Taylor Smith",
-      image: "/images/ebay.png",
-      review:
-        "One of the best collaborations I've had. Clear communication and great design sense.",
-    },
-    {
-      name: "Jamie Lee",
-      image: "/images/ebay.png",
-      review:
-        "Extremely professional and creative. Delivered exactly what we needed and more.",
-    },
-    {
-      name: "Taylor Smith",
-      image: "/images/ebay.png",
-      review:
-        "One of the best collaborations I've had. Clear communication and great design sense.",
-    },
-    {
-      name: "Jamie Lee",
-      image: "/images/ebay.png",
-      review:
-        "Extremely professional and creative. Delivered exactly what we needed and more.",
-    },
-    {
-      name: "Taylor Smith",
-      image: "/images/ebay.png",
-      review:
-        "One of the best collaborations I've had. Clear communication and great design sense.",
-    },
-    {
-      name: "Jamie Lee",
-      image: "/images/ebay.png",
-      review:
-        "Extremely professional and creative. Delivered exactly what we needed and more.",
-    },
-    {
-      name: "Taylor Smith",
-      image: "/images/ebay.png",
-      review:
-        "One of the best collaborations I've had. Clear communication and great design sense.",
-    },
-  ];
 
   return (
     <div
@@ -255,83 +197,16 @@ export default function Projects() {
         ref={containerRef}
         className="flex-1 flex flex-col items-center gap- mt-10 px-4 py-1 m-auto"
       >
-        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center gap-12 py-20 md:py-32 px-4">
-          <div className="w-full flex flex-col gap-4 ml-8">
-            {/* Heading Logic: Kept the dot-indicator style */}
-            <h1 className="flex items-center gap-3 text-3xl">
-              <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
-              reviews & references
-            </h1>
-
-            {/* Subtext Logic: Kept your specific alignment and opacity */}
-            <p className="text-md text-zinc-500 max-w-prose">
-              A comprehensive list of buyers who have engaged in business
-              exchanges throughout my time as an entrepreneur. I've had the
-              absolute pleasure to maintain a five star rating with over 100+
-              reviews.
-            </p>
-          </div>
-
-          <div className="max-w-6xl mx-auto px-4">
-            <div
-              className="grid gap-4 place-items-center
-                          grid-cols-1
-                          sm:grid-cols-2
-                          md:grid-cols-3
-                          lg:grid-cols-4
-                        "
-            >
-              {testimonials.map((item, index) => (
-                <div
-                  key={index}
-                  className="
-          lg:px-3 lg:py-4 py-5 px-4 rounded-3xl
-          text-zinc-500 dark:text-zinc-400
-          bg-zinc-100/50 dark:bg-white/[0.03]
-          border border-black/5 dark:border-white/10
-          text-sm font-medium
-          dark:hover:border-[#7c3aed]/40
-          dark:hover:text-[#c084fc]
-          dark:hover:bg-[#7c3aed]/5
-          transition-all duration-300 ease-in-out
-          lg:max-w-[260px] w-full
-        "
-                >
-                  {/* Avatar */}
-                  <div className="flex flex-col items-center text-center gap-3">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-12 h-12 rounded-full object-cover border border-black/10"
-                    />
-
-                    {/* Name */}
-                    <h4 className="text-sm dark:text-[#ffffff] text-[#000000]">
-                      {item.name}
-                    </h4>
-
-                    {/* Stars */}
-                    <div className="flex gap-1 text-[#f5c26b]">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <IoMdStar key={i} className="w-4 h-4" />
-                      ))}
-                    </div>
-
-                    {/* Review */}
-                    <p className="text-xs leading-relaxed pt-2 font-normal">
-                      {item.review}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 py-20 md:py-32 px-4">
+          <div className="text-center text-sm text-[#121212] dark:text-[#ffffff] tracking-[.2em]">
+            CONTACT
           </div>
         </section>
       </main>
 
       <footer
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-wrap justify-between items-start gap-y-8 w-full relative 
-  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -mt-5"
+  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
       >
         {/* Brand Section */}
         <div className="footer-brand">
