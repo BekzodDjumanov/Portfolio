@@ -230,12 +230,13 @@ export default function Projects() {
         <AnimatedThemeToggler className="cursor-pointer" />
       </div>
 
-      <div
+      <Link
+        href="/"
         className="flex fixed items-center justify-center absolute top-8 left-10
         hover:scale-105 shadow-md rounded-full backdrop-blur p-1.5 text-4xl fade-right opacity-0 transition-all duration-300 ease-in-out cursor-pointer z-50"
       >
         <FiGlobe />
-      </div>
+      </Link>
 
       {/* MAIN CONTENT HERE */}
       {/*<main

@@ -41,6 +41,10 @@ body {
   overscroll-behavior: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
