@@ -82,6 +82,8 @@ export default function Projects() {
       logo: "/images/ebay.png",
       description:
         "Generated $150,000+ in gross revenue by optimizing SEO and scaling product listings, increasing gross margin by 21.",
+      website: "https://www.ebay.com",
+      stock: "https://finance.yahoo.com/quote/EBAY",
     },
     {
       date: "May 2026 — ???",
@@ -90,6 +92,8 @@ export default function Projects() {
       logo: "/images/caci.png",
       description:
         "Internship for Summer 2026, where I will be contributing to cloud initiatives lead by CACI and their innovations.",
+      website: "https://www.caci.com",
+      stock: "https://finance.yahoo.com/quote/CACI",
     },
     {
       date: "May 2025 — Sep 2025",
@@ -98,6 +102,8 @@ export default function Projects() {
       logo: "/images/cummings.png",
       description:
         "Working closely with core employees in order to deliver impactful results to our clients. Handling consumer data and increasing user metrics.",
+      website: "https://www.cummingsrealtors.com",
+      stock: "https://google.com", // private company
     },
     {
       date: "Jan 2024 — May 2024",
@@ -106,6 +112,8 @@ export default function Projects() {
       logo: "/images/fffcu.png",
       description:
         "Played significant role in evaluating statewide cybersecurity awareness and working closely with associate members, providing effective and steadfast solutions.",
+      website: "https://www.firstfinancial.org",
+      stock: "https://google.com",
     },
   ];
 
@@ -301,55 +309,48 @@ export default function Projects() {
                   </p>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-5">
-                  <div
-                    className="
+                  {item.website && (
+                    <Link
+                      href={item.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
                         px-4 py-2 rounded-lg inline-flex items-center gap-2
                         text-zinc-500 dark:text-zinc-400 
-                        
                         bg-zinc-100/50 dark:bg-white/[0.03] 
-                        
                         border border-black/5 dark:border-white/10 
-                        
-                        text-xs font-normal
-                        
-                        md:text-sm
-                        
+                        text-xs font-normal md:text-sm
                         whitespace-nowrap
-                        
-                        dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5
-
-                        hover:border-[#7c3aed]/40 hover:text-[#c084fc] hover:dark:bg-[#7c3aed]/5
+                        hover:border-[#7c3aed]/40 hover:text-[#c084fc]
+                        dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc]
                         transition-all duration-300 ease-in-out
-                        
-                        cursor-pointer
                       "
-                  >
-                    <FiLink className="text-sm md:text-base flex-shrink-0" />
-                    Website Link
-                  </div>
-
-                  <div
-                    className="
-                        px-4 py-2 rounded-lg inline-flex items-center gap-2
-                        text-violet-600 dark:text-violet-400
-
-                        bg-violet-100/70 dark:bg-violet-500/10
-
-                        border border-violet-300/60 dark:border-violet-400/30
-
-                        text-xs font-medium md:text-sm
-                        whitespace-nowrap
-
-                        hover:bg-violet-200/70 dark:hover:bg-violet-500/20
-                        hover:border-violet-400 dark:hover:border-violet-400
-                        transition-all duration-300 ease-in-out
-
-                        cursor-pointer
-                      "
-                  >
-                    <FiTrendingUp className="text-sm md:text-base flex-shrink-0" />
-                    Stock Price
-                  </div>
+                    >
+                      <FiLink className="text-sm md:text-base flex-shrink-0" />
+                      Website Link
+                    </Link>
+                  )}
+                  {item.stock && (
+                    <Link
+                      href={item.stock}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                          px-4 py-2 rounded-lg inline-flex items-center gap-2
+                          text-violet-600 dark:text-violet-400
+                          bg-violet-100/70 dark:bg-violet-500/10
+                          border border-violet-300/60 dark:border-violet-400/30
+                          text-xs font-medium md:text-sm
+                          whitespace-nowrap
+                          hover:bg-violet-200/70 dark:hover:bg-violet-500/20
+                          hover:border-violet-400
+                          transition-all duration-300 ease-in-out
+                        "
+                    >
+                      <FiTrendingUp className="text-sm md:text-base flex-shrink-0" />
+                      Stock Price
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}

@@ -660,21 +660,21 @@ export default function Home() {
               <Link
                 href="/resume"
                 className="
-  w-full mt-6 py-3 px-4 rounded-xl
-  bg-white/5
-  border border-black/10 dark:border-white/10
-  text-sm font-bold
-  flex items-center justify-center gap-2
-  dark:text-zinc-500
-  
-  hover:bg-[#4c1d95]/20
-  hover:text-black/90 dark:hover:text-white
-  backdrop-blur-md
-  
-  transition-all duration-300 ease-in-out
-  cursor-pointer
-  shadow-lg
-"
+                w-full mt-6 py-3 px-4 rounded-xl
+                bg-white/5
+                border border-black/10 dark:border-white/10
+                text-sm font-bold
+                flex items-center justify-center gap-2
+                dark:text-zinc-500
+                
+                hover:bg-[#4c1d95]/20
+                hover:text-black/90 dark:hover:text-white
+                backdrop-blur-md
+                
+                transition-all duration-300 ease-in-out
+                cursor-pointer
+                shadow-lg
+              "
               >
                 A more detailed look <IoIosArrowForward />
               </Link>
