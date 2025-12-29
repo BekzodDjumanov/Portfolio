@@ -255,7 +255,7 @@ export default function Projects() {
               machine learning.
             </p>
 
-            <p className="fade-in opacity-0 text-lg max-w-prose dark:text-zinc-400">
+            <p className="fade-in opacity-0 text-lg max-w-prose dark:text-zinc-400 border-l border-zinc-800 pl-4 mt-4">
               I think this is what we must do as humans.
             </p>
           </div>

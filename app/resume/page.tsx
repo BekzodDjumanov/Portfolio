@@ -103,7 +103,6 @@ export default function Projects() {
       description:
         "Working closely with core employees in order to deliver impactful results to our clients. Handling consumer data and increasing user metrics.",
       website: "https://www.cummingsrealtors.com",
-      stock: "https://google.com", // private company
     },
     {
       date: "Jan 2024 — May 2024",
@@ -113,7 +112,6 @@ export default function Projects() {
       description:
         "Played significant role in evaluating statewide cybersecurity awareness and working closely with associate members, providing effective and steadfast solutions.",
       website: "https://www.firstfinancial.org",
-      stock: "https://google.com",
     },
   ];
 
@@ -249,11 +247,11 @@ export default function Projects() {
       {/* MAIN CONTENT HERE */}
       <main
         ref={containerRef}
-        className="flex-1 flex flex-col items-center mt-10 px-4 py-1"
+        className="flex-1 flex flex-col items-center mt-10 px-4 py-1 overflow-x-hidden" // Added overflow-x-hidden
       >
-        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center py-20 md:py-32 px-4">
+        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center py-20 md:py-32">
           {/* Heading & Subtext - Using ml-8 to match your Reviews style */}
-          <div className="w-full flex flex-col gap-4 ml-8 mb-12">
+          <div className="w-full flex flex-col gap-4 ml-2 md:ml-8 mb-12 px-4">
             <h1 className="flex items-center gap-3 text-3xl">
               <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
               resume & roadmap
@@ -266,24 +264,22 @@ export default function Projects() {
             </p>
           </div>
 
-          <div className="w-full max-w-6xl ml-8">
+          <div className="w-full max-w-6xl md:ml-8 px-4">
             {timeline.map((item, index) => (
               <div
                 key={index}
-                className="relative flex items-start gap-6 mb-16 group"
+                /* md:flex-row keeps your desktop look; flex-col stacks it for mobile */
+                className="relative flex flex-col md:flex-row items-start gap-6 mb-16 group"
               >
-                {/* Logo / Node (Left) */}
-                {/*HERE */}
-                <div className="w-px h-30 bg-zinc-800"></div>
-
+                {/* Logo / Node */}
                 <div
                   className="relative z-10 flex items-center justify-center
-                w-14 h-14 md:w-16 md:h-16 shrink-0
-                rounded-full bg-white dark:bg-[#0A0A0B]
-                border-[3px] border-zinc-200 dark:border-zinc-800
-                transition-all duration-500
-                shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:shadow-[0_0_20px_rgba(0,0,0,0.5)]
-                overflow-hidden p-2"
+        w-14 h-14 md:w-16 md:h-16 shrink-0
+        rounded-full bg-white dark:bg-[#0A0A0B]
+        border-[3px] border-zinc-200 dark:border-zinc-800
+        transition-all duration-500
+        shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:shadow-[0_0_20px_rgba(0,0,0,0.5)]
+        overflow-hidden p-2"
                 >
                   <img
                     src={item.logo}
@@ -292,8 +288,8 @@ export default function Projects() {
                   />
                 </div>
 
-                {/* Stacked Content (Right) */}
-                <div className="flex flex-col gap-1 text-left max-w-md">
+                {/* Stacked Content - flex-1 allows it to grow/shrink properly */}
+                <div className="flex flex-col gap-1 text-left flex-1 min-w-0">
                   <span className="text-xs font-medium opacity-40 whitespace-nowrap">
                     {item.date}
                   </span>
@@ -304,53 +300,37 @@ export default function Projects() {
                     {item.company}
                   </p>
 
-                  <p className="text-xs md:text-sm text-zinc-500 dark:text-zinc-400 pt-2">
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400 pt-2 max-w-prose">
                     {item.description}
                   </p>
                 </div>
-                <div className="flex flex-col lg:flex-row gap-5">
+
+                {/* Buttons Row - flex-wrap prevents the 'cutting off' on mobile */}
+                <div className="flex flex-row md:flex-col lg:flex-row flex-wrap gap-3 mt-2 md:mt-0">
                   {item.website && (
                     <Link
                       href={item.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="
-                        px-4 py-2 rounded-lg inline-flex items-center gap-2
-                        text-zinc-500 dark:text-zinc-400 
-                        bg-zinc-100/50 dark:bg-white/[0.03] 
-                        border border-black/5 dark:border-white/10 
-                        text-xs font-normal md:text-sm
-                        whitespace-nowrap
-                        hover:border-[#7c3aed]/40 hover:text-[#c084fc]
-                        dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc]
-                        transition-all duration-300 ease-in-out
-                      "
+                      className=" px-4 py-2 rounded-lg inline-flex items-center gap-2 text-zinc-500 dark:text-zinc-400 bg-zinc-100/50 dark:bg-white/[0.03] border border-black/5 dark:border-white/10 text-xs font-normal md:text-sm whitespace-nowrap hover:border-[#7c3aed]/40 hover:text-[#c084fc] dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] transition-all duration-300 ease-in-out "
                     >
-                      <FiLink className="text-sm md:text-base flex-shrink-0" />
-                      Website Link
+                      {" "}
+                      <FiLink className="text-sm md:text-base flex-shrink-0" />{" "}
+                      Website Link{" "}
                     </Link>
-                  )}
+                  )}{" "}
                   {item.stock && (
                     <Link
                       href={item.stock}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="
-                          px-4 py-2 rounded-lg inline-flex items-center gap-2
-                          text-violet-600 dark:text-violet-400
-                          bg-violet-100/70 dark:bg-violet-500/10
-                          border border-violet-300/60 dark:border-violet-400/30
-                          text-xs font-medium md:text-sm
-                          whitespace-nowrap
-                          hover:bg-violet-200/70 dark:hover:bg-violet-500/20
-                          hover:border-violet-400
-                          transition-all duration-300 ease-in-out
-                        "
+                      className=" px-4 py-2 rounded-lg inline-flex items-center gap-2 text-violet-600 dark:text-violet-400 bg-violet-100/70 dark:bg-violet-500/10 border border-violet-300/60 dark:border-violet-400/30 text-xs font-medium md:text-sm whitespace-nowrap hover:bg-violet-200/70 dark:hover:bg-violet-500/20 hover:border-violet-400 transition-all duration-300 ease-in-out "
                     >
-                      <FiTrendingUp className="text-sm md:text-base flex-shrink-0" />
-                      Stock Price
+                      {" "}
+                      <FiTrendingUp className="text-sm md:text-base flex-shrink-0" />{" "}
+                      Stock Price{" "}
                     </Link>
-                  )}
+                  )}{" "}
                 </div>
               </div>
             ))}
@@ -377,7 +357,7 @@ export default function Projects() {
         </div>
 
         {/* Navigation Section */}
-        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-22.5 text-sm">
+        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 text-sm">
           {footerLinks.map((link, i) => (
             <Link001
               key={i}
