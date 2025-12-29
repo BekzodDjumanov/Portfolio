@@ -239,23 +239,18 @@ export default function Projects() {
       </Link>
 
       {/* MAIN CONTENT HERE */}
-      {/*<main
+      <main
         ref={containerRef}
-        className="flex-1 flex flex-col items-center gap- mt-10 px-4 py-1 m-auto"
-      > */}
-      <main ref={containerRef} className="flex-1 flex flex-col mt-10 px-4 py-1">
-        {/* 
-        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col py-20 md:py-32 px-4">
-        */}
-        <section className="opacity-0 fade-in w-full flex flex-col py-20 md:py-32 px-4 md:px-12">
-          <div className="w-full flex flex-col gap-4">
-            {/* Heading Logic: Kept the dot-indicator style */}
+        className="flex-1 flex flex-col items-center mt-10 px-4 py-1"
+      >
+        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center py-20 md:py-32 px-4">
+          {/* Heading & Subtext - Using ml-8 to match your Reviews style */}
+          <div className="w-full flex flex-col gap-4 ml-8 mb-12">
             <h1 className="flex items-center gap-3 text-3xl">
               <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
               resume & roadmap
             </h1>
 
-            {/* Subtext Logic: Kept your specific alignment and opacity */}
             <p className="text-md text-zinc-500 max-w-prose">
               My journey through employment and each role I had the pleasure of
               taking, where I had the opportunity to contribute to innovative
@@ -263,7 +258,7 @@ export default function Projects() {
             </p>
           </div>
 
-          <div className="relative max-w-4xl py-12 md:mx-0">
+          <div className="w-full max-w-6xl ml-8">
             {timeline.map((item, index) => (
               <div
                 key={index}
@@ -278,7 +273,7 @@ export default function Projects() {
                 w-14 h-14 md:w-16 md:h-16 shrink-0
                 rounded-full bg-white dark:bg-[#0A0A0B]
                 border-[3px] border-zinc-200 dark:border-zinc-800
-                group-hover:border-purple-500/50 transition-all duration-500
+                transition-all duration-500
                 shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:shadow-[0_0_20px_rgba(0,0,0,0.5)]
                 overflow-hidden p-2"
                 >
@@ -301,7 +296,7 @@ export default function Projects() {
                     {item.company}
                   </p>
 
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400 pt-2">
+                  <p className="text-xs md:text-sm text-zinc-500 dark:text-zinc-400 pt-2">
                     {item.description}
                   </p>
                 </div>
@@ -322,6 +317,8 @@ export default function Projects() {
                         whitespace-nowrap
                         
                         dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5
+
+                        hover:border-[#7c3aed]/40 hover:text-[#c084fc] hover:dark:bg-[#7c3aed]/5
                         transition-all duration-300 ease-in-out
                         
                         cursor-pointer

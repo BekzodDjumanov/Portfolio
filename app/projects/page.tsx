@@ -7,6 +7,10 @@ import { RollingText } from "@/components/ui/skiper-ui/skiper58";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { FaChevronDown } from "react-icons/fa6";
 import { Link001 } from "@/components/ui/skiper-ui/skiper40";
+import { TbPointFilled } from "react-icons/tb";
+import { FaGithubAlt } from "react-icons/fa";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { Code } from "lucide-react";
 
 import Link from "next/link";
 
@@ -205,18 +209,581 @@ export default function Projects() {
       {/* MAIN CONTENT HERE */}
       <main
         ref={containerRef}
-        className="flex-1 flex flex-col items-center gap- mt-10 px-4 py-1 m-auto"
+        className="flex-1 flex flex-col items-center mt-10 px-4 py-1"
       >
-        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 py-20 md:py-32 px-4">
-          <div className="text-center text-sm text-[#121212] dark:text-[#ffffff] tracking-[.2em]">
-            PROJECTS
+        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center py-20 md:py-32 px-4">
+          {/* Heading & Subtext - Using ml-8 to match your Reviews style */}
+          <div className="w-full flex flex-col gap-4 ml-8 mb-12">
+            <h1 className="flex items-center gap-3 text-3xl">
+              <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
+              projects
+            </h1>
+
+            <p className="text-md text-zinc-500 max-w-prose">
+              My captivating and illustrious works of art that bewilder any
+              entity that observes. With my power, I harnesss capabilities
+              beyond human perception or understanding.
+            </p>
+          </div>
+
+          {/* FIRST PROJECT */}
+
+          <div className="w-full max-w-5xl mx-auto lg:ml-8 flex items-center gap-4 mb-5 opacity-50">
+            <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-zinc-500 whitespace-nowrap">
+              Project 1 — AI & Machine Learning
+            </span>
+          </div>
+
+          <div
+            className="
+              group relative flex flex-col lg:flex-row gap-8 
+              p-5 md:p-8 rounded-[2rem]
+              bg-zinc-100/50 dark:bg-white/[0.03]
+              border border-black/5 dark:border-white/10
+              transition-all duration-500 ease-in-out
+              w-full max-w-5xl mx-auto lg:ml-4 shadow-lg
+          "
+          >
+            {/* Left Side - Project Video/Preview */}
+            <div className="relative w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-200 dark:bg-zinc-900">
+              <video
+                src="/videos/project2.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+              />
+            </div>
+
+            {/* Right Side - Content */}
+            <div className="flex flex-col justify-between w-full lg:w-1/2 space-y-6">
+              <div>
+                <h3 className="text-xl text-[#000000] dark:text-[#ffffff] lg:text-left text-center">
+                  Online IDE Compiler
+                </h3>
+
+                {/* Bullet Points */}
+                <ul className="mt-4 space-y-3">
+                  {[
+                    "Architected a Flask REST API utilizing OpenAI’s Whisper models to deliver high-accuracy transcription across 99+ languages",
+                    "Integrated JavaScript fetch and async handlers to enable real-time file processing and seamless client-server interaction",
+                    "Designed a high-performance frontend pipeline for uninterrupted user sessions and optimized audio data handling",
+                  ].map((point, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400"
+                    >
+                      <div className="dark:text-[#ffffff] text-[#000000]">
+                        <TbPointFilled />
+                      </div>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mt-6 lg:justify-start justify-center">
+                  {[
+                    "Python",
+                    "Flask",
+                    "JavaScript",
+                    "HTML",
+                    "CSS",
+                    "Whisper AI",
+                    "FFmpeg",
+                    "MongoDB",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full dark:text-purple-300
+                      text-zinc-500 dark:text-zinc-400 
+                      
+                      bg-zinc-100/50 dark:bg-white/[0.03] 
+                      
+                      border border-black/5 dark:border-white/10 
+                      
+                      text-sm font-medium 
+                      
+                      dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Action Button */}
+              <div className="flex gap-3 lg:justify-start justify-center">
+                {/* Source Code Button */}
+                <button
+                  className="
+                  group/btn flex items-center justify-center gap-2 
+                  w-fit px-4 py-2 rounded-xl
+                  text-zinc-400 dark:text-zinc-400 
+                  bg-zinc-100/50 dark:bg-white/[0.02] 
+                  border border-black/5 dark:border-white/10 
+                  text-sm font-medium transition-all duration-300
+                  
+                  /* Vampire Purple Hover State */
+                  dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5
+                  transition-all duration-300 ease-in-out
+                  
+                  hover:scale-[1.02] active:scale-95
+                  cursor-pointer
+                "
+                >
+                  <FaGithubAlt className="group-hover/btn:rotate-12 transition-transform duration-300" />
+                  <span>Source Code</span>
+                </button>
+
+                {/* Live Demo Button (Primary Action) */}
+                <button
+                  className="
+                    group/btn flex items-center justify-center gap-2 
+                    w-fit px-4 py-2 rounded-xl
+                    
+                    text-violet-600 dark:text-violet-400
+
+                    bg-violet-100/70 dark:bg-violet-500/10
+
+                    border border-violet-300/60 dark:border-violet-400/30
+
+                    text-xs font-medium md:text-sm
+                    whitespace-nowrap
+
+                    hover:bg-violet-200/70 dark:hover:bg-violet-500/20
+                    hover:border-violet-400 dark:hover:border-violet-400
+                    transition-all duration-300 ease-in-out
+      
+                    hover:scale-[1.05] active:scale-95
+                    cursor-pointer
+    "
+                >
+                  <FaArrowUpRightFromSquare className="text-xs group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
+                  <span>Live Demo</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* SECOND PROJECT */}
+
+          <div className="w-full max-w-5xl mx-auto lg:ml-8 flex items-center gap-4 my-12 translate-y-7 opacity-50">
+            <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-zinc-500 whitespace-nowrap">
+              Project 2 — Frontend & Education
+            </span>
+          </div>
+
+          <div
+            className="
+            group relative flex flex-col lg:flex-row gap-8 
+            p-5 md:p-8 rounded-[2rem]
+            bg-zinc-100/50 dark:bg-white/[0.03]
+            border border-black/5 dark:border-white/10
+            transition-all duration-500 ease-in-out
+            w-full max-w-5xl mx-auto lg:ml-4 shadow-lg
+"
+          >
+            {/* Left Side - Project Video/Preview */}
+            <div className="relative w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-200 dark:bg-zinc-900">
+              <video
+                src="/videos/project4.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+              />
+            </div>
+
+            {/* Right Side - Content */}
+            <div className="flex flex-col justify-between w-full lg:w-1/2 space-y-6">
+              <div>
+                <h3 className="text-xl text-[#000000] dark:text-[#ffffff] lg:text-left text-center">
+                  GitLearn | Git & GitHub Academy
+                </h3>
+
+                {/* Bullet Points */}
+                <ul className="mt-4 space-y-3">
+                  {[
+                    "Deployed a fully responsive educational platform focused on Git and GitHub fundamentals, with purpose-driven, curated learning modules",
+                    "Engineered a scalable front end using HTML, CSS, and JavaScript to support high-traffic user requests",
+                    "Crafted a modern, intuitive UI/UX to enhance site appeal and drive learner engagement and content growth",
+                  ].map((point, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400"
+                    >
+                      <div className="dark:text-[#ffffff] text-[#000000]">
+                        <TbPointFilled />
+                      </div>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mt-6 lg:justify-start justify-center">
+                  {["HTML", "CSS", "JavaScript", "GSAP", "Figma"].map(
+                    (tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full dark:text-purple-300
+                      text-zinc-500 dark:text-zinc-400 
+                      
+                      bg-zinc-100/50 dark:bg-white/[0.03] 
+                      
+                      border border-black/5 dark:border-white/10 
+                      
+                      text-sm font-medium 
+                      
+                      dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5"
+                      >
+                        {tech}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
+
+              {/* Action Button */}
+              <div className="flex gap-3 lg:justify-start justify-center">
+                {/* Source Code Button */}
+                <button
+                  className="
+                  group/btn flex items-center justify-center gap-2 
+                  w-fit px-4 py-2 rounded-xl
+                  text-zinc-400 dark:text-zinc-400 
+                  bg-zinc-100/50 dark:bg-white/[0.02] 
+                  border border-black/5 dark:border-white/10 
+                  text-sm font-medium transition-all duration-300
+                  
+                  /* Vampire Purple Hover State */
+                  dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5
+                  transition-all duration-300 ease-in-out
+                  
+                  hover:scale-[1.02] active:scale-95
+                  cursor-pointer
+                "
+                >
+                  <FaGithubAlt className="group-hover/btn:rotate-12 transition-transform duration-300" />
+                  <span>Source Code</span>
+                </button>
+
+                {/* Live Demo Button (Primary Action) */}
+                <button
+                  className="
+                    group/btn flex items-center justify-center gap-2 
+                    w-fit px-4 py-2 rounded-xl
+                    
+                    text-violet-600 dark:text-violet-400
+
+                    bg-violet-100/70 dark:bg-violet-500/10
+
+                    border border-violet-300/60 dark:border-violet-400/30
+
+                    text-xs font-medium md:text-sm
+                    whitespace-nowrap
+
+                    hover:bg-violet-200/70 dark:hover:bg-violet-500/20
+                    hover:border-violet-400 dark:hover:border-violet-400
+                    transition-all duration-300 ease-in-out
+      
+                    hover:scale-[1.05] active:scale-95
+                    cursor-pointer
+    "
+                >
+                  <FaArrowUpRightFromSquare className="text-xs group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
+                  <span>Live Demo</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* THIRD PROJECT */}
+
+          <div className="w-full max-w-5xl mx-auto lg:ml-8 flex items-center gap-4 my-12 translate-y-7 opacity-50">
+            <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-zinc-500 whitespace-nowrap">
+              Project 3 — Backend & Docker
+            </span>
+          </div>
+
+          <div
+            className="
+            group relative flex flex-col lg:flex-row gap-8 
+            p-5 md:p-8 rounded-[2rem]
+            bg-zinc-100/50 dark:bg-white/[0.03]
+            border border-black/5 dark:border-white/10
+            transition-all duration-500 ease-in-out
+            w-full max-w-5xl mx-auto lg:ml-4 shadow-lg
+"
+          >
+            {/* Left Side - Project Video/Preview */}
+            <div className="relative w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-200 dark:bg-zinc-900">
+              <video
+                src="/videos/project3.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+              />
+            </div>
+
+            {/* Right Side - Content */}
+            <div className="flex flex-col justify-between w-full lg:w-1/2 space-y-6">
+              <div>
+                <h3 className="text-xl text-[#000000] dark:text-[#ffffff] lg:text-left text-center">
+                  Online IDE Compiler
+                </h3>
+
+                {/* Bullet Points */}
+                <ul className="mt-4 space-y-3">
+                  {[
+                    "Architected a real-time IDE using Flask and JavaScript, enabling seamless server-side execution of Python code",
+                    "Optimized request handling to deliver instantaneous, 100% accurate code-to-output conversion",
+                    "Engineered a modern, high-performance interface focused on developer productivity and low-latency interactions",
+                  ].map((point, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400"
+                    >
+                      <div className="dark:text-[#ffffff] text-[#000000]">
+                        <TbPointFilled />
+                      </div>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mt-6 lg:justify-start justify-center">
+                  {[
+                    "Python",
+                    "Flask",
+                    "JavaScript",
+                    "HTML",
+                    "CSS",
+                    "GSAP",
+                    "Docker",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full dark:text-purple-300
+                      text-zinc-500 dark:text-zinc-400 
+                      
+                      bg-zinc-100/50 dark:bg-white/[0.03] 
+                      
+                      border border-black/5 dark:border-white/10 
+                      
+                      text-sm font-medium 
+                      
+                      dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Action Button */}
+              <div className="flex gap-3 lg:justify-start justify-center">
+                {/* Source Code Button */}
+                <button
+                  className="
+                  group/btn flex items-center justify-center gap-2 
+                  w-fit px-4 py-2 rounded-xl
+                  text-zinc-400 dark:text-zinc-400 
+                  bg-zinc-100/50 dark:bg-white/[0.02] 
+                  border border-black/5 dark:border-white/10 
+                  text-sm font-medium transition-all duration-300
+                  
+                  /* Vampire Purple Hover State */
+                  dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5
+                  transition-all duration-300 ease-in-out
+                  
+                  hover:scale-[1.02] active:scale-95
+                  cursor-pointer
+                "
+                >
+                  <FaGithubAlt className="group-hover/btn:rotate-12 transition-transform duration-300" />
+                  <span>Source Code</span>
+                </button>
+
+                {/* Live Demo Button (Primary Action) */}
+                <button
+                  className="
+                    group/btn flex items-center justify-center gap-2 
+                    w-fit px-4 py-2 rounded-xl
+                    
+                    text-violet-600 dark:text-violet-400
+
+                    bg-violet-100/70 dark:bg-violet-500/10
+
+                    border border-violet-300/60 dark:border-violet-400/30
+
+                    text-xs font-medium md:text-sm
+                    whitespace-nowrap
+
+                    hover:bg-violet-200/70 dark:hover:bg-violet-500/20
+                    hover:border-violet-400 dark:hover:border-violet-400
+                    transition-all duration-300 ease-in-out
+      
+                    hover:scale-[1.05] active:scale-95
+                    cursor-pointer
+    "
+                >
+                  <FaArrowUpRightFromSquare className="text-xs group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
+                  <span>Live Demo</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* FOURTH PROJECT */}
+
+          <div className="w-full max-w-5xl mx-auto lg:ml-8 flex items-center gap-4 my-12 translate-y-7 opacity-50">
+            <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-zinc-500">
+              Project 4 — Machine Learning & Reinforcement Learning
+            </span>
+          </div>
+
+          <div
+            className="
+            group relative flex flex-col lg:flex-row gap-8 
+            p-5 md:p-8 rounded-[2rem]
+            bg-zinc-100/50 dark:bg-white/[0.03]
+            border border-black/5 dark:border-white/10
+            transition-all duration-500 ease-in-out
+            w-full max-w-5xl mx-auto lg:ml-4 shadow-lg
+"
+          >
+            {/* Left Side - Project Video/Preview */}
+            <div className="relative w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-200 dark:bg-zinc-900">
+              <video
+                src="/videos/project1.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+              />
+            </div>
+
+            {/* Right Side - Content */}
+            <div className="flex flex-col justify-between w-full lg:w-1/2 space-y-6">
+              <div>
+                <h3 className="text-xl text-[#000000] dark:text-[#ffffff] lg:text-left text-center">
+                  EPL Football Match Predictor
+                </h3>
+
+                {/* Bullet Points */}
+                <ul className="mt-4 space-y-3">
+                  {[
+                    "Engineered an ML pipeline to forecast EPL outcomes using team metrics and schedule dynamics",
+                    "Achieved 91% precision and 81% accuracy through feature engineering and threshold optimization",
+                    "Refined classification thresholds to minimize false positives and enhance model reliability",
+                  ].map((point, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400"
+                    >
+                      <div className="dark:text-[#ffffff] text-[#000000]">
+                        <TbPointFilled />
+                      </div>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mt-6 lg:justify-start justify-center">
+                  {[
+                    "Python",
+                    "Jupyter",
+                    "scikit-learn",
+                    "pandas",
+                    "BeautifulSoup",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full dark:text-purple-300
+                      text-zinc-500 dark:text-zinc-400 
+                      
+                      bg-zinc-100/50 dark:bg-white/[0.03] 
+                      
+                      border border-black/5 dark:border-white/10 
+                      
+                      text-sm font-medium 
+                      
+                      dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Action Button */}
+              <div className="flex gap-3 lg:justify-start justify-center">
+                {/* Source Code Button */}
+                <button
+                  className="
+                  group/btn flex items-center justify-center gap-2 
+                  w-fit px-4 py-2 rounded-xl
+                  text-zinc-400 dark:text-zinc-400 
+                  bg-zinc-100/50 dark:bg-white/[0.02] 
+                  border border-black/5 dark:border-white/10 
+                  text-sm font-medium transition-all duration-300
+                  
+                  /* Vampire Purple Hover State */
+                  dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5
+                  transition-all duration-300 ease-in-out
+                  
+                  hover:scale-[1.02] active:scale-95
+                  cursor-pointer
+                "
+                >
+                  <FaGithubAlt className="group-hover/btn:rotate-12 transition-transform duration-300" />
+                  <span>Source Code</span>
+                </button>
+
+                {/* Live Demo Button (Primary Action) */}
+                <button
+                  className="
+                    group/btn flex items-center justify-center gap-2 
+                    w-fit px-4 py-2 rounded-xl
+                    
+                    text-violet-600 dark:text-violet-400
+
+                    bg-violet-100/70 dark:bg-violet-500/10
+
+                    border border-violet-300/60 dark:border-violet-400/30
+
+                    text-xs font-medium md:text-sm
+                    whitespace-nowrap
+
+                    hover:bg-violet-200/70 dark:hover:bg-violet-500/20
+                    hover:border-violet-400 dark:hover:border-violet-400
+                    transition-all duration-300 ease-in-out
+      
+                    hover:scale-[1.05] active:scale-95
+                    cursor-pointer
+    "
+                >
+                  <FaArrowUpRightFromSquare className="text-xs group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
+                  <span>Live Demo</span>
+                </button>
+              </div>
+            </div>
           </div>
         </section>
       </main>
 
       <footer
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-wrap justify-between items-start gap-y-8 w-full relative 
-  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
+  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -my-10"
       >
         {/* Brand Section */}
         <div className="footer-brand">

@@ -698,7 +698,7 @@ export default function Projects() {
       {/* MAIN CONTENT HERE */}
       <main
         ref={containerRef}
-        className="flex-1 flex flex-col items-center gap- mt-10 px-4 py-1 m-auto"
+        className="flex-1 flex flex-col items-center mt-10 px-4 py-1 m-auto"
       >
         <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center gap-12 py-20 md:py-32 px-4">
           <div className="w-full flex flex-col gap-4 ml-8">
