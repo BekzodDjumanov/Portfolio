@@ -52,7 +52,7 @@ export default function Projects() {
 
     gsap.fromTo(
       containerRef.current.querySelectorAll(".fade-in"),
-      { opacity: 0, y: -20, filter: "blur(10px)" },
+      { opacity: 0, y: -10, filter: "blur(10px)" },
       {
         opacity: 1,
         y: 0,
@@ -70,7 +70,7 @@ export default function Projects() {
     { label: "Resume", href: "/resume" },
     { label: "Projects", href: "/projects" },
     { label: "Reviews", href: "/reviews" },
-    { label: "Contacts", href: "/contact" },
+    { label: "About", href: "/about" },
   ];
 
   return (
@@ -134,8 +134,8 @@ export default function Projects() {
             <Link href="/reviews" className="transition-all duration-300">
               <RollingText>Reviews</RollingText>
             </Link>
-            <Link href="/contact" className="transition-all duration-300">
-              <RollingText>Contact</RollingText>
+            <Link href="/about" className="transition-all duration-300">
+              <RollingText>About</RollingText>
             </Link>
           </nav>
         </div>
@@ -173,11 +173,11 @@ export default function Projects() {
                 <RollingText>Reviews</RollingText>
               </Link>
               <Link
-                href="/contact"
+                href="/about"
                 onClick={() => setIsOpen(false)}
                 className="transition-colors"
               >
-                <RollingText>Contact</RollingText>
+                <RollingText>About</RollingText>
               </Link>
             </nav>
           </div>
@@ -205,20 +205,67 @@ export default function Projects() {
       {/* MAIN CONTENT HERE */}
       <main
         ref={containerRef}
-        className="flex-1 flex flex-col items-center justify-center mt-10 px-4 py-1 m-auto"
+        className="flex-1 flex flex-col items-center mt-10 px-4 py-1"
       >
-        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex items-center justify-center py-20 md:py-32 px-4">
-          <div className="text-sm text-[#121212] dark:text-[#ffffff] tracking-[.2em]">
-            SOON
+        <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center py-20 md:py-32 px-4">
+          {/* Heading & Subtext - Using ml-8 to match your Reviews style */}
+          <div className="w-full flex flex-col gap-4 ml-8 mb-12">
+            <h1 className="flex items-center gap-3 text-3xl">
+              <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
+              about me
+            </h1>
+
+            <p className="fade-in opacity-0 text-lg max-w-prose dark:text-zinc-400">
+              Hey, I'm Bekzod Djumanov.
+            </p>
+
+            <p className="fade-in opacity-0 text-lg max-w-prose dark:text-zinc-400">
+              I'm currently studying at the{" "}
+              <Link
+                href="https://www.usnews.com/best-colleges/university-of-maryland-2103"
+                className="text-purple-400 italic"
+              >
+                University of Maryland
+              </Link>
+              , with a major in Computer Engineering in the A. James Clark
+              School of Engineering.
+            </p>
+
+            <p className="fade-in opacity-0 text-lg max-w-prose dark:text-zinc-400">
+              I will be taking the role as a Cloud Software Developer at{" "}
+              <Link href="https://caci.com" className="text-purple-400 italic">
+                CACI
+              </Link>
+              , a contractor that delivers solutions to the Department of
+              Defense and Department of Homeland Security.
+            </p>
+
+            <p className="fade-in opacity-0 text-lg max-w-prose dark:text-zinc-400">
+              In my{" "}
+              <Link href="/projects" className="text-purple-400 italic">
+                projects
+              </Link>
+              , I have leveraged the cloud and AI automation in order to deliver
+              scalable, reliable, and secure products.
+            </p>
+
+            <p className="fade-in opacity-0 text-lg max-w-prose dark:text-zinc-400">
+              I am continuously building and expanding my knowledge in software
+              infrastructure, cloud automation, artificial intelligence, and
+              machine learning.
+            </p>
+
+            <p className="fade-in opacity-0 text-lg max-w-prose dark:text-zinc-400">
+              I think this is what we must do as humans.
+            </p>
           </div>
         </section>
       </main>
 
-      {/*<footer
+      <footer
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-wrap justify-between items-start gap-y-8 w-full relative 
-  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
+  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -mt-20"
       >
-
         <div className="footer-brand">
           <div className="mt-2 flex gap-2 items-center">
             <ShinyButton className="flex items-center gap-2">
@@ -244,7 +291,6 @@ export default function Projects() {
           ))}
         </div>
 
-
         <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
           <a
             href="#"
@@ -261,7 +307,6 @@ export default function Projects() {
           </a>
         </div>
 
-
         <div className="footer-line w-full h-[1px] bg-white/10 my-4"></div>
 
         <div className="ending-credit w-full text-center text-[#7b7c8c] text-xs">
@@ -269,7 +314,6 @@ export default function Projects() {
           Figma.
         </div>
       </footer>
-      */}
     </div>
   );
 }

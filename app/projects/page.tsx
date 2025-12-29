@@ -74,7 +74,7 @@ export default function Projects() {
     { label: "Resume", href: "/resume" },
     { label: "Projects", href: "/projects" },
     { label: "Reviews", href: "/reviews" },
-    { label: "Contacts", href: "/contact" },
+    { label: "About", href: "/about" },
   ];
 
   return (
@@ -138,8 +138,8 @@ export default function Projects() {
             <Link href="/reviews" className="transition-all duration-300">
               <RollingText>Reviews</RollingText>
             </Link>
-            <Link href="/contact" className="transition-all duration-300">
-              <RollingText>Contact</RollingText>
+            <Link href="/about" className="transition-all duration-300">
+              <RollingText>About</RollingText>
             </Link>
           </nav>
         </div>
@@ -177,11 +177,11 @@ export default function Projects() {
                 <RollingText>Reviews</RollingText>
               </Link>
               <Link
-                href="/contact"
+                href="/about"
                 onClick={() => setIsOpen(false)}
                 className="transition-colors"
               >
-                <RollingText>Contact</RollingText>
+                <RollingText>About</RollingText>
               </Link>
             </nav>
           </div>
@@ -260,7 +260,7 @@ export default function Projects() {
             <div className="flex flex-col justify-between w-full lg:w-1/2 space-y-6">
               <div>
                 <h3 className="text-xl text-[#000000] dark:text-[#ffffff] lg:text-left text-center">
-                  Online IDE Compiler
+                  AI Speech-to-Text Converter
                 </h3>
 
                 {/* Bullet Points */}
@@ -334,7 +334,9 @@ export default function Projects() {
                 "
                 >
                   <FaGithubAlt className="group-hover/btn:rotate-12 transition-transform duration-300" />
-                  <span>Source Code</span>
+                  <Link href="https://github.com/BekzodDjumanov/ML-EPL">
+                    Source Code
+                  </Link>
                 </button>
 
                 {/* Live Demo Button (Primary Action) */}
@@ -361,7 +363,9 @@ export default function Projects() {
     "
                 >
                   <FaArrowUpRightFromSquare className="text-xs group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
-                  <span>Live Demo</span>
+                  <Link href="https://speechtotext.up.railway.app/">
+                    Live Demo
+                  </Link>
                 </button>
               </div>
             </div>
@@ -371,7 +375,7 @@ export default function Projects() {
 
           <div className="w-full max-w-5xl mx-auto lg:ml-8 flex items-center gap-4 my-12 translate-y-7 opacity-50">
             <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-zinc-500 whitespace-nowrap">
-              Project 2 — Frontend & Education
+              Project 2 — Frontend
             </span>
           </div>
 
@@ -468,7 +472,9 @@ export default function Projects() {
                 "
                 >
                   <FaGithubAlt className="group-hover/btn:rotate-12 transition-transform duration-300" />
-                  <span>Source Code</span>
+                  <Link href="https://github.com/BekzodDjumanov/GitLearn">
+                    Source Code
+                  </Link>
                 </button>
 
                 {/* Live Demo Button (Primary Action) */}
@@ -495,7 +501,7 @@ export default function Projects() {
     "
                 >
                   <FaArrowUpRightFromSquare className="text-xs group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
-                  <span>Live Demo</span>
+                  <Link href="https://gitlearn.org/">Live Demo</Link>
                 </button>
               </div>
             </div>
@@ -505,7 +511,7 @@ export default function Projects() {
 
           <div className="w-full max-w-5xl mx-auto lg:ml-8 flex items-center gap-4 my-12 translate-y-7 opacity-50">
             <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-zinc-500 whitespace-nowrap">
-              Project 3 — Backend & Docker
+              Project 3 — Backend
             </span>
           </div>
 
@@ -608,7 +614,9 @@ export default function Projects() {
                 "
                 >
                   <FaGithubAlt className="group-hover/btn:rotate-12 transition-transform duration-300" />
-                  <span>Source Code</span>
+                  <Link href="https://github.com/BekzodDjumanov/OnlineIDE">
+                    Source Code
+                  </Link>
                 </button>
 
                 {/* Live Demo Button (Primary Action) */}
@@ -635,7 +643,9 @@ export default function Projects() {
     "
                 >
                   <FaArrowUpRightFromSquare className="text-xs group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
-                  <span>Live Demo</span>
+                  <Link href="https://onlineide-main.onrender.com/">
+                    Live Demo
+                  </Link>
                 </button>
               </div>
             </div>

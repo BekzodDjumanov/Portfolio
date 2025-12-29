@@ -71,7 +71,7 @@ export default function Projects() {
     { label: "Resume", href: "/resume" },
     { label: "Projects", href: "/projects" },
     { label: "Reviews", href: "/reviews" },
-    { label: "Contacts", href: "/contact" },
+    { label: "About", href: "/about" },
   ];
 
   const timeline = [
@@ -81,15 +81,15 @@ export default function Projects() {
       company: "eBay Enterprise",
       logo: "/images/ebay.png",
       description:
-        "Pursuing a B.S. in Computer Engineering with a focus on embedded systems and software architecture.",
+        "Generated $150,000+ in gross revenue by optimizing SEO and scaling product listings, increasing gross margin by 21.",
     },
     {
-      date: "May 2026 — UNKNOWN",
+      date: "May 2026 — ???",
       role: "Cloud Software Developer Intern",
       company: "CACI International",
       logo: "/images/caci.png",
       description:
-        "Worked on frontend systems, internal tooling, and performance optimizations.",
+        "Internship for Summer 2026, where I will be contributing to cloud initiatives lead by CACI and their innovations.",
     },
     {
       date: "May 2025 — Sep 2025",
@@ -97,7 +97,7 @@ export default function Projects() {
       company: "Cummings & Co. Realtors",
       logo: "/images/cummings.png",
       description:
-        "Built internal dashboards and supported legacy systems during migration.",
+        "Working closely with core employees in order to deliver impactful results to our clients. Handling consumer data and increasing user metrics.",
     },
     {
       date: "Jan 2024 — May 2024",
@@ -105,7 +105,7 @@ export default function Projects() {
       company: "First Financial Credit Union",
       logo: "/images/fffcu.png",
       description:
-        "Built internal dashboards and supported legacy systems during migration.",
+        "Played significant role in evaluating statewide cybersecurity awareness and working closely with associate members, providing effective and steadfast solutions.",
     },
   ];
 
@@ -170,8 +170,8 @@ export default function Projects() {
             <Link href="/reviews" className="transition-all duration-300">
               <RollingText>Reviews</RollingText>
             </Link>
-            <Link href="/contact" className="transition-all duration-300">
-              <RollingText>Contact</RollingText>
+            <Link href="/about" className="transition-all duration-300">
+              <RollingText>About</RollingText>
             </Link>
           </nav>
         </div>
@@ -209,11 +209,11 @@ export default function Projects() {
                 <RollingText>Reviews</RollingText>
               </Link>
               <Link
-                href="/contact"
+                href="/about"
                 onClick={() => setIsOpen(false)}
                 className="transition-colors"
               >
-                <RollingText>Contact</RollingText>
+                <RollingText>About</RollingText>
               </Link>
             </nav>
           </div>

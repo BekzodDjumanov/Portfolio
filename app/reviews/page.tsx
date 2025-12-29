@@ -71,7 +71,7 @@ export default function Projects() {
     { label: "Resume", href: "/resume" },
     { label: "Projects", href: "/projects" },
     { label: "Reviews", href: "/reviews" },
-    { label: "Contacts", href: "/contact" },
+    { label: "About", href: "/about" },
   ];
 
   const testimonials = [
@@ -627,8 +627,8 @@ export default function Projects() {
             <Link href="/reviews" className="transition-all duration-300">
               <RollingText>Reviews</RollingText>
             </Link>
-            <Link href="/contact" className="transition-all duration-300">
-              <RollingText>Contact</RollingText>
+            <Link href="/about" className="transition-all duration-300">
+              <RollingText>About</RollingText>
             </Link>
           </nav>
         </div>
@@ -666,11 +666,11 @@ export default function Projects() {
                 <RollingText>Reviews</RollingText>
               </Link>
               <Link
-                href="/contact"
+                href="/about"
                 onClick={() => setIsOpen(false)}
                 className="transition-colors"
               >
-                <RollingText>Contact</RollingText>
+                <RollingText>about</RollingText>
               </Link>
             </nav>
           </div>

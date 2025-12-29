@@ -150,7 +150,7 @@ export default function Home() {
     { label: "Resume", href: "/resume" },
     { label: "Projects", href: "/projects" },
     { label: "Reviews", href: "/reviews" },
-    { label: "Contacts", href: "/contact" },
+    { label: "About", href: "/about" },
   ];
 
   return (
@@ -214,8 +214,8 @@ export default function Home() {
             <Link href="/reviews" className="transition-all duration-300">
               <RollingText>Reviews</RollingText>
             </Link>
-            <Link href="/contact" className="transition-all duration-300">
-              <RollingText>Contact</RollingText>
+            <Link href="/about" className="transition-all duration-300">
+              <RollingText>About</RollingText>
             </Link>
           </nav>
         </div>
@@ -253,11 +253,11 @@ export default function Home() {
                 <RollingText>Reviews</RollingText>
               </Link>
               <Link
-                href="/contact"
+                href="/about"
                 onClick={() => setIsOpen(false)}
                 className="transition-colors"
               >
-                <RollingText>Contact</RollingText>
+                <RollingText>About</RollingText>
               </Link>
             </nav>
           </div>
@@ -306,11 +306,11 @@ export default function Home() {
             </div>
 
             <div className="space-y-4 max-w-xl mx-auto md:mx-0 opacity-0 fade-in">
-              <p className="text-lg md:text-xl leading-relaxed opacity-90 -mt-2">
+              <p className="text-lg md:text-xl leading-relaxed -mt-2">
                 Current student at the University of Maryland, specializing in
                 Computer Engineering.
               </p>
-              <p className="text-sm md:text-base opacity-60 leading-relaxed opacity-0 fade-in">
+              <p className="text-sm md:text-base dark:text-zinc-500 leading-relaxed opacity-0 fade-in">
                 Carroll Community College Summa Cum Laude Alumni,{" "}
                 <br className="hidden md:block" /> holding an Associate of Arts
                 in Computer Science.
@@ -346,7 +346,8 @@ export default function Home() {
               )}
             </div>
             <div className="opacity-0 fade-in flex justify-center md:justify-center lg:justify-start gap-4 w-full pt-4 -mt-4">
-              <div
+              <Link
+                href="https://github.com/BekzodDjumanov"
                 className="group flex items-center justify-center w-11 h-11 
     rounded-full bg-white/5 dark:bg-[#000000]/40 
     backdrop-blur-md border border-white/20 dark:border-white/10 
@@ -360,9 +361,10 @@ export default function Home() {
     group-hover:text-black dark:group-hover:text-purple-400
     group-hover:opacity-100 group-hover:scale-110"
                 />
-              </div>
+              </Link>
 
-              <div
+              <Link
+                href="https://www.linkedin.com/in/bekzod-djumanov/"
                 className="group flex items-center justify-center w-11 h-11 
     rounded-full bg-white/5 dark:bg-[#000000]/40 
     backdrop-blur-md border border-white/20 dark:border-white/10 
@@ -375,7 +377,7 @@ export default function Home() {
     transition-all duration-300 dark:group-hover:text-purple-400
     group-hover:text-[#000000] group-hover:opacity-100 group-hover:scale-110"
                 />
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -862,19 +864,19 @@ export default function Home() {
 
         {/* Social Section */}
         <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
-          <a
-            href="#"
+          <Link
+            href="https://github.com/BekzodDjumanov"
             className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
           >
             <FaGithub />
-          </a>
+          </Link>
 
-          <a
-            href="#"
+          <Link
+            href="https://www.linkedin.com/in/bekzod-djumanov/"
             className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
           >
             <FaLinkedin />
-          </a>
+          </Link>
         </div>
 
         {/* Line */}
