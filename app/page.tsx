@@ -797,26 +797,14 @@ export default function Home() {
                 className="group relative flex items-center justify-center w-[150px] h-[52px] 
       transition-all duration-500 active:scale-95 cursor-pointer outline-none 
       rounded-xl overflow-hidden dark:bg-[#0A0118] border dark:border-[#4c1d95]/40 border-black/10
-      hover:border-[#a855f7]/60 hover:shadow-[0_0_30px_rgba(76,29,149,0.3)] shadow-lg"
+      hover:border-[#a855f7]/60 shadow-lg"
                 type="submit"
               >
-                {/* Radiant Background Glow */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500
-      bg-[radial-gradient(circle_at_center,_rgba(124,58,237,0.15)_0%,_transparent_70%)]"
-                />
-
-                {/* Bottom Energy Line */}
-                <div
-                  className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#a855f7] to-transparent 
-      translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"
-                />
-
                 {/* Centered Text Container */}
                 <div className="relative z-20 flex items-center justify-center w-full">
                   <p
-                    className="m-0 p-0 text-[14px] font-bold tracking-[0.2em] uppercase
-        dark:text-[#F3E8FF] group-hover:text-white transition-colors duration-300
+                    className="m-0 p-0 text-[14px] tracking-[0.2em] uppercase
+        dark:text-[#F3E8FF] group-hover:text-white transition-all duration-300
         group-hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.6)]"
                   >
                     Submit
@@ -855,7 +843,7 @@ export default function Home() {
             <Link001
               key={i}
               href={link.href}
-              className="dark:text-white hover:text-purple-400"
+              className="dark:text-white dark:hover:text-purple-400 hover:text-purple-400"
             >
               {link.label}
             </Link001>

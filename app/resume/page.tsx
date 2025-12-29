@@ -362,7 +362,7 @@ export default function Projects() {
             <Link001
               key={i}
               href={link.href}
-              className="dark:text-white hover:text-purple-400"
+              className="dark:text-white dark:hover:text-purple-400 hover:text-purple-400"
             >
               {link.label}
             </Link001>
