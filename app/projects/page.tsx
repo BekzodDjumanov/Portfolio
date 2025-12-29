@@ -334,7 +334,7 @@ export default function Projects() {
                 "
                 >
                   <FaGithubAlt className="group-hover/btn:rotate-12 transition-transform duration-300" />
-                  <Link href="https://github.com/BekzodDjumanov/ML-EPL">
+                  <Link href="https://github.com/BekzodDjumanov/SpeechToText">
                     Source Code
                   </Link>
                 </button>
@@ -756,34 +756,9 @@ export default function Projects() {
                 "
                 >
                   <FaGithubAlt className="group-hover/btn:rotate-12 transition-transform duration-300" />
-                  <span>Source Code</span>
-                </button>
-
-                {/* Live Demo Button (Primary Action) */}
-                <button
-                  className="
-                    group/btn flex items-center justify-center gap-2 
-                    w-fit px-4 py-2 rounded-xl
-                    
-                    text-violet-600 dark:text-violet-400
-
-                    bg-violet-100/70 dark:bg-violet-500/10
-
-                    border border-violet-300/60 dark:border-violet-400/30
-
-                    text-xs font-medium md:text-sm
-                    whitespace-nowrap
-
-                    hover:bg-violet-200/70 dark:hover:bg-violet-500/20
-                    hover:border-violet-400 dark:hover:border-violet-400
-                    transition-all duration-300 ease-in-out
-      
-                    hover:scale-[1.05] active:scale-95
-                    cursor-pointer
-    "
-                >
-                  <FaArrowUpRightFromSquare className="text-xs group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
-                  <span>Live Demo</span>
+                  <Link href="https://github.com/BekzodDjumanov/ML-EPL">
+                    Source Code
+                  </Link>
                 </button>
               </div>
             </div>
