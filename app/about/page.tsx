@@ -67,10 +67,10 @@ export default function Projects() {
 
   const footerLinks = [
     { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Resume", href: "/resume" },
     { label: "Projects", href: "/projects" },
     { label: "Reviews", href: "/reviews" },
-    { label: "About", href: "/about" },
   ];
 
   return (
@@ -125,6 +125,9 @@ export default function Projects() {
             >
               <RollingText>Home</RollingText>
             </Link>
+            <Link href="/about" className="transition-all duration-300">
+              <RollingText>About</RollingText>
+            </Link>
             <Link href="/resume" className="transition-all duration-300">
               <RollingText>Resume</RollingText>
             </Link>
@@ -133,9 +136,6 @@ export default function Projects() {
             </Link>
             <Link href="/reviews" className="transition-all duration-300">
               <RollingText>Reviews</RollingText>
-            </Link>
-            <Link href="/about" className="transition-all duration-300">
-              <RollingText>About</RollingText>
             </Link>
           </nav>
         </div>
@@ -150,6 +150,13 @@ export default function Projects() {
                 className="transition-colors"
               >
                 <RollingText>Home</RollingText>
+              </Link>
+              <Link
+                href="/about"
+                onClick={() => setIsOpen(false)}
+                className="transition-colors"
+              >
+                <RollingText>About</RollingText>
               </Link>
               <Link
                 href="/resume"
@@ -171,13 +178,6 @@ export default function Projects() {
                 className="transition-colors"
               >
                 <RollingText>Reviews</RollingText>
-              </Link>
-              <Link
-                href="/about"
-                onClick={() => setIsOpen(false)}
-                className="transition-colors"
-              >
-                <RollingText>About</RollingText>
               </Link>
             </nav>
           </div>
@@ -223,7 +223,7 @@ export default function Projects() {
               I'm currently studying at the{" "}
               <Link
                 href="https://www.usnews.com/best-colleges/university-of-maryland-2103"
-                className="text-purple-400 italic"
+                className="text-purple-400 italic hover:text-purple-500 transition-all duration-300 ease-in-out"
               >
                 University of Maryland
               </Link>
@@ -233,7 +233,10 @@ export default function Projects() {
 
             <p className="fade-in opacity-0 text-lg max-w-prose dark:text-zinc-400">
               I will be taking the role as a Cloud Software Developer at{" "}
-              <Link href="https://caci.com" className="text-purple-400 italic">
+              <Link
+                href="https://caci.com"
+                className="text-purple-400 italic hover:text-purple-500 transition-all duration-300 ease-in-out"
+              >
                 CACI
               </Link>
               , a contractor that delivers solutions to the Department of
@@ -242,7 +245,10 @@ export default function Projects() {
 
             <p className="fade-in opacity-0 text-lg max-w-prose dark:text-zinc-400">
               In my{" "}
-              <Link href="/projects" className="text-purple-400 italic">
+              <Link
+                href="/projects"
+                className="text-purple-400 italic hover:text-purple-500 transition-all duration-300 ease-in-out"
+              >
                 projects
               </Link>
               , I have leveraged the cloud and AI automation in order to deliver
@@ -279,7 +285,7 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-22.5 text-sm">
+        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-40 text-sm">
           {footerLinks.map((link, i) => (
             <Link001
               key={i}
@@ -292,19 +298,19 @@ export default function Projects() {
         </div>
 
         <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
-          <a
-            href="#"
+          <Link
+            href="https://github.com/BekzodDjumanov"
             className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
           >
             <FaGithub />
-          </a>
+          </Link>
 
-          <a
-            href="#"
+          <Link
+            href="https://www.linkedin.com/in/bekzod-djumanov/"
             className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
           >
             <FaLinkedin />
-          </a>
+          </Link>
         </div>
 
         <div className="footer-line w-full h-[1px] bg-white/10 my-4"></div>

@@ -68,10 +68,10 @@ export default function Projects() {
 
   const footerLinks = [
     { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Resume", href: "/resume" },
     { label: "Projects", href: "/projects" },
     { label: "Reviews", href: "/reviews" },
-    { label: "About", href: "/about" },
   ];
 
   const timeline = [
@@ -81,7 +81,7 @@ export default function Projects() {
       company: "eBay Enterprise",
       logo: "/images/ebay.png",
       description:
-        "Generated $150,000+ in gross revenue by optimizing SEO and scaling product listings, increasing gross margin by 21.",
+        "Generated $150,000+ in gross revenue by optimizing SEO and scaling product listings, increasing gross margin by 21%.",
       website: "https://www.ebay.com",
       stock: "https://finance.yahoo.com/quote/EBAY",
     },
@@ -107,7 +107,7 @@ export default function Projects() {
     {
       date: "Jan 2024 — May 2024",
       role: "IT Administrator Intern",
-      company: "First Financial Credit Union",
+      company: "First Financial Federal Credit Union",
       logo: "/images/fffcu.png",
       description:
         "Played significant role in evaluating statewide cybersecurity awareness and working closely with associate members, providing effective and steadfast solutions.",
@@ -167,6 +167,9 @@ export default function Projects() {
             >
               <RollingText>Home</RollingText>
             </Link>
+            <Link href="/about" className="transition-all duration-300">
+              <RollingText>About</RollingText>
+            </Link>
             <Link href="/resume" className="transition-all duration-300">
               <RollingText>Resume</RollingText>
             </Link>
@@ -175,9 +178,6 @@ export default function Projects() {
             </Link>
             <Link href="/reviews" className="transition-all duration-300">
               <RollingText>Reviews</RollingText>
-            </Link>
-            <Link href="/about" className="transition-all duration-300">
-              <RollingText>About</RollingText>
             </Link>
           </nav>
         </div>
@@ -192,6 +192,13 @@ export default function Projects() {
                 className="transition-colors"
               >
                 <RollingText>Home</RollingText>
+              </Link>
+              <Link
+                href="/about"
+                onClick={() => setIsOpen(false)}
+                className="transition-colors"
+              >
+                <RollingText>About</RollingText>
               </Link>
               <Link
                 href="/resume"
@@ -213,13 +220,6 @@ export default function Projects() {
                 className="transition-colors"
               >
                 <RollingText>Reviews</RollingText>
-              </Link>
-              <Link
-                href="/about"
-                onClick={() => setIsOpen(false)}
-                className="transition-colors"
-              >
-                <RollingText>About</RollingText>
               </Link>
             </nav>
           </div>
@@ -258,9 +258,9 @@ export default function Projects() {
             </h1>
 
             <p className="text-md text-zinc-500 max-w-prose">
-              My journey through employment and each role I had the pleasure of
-              taking, where I had the opportunity to contribute to innovative
-              projects and designs.
+              My journey through employment and a concise, yet defined
+              description that touches on some of the work I have contributed
+              to.
             </p>
           </div>
 
@@ -296,7 +296,7 @@ export default function Projects() {
 
                   <h3 className="text-lg dark:text-white">{item.role}</h3>
 
-                  <p className="text-xs font-medium whitespace-nowrap dark:text-purple-300 dark:bg-white/5 inline-block w-fit px-2 py-0.5 rounded-md">
+                  <p className="text-xs font-medium whitespace-nowrap dark:text-purple-300 dark:bg-white/5 inline-block w-fit py-0.5 rounded-md">
                     {item.company}
                   </p>
 
@@ -357,7 +357,7 @@ export default function Projects() {
         </div>
 
         {/* Navigation Section */}
-        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 text-sm">
+        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-40 text-sm">
           {footerLinks.map((link, i) => (
             <Link001
               key={i}
@@ -371,19 +371,19 @@ export default function Projects() {
 
         {/* Social Section */}
         <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
-          <a
-            href="#"
+          <Link
+            href="https://github.com/BekzodDjumanov"
             className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
           >
             <FaGithub />
-          </a>
+          </Link>
 
-          <a
-            href="#"
+          <Link
+            href="https://www.linkedin.com/in/bekzod-djumanov/"
             className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
           >
             <FaLinkedin />
-          </a>
+          </Link>
         </div>
 
         {/* Line */}

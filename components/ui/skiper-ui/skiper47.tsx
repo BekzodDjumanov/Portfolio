@@ -21,7 +21,7 @@ import { cn } from "@/lib/utils";
 const Skiper47 = () => {
   const images = [
     {
-      src: "/images/hell.png",
+      src: "/images/main.png",
       alt: "Illustrations by my fav AarzooAly",
     },
     {
@@ -29,7 +29,7 @@ const Skiper47 = () => {
       alt: "Illustrations by my fav AarzooAly",
     },
     {
-      src: "/images/bateman.png",
+      src: "/images/nomouth.png",
       alt: "Illustrations by my fav AarzooAly",
     },
     {
@@ -37,7 +37,7 @@ const Skiper47 = () => {
       alt: "Illustrations by my fav AarzooAly",
     },
     {
-      src: "/images/bateman.png",
+      src: "/images/nomouth.png",
       alt: "Illustrations by my fav AarzooAly",
     },
     {

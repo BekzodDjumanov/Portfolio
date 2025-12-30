@@ -147,10 +147,10 @@ export default function Home() {
 
   const footerLinks = [
     { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Resume", href: "/resume" },
     { label: "Projects", href: "/projects" },
     { label: "Reviews", href: "/reviews" },
-    { label: "About", href: "/about" },
   ];
 
   return (
@@ -205,6 +205,9 @@ export default function Home() {
             >
               <RollingText>Home</RollingText>
             </Link>
+            <Link href="/about" className="transition-all duration-300">
+              <RollingText>About</RollingText>
+            </Link>
             <Link href="/resume" className="transition-all duration-300">
               <RollingText>Resume</RollingText>
             </Link>
@@ -213,9 +216,6 @@ export default function Home() {
             </Link>
             <Link href="/reviews" className="transition-all duration-300">
               <RollingText>Reviews</RollingText>
-            </Link>
-            <Link href="/about" className="transition-all duration-300">
-              <RollingText>About</RollingText>
             </Link>
           </nav>
         </div>
@@ -230,6 +230,13 @@ export default function Home() {
                 className="transition-colors"
               >
                 <RollingText>Home</RollingText>
+              </Link>
+              <Link
+                href="/about"
+                onClick={() => setIsOpen(false)}
+                className="transition-colors"
+              >
+                <RollingText>About</RollingText>
               </Link>
               <Link
                 href="/resume"
@@ -251,13 +258,6 @@ export default function Home() {
                 className="transition-colors"
               >
                 <RollingText>Reviews</RollingText>
-              </Link>
-              <Link
-                href="/about"
-                onClick={() => setIsOpen(false)}
-                className="transition-colors"
-              >
-                <RollingText>About</RollingText>
               </Link>
             </nav>
           </div>
@@ -769,7 +769,7 @@ export default function Home() {
                 </label>
                 <input
                   type="tel"
-                  placeholder="+1 (555) 123-4567"
+                  placeholder="+1 (123) 456-7890"
                   className="w-full bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-lg rounded-xl px-4 py-3
               text-zinc-800 dark:text-[#ffffff] placeholder-zinc-400 dark:placeholder-[#ffffff]/40
               focus:outline-none focus:border-[#000000] dark:focus:border-[#ffffff]/60 transition-colors"
@@ -794,21 +794,14 @@ export default function Home() {
               </div>
 
               <button
-                className="group relative flex items-center justify-center w-[150px] h-[52px] 
-      transition-all duration-500 active:scale-95 cursor-pointer outline-none 
-      rounded-xl overflow-hidden dark:bg-[#0A0118] border dark:border-[#4c1d95]/40 border-black/10
-      hover:border-[#a855f7]/60 shadow-lg"
+                className="group relative flex items-center justify-center w-[150px] h-[52px] text-zinc-500
+      transition-all duration-500 active:scale-95 cursor-pointer outline-none dark:hover:text-[#a855f7]
+      rounded-xl overflow-hidden dark:bg-[#0A0118] border dark:border-white/10 border-black/10
+      dark:hover:border-[#a855f7]/60 hover:border-[#a855f7]/60 shadow-lg"
                 type="submit"
               >
-                {/* Centered Text Container */}
-                <div className="relative z-20 flex items-center justify-center w-full">
-                  <p
-                    className="m-0 p-0 text-[14px] tracking-[0.2em] uppercase
-        dark:text-[#F3E8FF] group-hover:text-white transition-all duration-300
-        group-hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.6)]"
-                  >
-                    Submit
-                  </p>
+                <div className="relative z-20 flex items-center justify-center w-full tracking-[.1em]">
+                  <p>Submit</p>
 
                   {/* Absolute Icon - Doesn't affect text centering */}
                   <IoIosArrowForward className="absolute right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#a855f7]" />
@@ -838,7 +831,7 @@ export default function Home() {
         </div>
 
         {/* Navigation Section */}
-        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-22.5 text-sm">
+        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-40 text-sm">
           {footerLinks.map((link, i) => (
             <Link001
               key={i}

@@ -71,10 +71,10 @@ export default function Projects() {
 
   const footerLinks = [
     { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Resume", href: "/resume" },
     { label: "Projects", href: "/projects" },
     { label: "Reviews", href: "/reviews" },
-    { label: "About", href: "/about" },
   ];
 
   return (
@@ -129,6 +129,9 @@ export default function Projects() {
             >
               <RollingText>Home</RollingText>
             </Link>
+            <Link href="/about" className="transition-all duration-300">
+              <RollingText>About</RollingText>
+            </Link>
             <Link href="/resume" className="transition-all duration-300">
               <RollingText>Resume</RollingText>
             </Link>
@@ -137,9 +140,6 @@ export default function Projects() {
             </Link>
             <Link href="/reviews" className="transition-all duration-300">
               <RollingText>Reviews</RollingText>
-            </Link>
-            <Link href="/about" className="transition-all duration-300">
-              <RollingText>About</RollingText>
             </Link>
           </nav>
         </div>
@@ -154,6 +154,13 @@ export default function Projects() {
                 className="transition-colors"
               >
                 <RollingText>Home</RollingText>
+              </Link>
+              <Link
+                href="/about"
+                onClick={() => setIsOpen(false)}
+                className="transition-colors"
+              >
+                <RollingText>About</RollingText>
               </Link>
               <Link
                 href="/resume"
@@ -175,13 +182,6 @@ export default function Projects() {
                 className="transition-colors"
               >
                 <RollingText>Reviews</RollingText>
-              </Link>
-              <Link
-                href="/about"
-                onClick={() => setIsOpen(false)}
-                className="transition-colors"
-              >
-                <RollingText>About</RollingText>
               </Link>
             </nav>
           </div>
@@ -220,9 +220,9 @@ export default function Projects() {
             </h1>
 
             <p className="text-md text-zinc-500 max-w-prose">
-              My captivating and illustrious works of art that bewilder any
-              entity that observes. With my power, I harnesss capabilities
-              beyond human perception or understanding.
+              The projects that I have orchestrated and developed through
+              meticulous planning, seeking to emphasize real-world applicability
+              rather than commonly exhausted ideas.
             </p>
           </div>
 
@@ -785,7 +785,7 @@ export default function Projects() {
         </div>
 
         {/* Navigation Section */}
-        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-22.5 text-sm">
+        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-40 text-sm">
           {footerLinks.map((link, i) => (
             <Link001
               key={i}
@@ -799,19 +799,19 @@ export default function Projects() {
 
         {/* Social Section */}
         <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
-          <a
-            href="#"
+          <Link
+            href="https://github.com/BekzodDjumanov"
             className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
           >
             <FaGithub />
-          </a>
+          </Link>
 
-          <a
-            href="#"
+          <Link
+            href="https://www.linkedin.com/in/bekzod-djumanov/"
             className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
           >
             <FaLinkedin />
-          </a>
+          </Link>
         </div>
 
         {/* Line */}

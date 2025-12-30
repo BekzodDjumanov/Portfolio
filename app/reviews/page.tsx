@@ -68,10 +68,10 @@ export default function Projects() {
 
   const footerLinks = [
     { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Resume", href: "/resume" },
     { label: "Projects", href: "/projects" },
     { label: "Reviews", href: "/reviews" },
-    { label: "About", href: "/about" },
   ];
 
   const testimonials = [
@@ -501,6 +501,51 @@ export default function Projects() {
       review: "Aguante Maradona!",
     },
     {
+      name: "Anonymous",
+      image: "/images/offerup.png",
+      review: "• Communicative\n • Item as Described\n • On Time",
+    },
+    {
+      name: "Anonymous",
+      image: "/images/offerup.png",
+      review: "• Communicative\n • Item as Described\n • Reliable",
+    },
+    {
+      name: "Anonymous",
+      image: "/images/offerup.png",
+      review: "• Communicative\n • Item as Described\n • Friendly",
+    },
+    {
+      name: "Anonymous",
+      image: "/images/offerup.png",
+      review: "• Communicative\n • Item as Described\n • Friendly",
+    },
+    {
+      name: "Anonymous",
+      image: "/images/offerup.png",
+      review: "• Communicative\n • Item as Described\n • Reliable",
+    },
+    {
+      name: "Anonymous",
+      image: "/images/offerup.png",
+      review: "• Communicative\n • Item as Described\n • On Time",
+    },
+    {
+      name: "Anonymous",
+      image: "/images/offerup.png",
+      review: "• Communicative\n • Item as Described\n • Communicative",
+    },
+    {
+      name: "Anonymous",
+      image: "/images/offerup.png",
+      review: "• Communicative\n • Item as Described\n • Communicative",
+    },
+    {
+      name: "Anonymous",
+      image: "/images/offerup.png",
+      review: "• Communicative\n • Item as Described\n • Communicative",
+    },
+    {
       name: "j7ke",
       image: "/images/discord.png",
       review:
@@ -618,6 +663,9 @@ export default function Projects() {
             >
               <RollingText>Home</RollingText>
             </Link>
+            <Link href="/about" className="transition-all duration-300">
+              <RollingText>About</RollingText>
+            </Link>
             <Link href="/resume" className="transition-all duration-300">
               <RollingText>Resume</RollingText>
             </Link>
@@ -626,9 +674,6 @@ export default function Projects() {
             </Link>
             <Link href="/reviews" className="transition-all duration-300">
               <RollingText>Reviews</RollingText>
-            </Link>
-            <Link href="/about" className="transition-all duration-300">
-              <RollingText>About</RollingText>
             </Link>
           </nav>
         </div>
@@ -643,6 +688,13 @@ export default function Projects() {
                 className="transition-colors"
               >
                 <RollingText>Home</RollingText>
+              </Link>
+              <Link
+                href="/about"
+                onClick={() => setIsOpen(false)}
+                className="transition-colors"
+              >
+                <RollingText>about</RollingText>
               </Link>
               <Link
                 href="/resume"
@@ -664,13 +716,6 @@ export default function Projects() {
                 className="transition-colors"
               >
                 <RollingText>Reviews</RollingText>
-              </Link>
-              <Link
-                href="/about"
-                onClick={() => setIsOpen(false)}
-                className="transition-colors"
-              >
-                <RollingText>about</RollingText>
               </Link>
             </nav>
           </div>
@@ -711,9 +756,9 @@ export default function Projects() {
             {/* Subtext Logic: Kept your specific alignment and opacity */}
             <p className="text-md text-zinc-500 max-w-prose">
               A comprehensive list of buyers who have engaged in business
-              exchanges throughout my time as an entrepreneur. I've had the
-              absolute pleasure to maintain a five star rating with over 100+
-              reviews.
+              exchanges throughout my time as an entrepreneur. Prioritizing
+              customer needs and connections are far greater than any technical
+              skill, which has led to 100+ 5 star reviews.
             </p>
           </div>
 
@@ -764,7 +809,7 @@ export default function Projects() {
                     </div>
 
                     {/* Review */}
-                    <p className="text-xs leading-relaxed pt-2 font-normal">
+                    <p className="text-xs leading-relaxed pt-2 font-normal whitespace-pre-line">
                       {item.review}
                     </p>
                   </div>
