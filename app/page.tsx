@@ -585,7 +585,7 @@ export default function Home() {
 
               <div className="space-y-10">
                 {/* Experience Item 1 */}
-                <div className="flex justify-between items-start group">
+                <div className="flex flex-col sm:flex-row sm:justify-between items-start group gap-4 sm:gap-0">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
                       <img
@@ -596,21 +596,26 @@ export default function Home() {
                     </div>
 
                     <div>
-                      <h3 className="lg:text-lg leading-none sm:text-sm">
+                      <h3 className="lg:text-lg text-[16px] leading-none sm:text-sm">
                         Cloud Software Developer Intern
                       </h3>
-                      <p className="text-sm opacity-60 mt-2">
+                      <p className="text-[14px] lg:text-sm opacity-60 mt-2 leading-none">
                         CACI International
+                      </p>
+                      {/* This shows ONLY on mobile (below 'sm' breakpoint) */}
+                      <p className="text-[12px] font-medium opacity-40 mt-2 sm:hidden">
+                        Dec 2025 — Present
                       </p>
                     </div>
                   </div>
-                  <span className="text-xs font-medium opacity-40 pt-1 whitespace-nowrap">
+                  {/* This shows ONLY on tablet/desktop (from 'sm' up) */}
+                  <span className="hidden sm:block text-xs font-medium opacity-40 pt-1 whitespace-nowrap">
                     Dec 2025 — Present
                   </span>
                 </div>
 
                 {/* Experience Item 2 */}
-                <div className="flex justify-between items-start group">
+                <div className="flex flex-col sm:flex-row sm:justify-between items-start group gap-4 sm:gap-0">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
                       <img
@@ -620,20 +625,24 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <h3 className="lg:text-lg leading-none sm:text-sm">
+                      <h3 className="lg:text-lg text-[16px] leading-none sm:text-sm">
                         Software Engineer Intern
                       </h3>
-                      <p className="text-sm opacity-60 mt-2">
+                      <p className="text-[14px] lg:text-sm opacity-60 mt-2 leading-none">
                         Cummings & Co. Realtors
+                      </p>
+                      <p className="text-[12px] font-medium opacity-40 mt-2 sm:hidden">
+                        May 2025 — Sep 2025
                       </p>
                     </div>
                   </div>
-                  <span className="text-xs font-medium opacity-40 pt-1 whitespace-nowrap">
+                  <span className="hidden sm:block text-xs font-medium opacity-40 pt-1 whitespace-nowrap">
                     May 2025 — Sep 2025
                   </span>
                 </div>
 
-                <div className="flex justify-between items-start group">
+                {/* Experience Item 3 */}
+                <div className="flex flex-col sm:flex-row sm:justify-between items-start group gap-4 sm:gap-0">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
                       <img
@@ -643,15 +652,18 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <h3 className="lg:text-lg leading-none sm:text-sm">
+                      <h3 className="lg:text-lg text-[16px] leading-none sm:text-sm">
                         IT Administrator Intern
                       </h3>
-                      <p className="text-sm opacity-60 mt-2">
+                      <p className="text-[14px] lg:text-sm opacity-60 mt-2 leading-none">
                         First Financial Federal Credit Union
+                      </p>
+                      <p className="text-[12px] font-medium opacity-40 mt-2 sm:hidden">
+                        Jan 2024 — May 2024
                       </p>
                     </div>
                   </div>
-                  <span className="text-xs font-medium opacity-40 pt-1 whitespace-nowrap">
+                  <span className="hidden sm:block text-xs font-medium opacity-40 pt-1 whitespace-nowrap">
                     Jan 2024 — May 2024
                   </span>
                 </div>
@@ -659,22 +671,7 @@ export default function Home() {
 
               <Link
                 href="/resume"
-                className="
-                w-full mt-6 py-3 px-4 rounded-xl
-                bg-white/5
-                border border-black/10 dark:border-white/10
-                text-sm font-bold
-                flex items-center justify-center gap-2
-                dark:text-zinc-500
-                
-                hover:bg-[#4c1d95]/20
-                hover:text-black/90 dark:hover:text-white
-                backdrop-blur-md
-                
-                transition-all duration-300 ease-in-out
-                cursor-pointer
-                shadow-lg
-              "
+                className="w-full mt-6 py-3 px-4 rounded-xl bg-white/5 border border-black/10 dark:border-white/10 text-sm font-bold flex items-center justify-center gap-2 dark:text-zinc-500 hover:bg-[#4c1d95]/20 hover:text-black/90 dark:hover:text-white backdrop-blur-md transition-all duration-300 ease-in-out cursor-pointer shadow-lg"
               >
                 A more detailed look <IoIosArrowForward />
               </Link>
@@ -813,7 +810,7 @@ export default function Home() {
       </section>
 
       <footer
-        className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-wrap justify-between items-start gap-y-8 w-full relative 
+        className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-col md:flex-row flex-wrap justify-between items-start gap-y-8 w-full relative 
   shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
       >
         {/* Brand Section */}
@@ -831,7 +828,16 @@ export default function Home() {
         </div>
 
         {/* Navigation Section */}
-        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-40 text-sm">
+        <div
+          className="footer-nav flex flex-nowrap gap-4 items-center mt-2 text-xs md:text-sm
+          justify-center
+          overflow-x-auto
+          md:overflow-visible
+          md:gap-6
+          md:justify-start
+          md:flex-wrap
+          md:mr-37"
+        >
           {footerLinks.map((link, i) => (
             <Link001
               key={i}
