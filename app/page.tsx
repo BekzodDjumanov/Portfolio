@@ -822,7 +822,7 @@ export default function Home() {
       transition-all duration-500 active:scale-95 cursor-pointer outline-none
       rounded-xl overflow-hidden dark:bg-[#0A0118]
       border border-black/10 dark:border-white/10
-      hover:border-purple-500 shadow-lg"
+      dark:hover:border-purple-500 shadow-lg dark:hover:text-purple-500"
               >
                 <div className="relative z-20 flex items-center justify-center w-full tracking-[.1em]">
                   <p>Submit</p>
