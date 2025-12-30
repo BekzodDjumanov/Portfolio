@@ -288,7 +288,7 @@ export default function Projects() {
 
         {/* Navigation Section */}
         <div
-          className="footer-nav flex flex-nowrap gap-4 items-center mt-2 text-xs md:text-sm
+          className="footer-nav flex flex-nowrap gap-4 items-center mt-2 text-sm
           justify-center
           overflow-x-auto
           md:overflow-visible
