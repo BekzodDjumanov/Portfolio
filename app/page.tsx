@@ -105,45 +105,57 @@ export default function Home() {
     };
   }, [isOpen]);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    setShowToast(true);
+    if (!formRef.current) return;
 
-    // Wait for toast to mount, then animate IN
-    requestAnimationFrame(() => {
-      if (toastRef.current) {
-        gsap.fromTo(
-          toastRef.current,
-          {
+    const formData = new FormData(formRef.current);
+
+    try {
+      // POST to the static HTML file Netlify detects
+      const res = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (!res.ok) throw new Error("Form submission failed");
+
+      // Reset form
+      formRef.current.reset();
+
+      // Trigger toast animation
+      setShowToast(true);
+      requestAnimationFrame(() => {
+        if (toastRef.current) {
+          gsap.fromTo(
+            toastRef.current,
+            { opacity: 0, y: 10 },
+            { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }
+          );
+        }
+      });
+
+      // Animate out after 3 seconds
+      setTimeout(() => {
+        if (toastRef.current) {
+          gsap.to(toastRef.current, {
             opacity: 0,
             y: 10,
-          },
-          {
-            opacity: 1,
-            y: 0,
             duration: 0.4,
-            ease: "power3.out",
-          }
-        );
-      }
-    });
-    formRef.current?.reset();
+            ease: "power3.in",
+            onComplete: () => setShowToast(false),
+          });
+        }
+      }, 3000);
+    } catch (err) {
+      console.error(err);
+      alert("Oops! Something went wrong."); // or create an error toast
+    }
 
-    // Hold, then animate OUT
-    setTimeout(() => {
-      if (toastRef.current) {
-        gsap.to(toastRef.current, {
-          opacity: 0,
-          y: 10,
-          duration: 0.4,
-          ease: "power3.in",
-          onComplete: () => setShowToast(false),
-        });
-      }
-    }, 3000);
+    gsap.killTweensOf(toastRef.current);
   };
-  gsap.killTweensOf(toastRef.current);
 
   const footerLinks = [
     { label: "Home", href: "/" },
@@ -709,6 +721,9 @@ export default function Home() {
           {/* Content Wrapper - Using Form as the grid container */}
           <form
             ref={formRef}
+            name="feedback"
+            method="POST"
+            data-netlify="true"
             className="grid grid-cols-1 lg:grid-cols-2 gap-16"
             onSubmit={handleFormSubmit}
           >
