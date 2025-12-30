@@ -108,24 +108,27 @@ export default function Home() {
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!formRef.current) return;
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-    const formData = new FormData(formRef.current);
+    // 🔴 REQUIRED FOR NETLIFY
+    formData.append("form-name", "feedback");
 
     try {
-      // POST to the static HTML file Netlify detects
-      const res = await fetch("/__forms.html", {
+      await fetch("/__forms.html", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
         body: new URLSearchParams(formData as any).toString(),
       });
 
-      if (!res.ok) throw new Error("Form submission failed");
+      // Kill any previous tweens
+      if (toastRef.current) {
+        gsap.killTweensOf(toastRef.current);
+      }
 
-      // Reset form
-      formRef.current.reset();
-
-      // Trigger toast animation
+      // Toast IN
       setShowToast(true);
       requestAnimationFrame(() => {
         if (toastRef.current) {
@@ -137,7 +140,9 @@ export default function Home() {
         }
       });
 
-      // Animate out after 3 seconds
+      form.reset();
+
+      // Toast OUT
       setTimeout(() => {
         if (toastRef.current) {
           gsap.to(toastRef.current, {
@@ -150,12 +155,11 @@ export default function Home() {
         }
       }, 3000);
     } catch (err) {
-      console.error(err);
-      alert("Oops! Something went wrong."); // or create an error toast
+      console.error("Form submission error:", err);
     }
-
-    gsap.killTweensOf(toastRef.current);
   };
+
+  gsap.killTweensOf(toastRef.current);
 
   const footerLinks = [
     { label: "Home", href: "/" },
@@ -723,100 +727,106 @@ export default function Home() {
             ref={formRef}
             name="feedback"
             method="POST"
-            data-netlify="true"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-16"
             onSubmit={handleFormSubmit}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-16"
           >
+            {/* REQUIRED FOR NETLIFY */}
+            <input type="hidden" name="form-name" value="feedback" />
+
             {/* LEFT — Form Fields */}
             <div className="space-y-6">
               {/* Name */}
               <div>
-                <label className="block text-xs uppercase tracking-widest dark:text-[#ffffff]/60 text-black/50 mb-2">
+                <label className="block text-xs uppercase tracking-widest dark:text-white/60 text-black/50 mb-2">
                   Name
                 </label>
                 <input
                   required
+                  name="name"
                   type="text"
                   placeholder="Your full name"
                   className="w-full bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-lg rounded-xl px-4 py-3
-              text-zinc-800 dark:text-[#ffffff] placeholder-zinc-400 dark:placeholder-[#ffffff]/40
-              focus:outline-none focus:border-[#000000] dark:focus:border-[#ffffff]/60 transition-colors"
+        text-zinc-800 dark:text-white placeholder-zinc-400 dark:placeholder-white/40
+        focus:outline-none focus:border-black dark:focus:border-white/60 transition-colors"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label className="block text-xs uppercase tracking-widest dark:text-[#ffffff]/60 text-black/50 mb-2">
+                <label className="block text-xs uppercase tracking-widest dark:text-white/60 text-black/50 mb-2">
                   Email
                 </label>
                 <input
                   required
+                  name="email"
                   type="email"
                   placeholder="you@example.com"
                   className="w-full bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-lg rounded-xl px-4 py-3
-              text-zinc-800 dark:text-[#ffffff] placeholder-zinc-400 dark:placeholder-[#ffffff]/40
-              focus:outline-none focus:border-[#000000] dark:focus:border-[#ffffff]/60 transition-colors"
+        text-zinc-800 dark:text-white placeholder-zinc-400 dark:placeholder-white/40
+        focus:outline-none focus:border-black dark:focus:border-white/60 transition-colors"
                 />
               </div>
 
               {/* Subject */}
               <div>
-                <label className="block text-xs uppercase tracking-widest dark:text-[#ffffff]/60 text-black/50 mb-2">
+                <label className="block text-xs uppercase tracking-widest dark:text-white/60 text-black/50 mb-2">
                   Subject
                 </label>
                 <input
                   required
+                  name="subject"
                   type="text"
                   placeholder="Subject"
                   className="w-full bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-lg rounded-xl px-4 py-3
-              text-zinc-800 dark:text-[#ffffff] placeholder-zinc-400 dark:placeholder-[#ffffff]/40
-              focus:outline-none focus:border-[#000000] dark:focus:border-[#ffffff]/60 transition-colors"
+        text-zinc-800 dark:text-white placeholder-zinc-400 dark:placeholder-white/40
+        focus:outline-none focus:border-black dark:focus:border-white/60 transition-colors"
                 />
               </div>
 
               {/* Phone */}
               <div>
-                <label className="block text-xs uppercase tracking-widest dark:text-[#ffffff]/60 text-black/50 mb-2">
+                <label className="block text-xs uppercase tracking-widest dark:text-white/60 text-black/50 mb-2">
                   Phone
                 </label>
                 <input
+                  name="phone"
                   type="tel"
                   placeholder="+1 (123) 456-7890"
                   className="w-full bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-lg rounded-xl px-4 py-3
-              text-zinc-800 dark:text-[#ffffff] placeholder-zinc-400 dark:placeholder-[#ffffff]/40
-              focus:outline-none focus:border-[#000000] dark:focus:border-[#ffffff]/60 transition-colors"
+        text-zinc-800 dark:text-white placeholder-zinc-400 dark:placeholder-white/40
+        focus:outline-none focus:border-black dark:focus:border-white/60 transition-colors"
                 />
               </div>
             </div>
 
-            {/* RIGHT — Message Textarea + Submit */}
+            {/* RIGHT — Message + Submit */}
             <div className="flex flex-col justify-between gap-6">
               <div>
-                <label className="block text-xs uppercase tracking-widest dark:text-[#ffffff]/60 text-black/50 mb-2">
+                <label className="block text-xs uppercase tracking-widest dark:text-white/60 text-black/50 mb-2">
                   Message
                 </label>
                 <textarea
                   required
+                  name="message"
                   rows={10}
                   placeholder="Write your message here..."
                   className="w-full bg-white/50 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-lg rounded-xl px-4 py-3
-              text-zinc-800 dark:text-[#ffffff] placeholder-zinc-400 dark:placeholder-[#ffffff]/40
-              focus:outline-none focus:border-[#000000] dark:focus:border-[#ffffff]/60 transition-colors resize-none"
+        text-zinc-800 dark:text-white placeholder-zinc-400 dark:placeholder-white/40
+        focus:outline-none focus:border-black dark:focus:border-white/60 transition-colors resize-none"
                 />
               </div>
 
               <button
-                className="group relative flex items-center justify-center w-[150px] h-[52px] text-zinc-500
-      transition-all duration-500 active:scale-95 cursor-pointer outline-none dark:hover:text-[#a855f7]
-      rounded-xl overflow-hidden dark:bg-[#0A0118] border dark:border-white/10 border-black/10
-      dark:hover:border-[#a855f7]/60 hover:border-[#a855f7]/60 shadow-lg"
                 type="submit"
+                className="group relative flex items-center justify-center w-[150px] h-[52px] text-zinc-500
+      transition-all duration-500 active:scale-95 cursor-pointer outline-none
+      rounded-xl overflow-hidden dark:bg-[#0A0118]
+      border border-black/10 dark:border-white/10
+      hover:border-purple-500 shadow-lg"
               >
                 <div className="relative z-20 flex items-center justify-center w-full tracking-[.1em]">
                   <p>Submit</p>
-
-                  {/* Absolute Icon - Doesn't affect text centering */}
-                  <IoIosArrowForward className="absolute right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#a855f7]" />
+                  <IoIosArrowForward className="absolute right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-purple-500" />
                 </div>
               </button>
             </div>
