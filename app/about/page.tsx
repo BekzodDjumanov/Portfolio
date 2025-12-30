@@ -269,9 +269,10 @@ export default function Projects() {
       </main>
 
       <footer
-        className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-wrap justify-between items-start gap-y-8 w-full relative 
-  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -mt-20"
+        className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-col md:flex-row flex-wrap justify-between items-start gap-y-8 w-full relative 
+  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
       >
+        {/* Brand Section */}
         <div className="footer-brand">
           <div className="mt-2 flex gap-2 items-center">
             <ShinyButton className="flex items-center gap-2">
@@ -285,7 +286,17 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-40 text-sm">
+        {/* Navigation Section */}
+        <div
+          className="footer-nav flex flex-nowrap gap-4 items-center mt-2 text-xs md:text-sm
+          justify-center
+          overflow-x-auto
+          md:overflow-visible
+          md:gap-6
+          md:justify-start
+          md:flex-wrap
+          md:mr-37"
+        >
           {footerLinks.map((link, i) => (
             <Link001
               key={i}
@@ -297,6 +308,7 @@ export default function Projects() {
           ))}
         </div>
 
+        {/* Social Section */}
         <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
           <Link
             href="https://github.com/BekzodDjumanov"
@@ -313,8 +325,10 @@ export default function Projects() {
           </Link>
         </div>
 
+        {/* Line */}
         <div className="footer-line w-full h-[1px] bg-white/10 my-4"></div>
 
+        {/* Ending Credit */}
         <div className="ending-credit w-full text-center text-[#7b7c8c] text-xs">
           Curated with Next.js, React, Tailwind CSS, Framer Motion, GSAP, &
           Figma.

@@ -821,8 +821,8 @@ export default function Projects() {
       </main>
 
       <footer
-        className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-wrap justify-between items-start gap-y-8 w-full relative 
-  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -my-5"
+        className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-col md:flex-row flex-wrap justify-between items-start gap-y-8 w-full relative 
+  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
       >
         {/* Brand Section */}
         <div className="footer-brand">
@@ -839,7 +839,16 @@ export default function Projects() {
         </div>
 
         {/* Navigation Section */}
-        <div className="footer-nav flex flex-wrap gap-6 items-center mt-2 mr-22.5 text-sm">
+        <div
+          className="footer-nav flex flex-nowrap gap-4 items-center mt-2 text-xs md:text-sm
+          justify-center
+          overflow-x-auto
+          md:overflow-visible
+          md:gap-6
+          md:justify-start
+          md:flex-wrap
+          md:mr-37"
+        >
           {footerLinks.map((link, i) => (
             <Link001
               key={i}
@@ -853,19 +862,19 @@ export default function Projects() {
 
         {/* Social Section */}
         <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
-          <a
-            href="#"
+          <Link
+            href="https://github.com/BekzodDjumanov"
             className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
           >
             <FaGithub />
-          </a>
+          </Link>
 
-          <a
-            href="#"
+          <Link
+            href="https://www.linkedin.com/in/bekzod-djumanov/"
             className="hover:text-purple-400 transition-colors duration-300 ease-in-out"
           >
             <FaLinkedin />
-          </a>
+          </Link>
         </div>
 
         {/* Line */}
