@@ -296,7 +296,7 @@ export default function Projects() {
 
                   <h3 className="text-lg dark:text-white">{item.role}</h3>
 
-                  <p className="text-xs font-medium whitespace-nowrap dark:text-purple-300 dark:bg-white/5 inline-block w-fit py-0.5 rounded-md">
+                  <p className="text-xs font-medium whitespace-nowrap dark:text-purple-300 inline-block w-fit py-0.5 rounded-md">
                     {item.company}
                   </p>
 
