@@ -576,7 +576,7 @@ export default function Home() {
             </div>
 
             {/* RIGHT SIDE: WORK HISTORY */}
-            <div className="flex-1 space-y-10 dark:bg-[#000000] border border-black/10 dark:border-white/10 px-5 py-5 backdrop-blur-sm shadow-lg">
+            <div className="flex-1 space-y-10 dark:bg-[#000000] border border-black/10 dark:border-white/10 px-5 py-5 backdrop-blur-sm shadow-lg rounded-lg">
               <div className="flex items-center gap-2 mb-4">
                 <h2 className="text-xs uppercase tracking-[0.3em] font-bold opacity-40">
                   Work History
