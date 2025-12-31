@@ -620,7 +620,7 @@ export default function Home() {
                       </p>
                       {/* This shows ONLY on mobile (below 'sm' breakpoint) */}
                       <p className="text-[12px] font-medium opacity-40 mt-2 sm:hidden">
-                        Dec 2025 — Present
+                        May 2026 — ???
                       </p>
                     </div>
                   </div>
