@@ -527,8 +527,8 @@ export default function Home() {
                     "C++",
                     "React / Next.js",
                     "Tailwind CSS",
-                    "HTML",
-                    "CSS",
+                    "TypeScript",
+                    "Git",
                     "JavaScript",
                     "GSAP",
                   ].map((skill) => (
