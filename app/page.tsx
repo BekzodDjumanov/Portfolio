@@ -458,7 +458,7 @@ export default function Home() {
         </p>
       </main>
       <div ref={containerRef2} className="relative w-full py-5">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 max-w-7xl mx-auto">
+        <div className="opacity-0 fade-in grid grid-cols-1 md:grid-cols-4 gap-4 px-4 max-w-7xl mx-auto">
           {cards.map((card, index) => (
             <div
               key={index}
