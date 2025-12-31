@@ -162,28 +162,29 @@ export default function Home() {
 
   const cards = [
     {
-      date: "SOON",
-      title: "Malignancy",
-      description: "SOON",
-      href: "/writing/solitude",
+      date: "Report - January 1st, 2025",
+      title: "A Fragile Foundation",
+      description:
+        "An insight into the AWS outage of October 20th, 2025 and its implications for the technological landscape.",
+      href: "/article1",
     },
     {
       date: "SOON",
       title: "Ephemeral",
       description: "SOON",
-      href: "/writing/systems",
+      href: "/article2",
     },
     {
       date: "SOON",
       title: "Despondence",
       description: "SOON",
-      href: "/writing/discipline",
+      href: "/article3",
     },
     {
       date: "SOON",
       title: "Grimace",
       description: "SOON",
-      href: "/writing/learning",
+      href: "/article4",
     },
   ];
 
@@ -463,8 +464,8 @@ export default function Home() {
             <div
               key={index}
               className="
-          h-35 rounded-xl border
-          dark:border-[#4c1d95]/30
+          h-42.5 rounded-xl border
+          dark:border-[#4c1d95]/60
           dark:bg-[#4c1d95]/20
           backdrop-blur-md
           dark:shadow-[0_0_20px_-5px_rgba(76,29,149,0.3)]
