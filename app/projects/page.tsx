@@ -247,7 +247,7 @@ export default function Projects() {
             {/* Left Side - Project Video/Preview */}
             <div className="relative w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-200 dark:bg-zinc-900">
               <video
-                src="/videos/project2.mp4"
+                src="/videos/project2.webm"
                 autoPlay
                 loop
                 muted
@@ -392,7 +392,7 @@ export default function Projects() {
             {/* Left Side - Project Video/Preview */}
             <div className="relative w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-200 dark:bg-zinc-900">
               <video
-                src="/videos/project4.mp4"
+                src="/videos/project4.webm"
                 autoPlay
                 loop
                 muted
@@ -528,7 +528,7 @@ export default function Projects() {
             {/* Left Side - Project Video/Preview */}
             <div className="relative w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-200 dark:bg-zinc-900">
               <video
-                src="/videos/project3.mp4"
+                src="/videos/project3.webm"
                 autoPlay
                 loop
                 muted
@@ -672,7 +672,7 @@ export default function Projects() {
             {/* Left Side - Project Video/Preview */}
             <div className="relative w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-200 dark:bg-zinc-900">
               <video
-                src="/videos/project1.mp4"
+                src="/videos/project1.webm"
                 autoPlay
                 loop
                 muted

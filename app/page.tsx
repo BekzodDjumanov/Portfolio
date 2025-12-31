@@ -8,7 +8,6 @@ import { ShinyButton } from "@/components/ui/shiny-button";
 import { Skiper47 } from "@/components/ui/skiper-ui/skiper47";
 import { Link001 } from "@/components/ui/skiper-ui/skiper40";
 import { ShineBorder } from "@/components/ui/shine-border";
-import { Marquee } from "@/components/ui/marquee";
 import { IoIosArrowDropright } from "react-icons/io";
 import { FaCheck } from "react-icons/fa6";
 
@@ -160,6 +159,33 @@ export default function Home() {
   };
 
   gsap.killTweensOf(toastRef.current);
+
+  const cards = [
+    {
+      date: "SOON",
+      title: "Malignancy",
+      description: "SOON",
+      href: "/writing/solitude",
+    },
+    {
+      date: "SOON",
+      title: "Ephemeral",
+      description: "SOON",
+      href: "/writing/systems",
+    },
+    {
+      date: "SOON",
+      title: "Despondence",
+      description: "SOON",
+      href: "/writing/discipline",
+    },
+    {
+      date: "2022 · Notes",
+      title: "Grimace",
+      description: "SOON",
+      href: "/writing/learning",
+    },
+  ];
 
   const footerLinks = [
     { label: "Home", href: "/" },
@@ -431,71 +457,47 @@ export default function Home() {
           Up to date info
         </p>
       </main>
-      <div ref={containerRef2} className="relative w-full">
-        {/* Black bar */}
-        <div className="w-full h-40 dark:bg-[#0a0a0a] dark:bg-gradient-to-br from-[#0b0b12] via-[#0f1020] to-[#1a103d] border-y dark:border-[#4c1d95]/20 dark:shadow-[inset_0_20px_30px_-20px_rgba(76,29,149,0.35),inset_0_-20px_30px_-20px_rgba(76,29,149,0.35)]"></div>
-
-        {/* Marquee content */}
-        <Marquee className="opacity-0 fade-in absolute top-0 left-0 w-full h-full flex items-center gap-4 px-4">
-          {/* Example articles */}
-          {[
-            {
-              date: "COMING SOON",
-              title: "COMING SOON",
-              description: "COMING SOON",
-              link: "#",
-            },
-            {
-              date: "COMING SOON",
-              title: "COMING SOON",
-              description: "COMING SOON",
-              link: "#",
-            },
-            {
-              date: "COMING SOON",
-              title: "COMING SOON",
-              description: "COMING SOON",
-              link: "#",
-            },
-          ].map((article, index) => (
+      <div ref={containerRef2} className="relative w-full py-5">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 max-w-7xl mx-auto">
+          {cards.map((card, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-64 h-32 p-4 
-          bg-white/10
-  border
-  border-white/20 dark:bg-[#4c1d95]/20
-          backdrop-blur-md 
-          rounded-xl shadow-lg 
-          border dark:border-[#7c3aed]/20 
-          hover:border-[#7c3aed]/50 
-          group/card transition-all duration-500
-          flex flex-col justify-between"
+              className="
+          h-35 rounded-xl border
+          dark:border-[#4c1d95]/30
+          dark:bg-[#4c1d95]/20
+          backdrop-blur-md
+          dark:shadow-[0_0_20px_-5px_rgba(76,29,149,0.3)]
+          transition-transform duration-300
+          flex flex-col justify-between p-4
+        "
             >
-              <span className="text-xs text-gray-500 dark:text-[#a855f7]/60 font-medium tracking-widest">
-                {article.date}
+              {/* Top */}
+              <span className="text-[10px] uppercase tracking-widest text-gray-500 dark:text-[#a855f7]/60">
+                {card.date}
               </span>
-              <h2 className="text-sm text-[#000000] dark:text-[#f3e8ff] transition-colors">
-                {article.title}
-              </h2>
-              <p className="text-[10px] text-gray-700 dark:text-zinc-400">
-                {article.description}
-              </p>
 
-              <a
-                href={article.link}
-                className="relative group/link w-fit text-xs font-bold text-[#000000] dark:text-[#c084fc] mt-2 flex items-center gap-1 transition-all duration-500 ease-in-out hover:gap-2"
+              {/* Middle */}
+              <div>
+                <h2 className="text-sm font-medium text-black dark:text-[#f3e8ff]">
+                  {card.title}
+                </h2>
+                <p className="text-[11px] text-gray-700 dark:text-zinc-400 mt-1">
+                  {card.description}
+                </p>
+              </div>
+
+              {/* Bottom */}
+              <Link
+                href={card.href}
+                className="text-xs font-semibold text-black dark:text-[#c084fc]
+                     flex items-center gap-1 transition-all hover:gap-2 duration-300 ease-in-out"
               >
-                <span className="relative">
-                  Read Article
-                  {/* The Underline: Now Vampire Purple */}
-                  <span className="absolute left-0 -bottom-1 w-0 h-[1.5px] dark:bg-[#7c3aed] bg-[#000000] transition-all duration-500 ease-in-out group-hover/link:w-full"></span>
-                </span>
-
-                <IoIosArrowDropright className="group-hover/link:translate-x-1 transition-transform" />
-              </a>
+                Read Article <IoIosArrowDropright />
+              </Link>
             </div>
           ))}
-        </Marquee>
+        </div>
       </div>
 
       <main>
@@ -516,7 +518,7 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="flex items-center gap-2">
                   <h2 className="text-xs uppercase tracking-[0.3em] font-bold opacity-40">
-                    ● Technical Skills
+                    ● Core Languages
                   </h2>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -525,12 +527,8 @@ export default function Home() {
                     "Java",
                     "SQL",
                     "C++",
-                    "React / Next.js",
-                    "Tailwind CSS",
                     "TypeScript",
-                    "Git",
                     "JavaScript",
-                    "GSAP",
                   ].map((skill) => (
                     <div
                       key={skill}
@@ -557,16 +555,43 @@ export default function Home() {
               {/* Soft Skills Block */}
               <div className="space-y-6">
                 <h2 className="text-xs uppercase tracking-[0.3em] font-bold opacity-40">
-                  ● Soft Skills
+                  ● Frameworks & Libraries
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {["React", "Next.js", "Tailwind CSS", "GSAP"].map((skill) => (
+                    <div
+                      key={skill}
+                      className="
+                      px-4 py-2 rounded-lg 
+                      text-zinc-500 dark:text-zinc-400 
+                      
+                      bg-zinc-100/50 dark:bg-white/[0.03] 
+                      
+                      border border-black/5 dark:border-white/10 
+                      
+                      text-sm font-medium 
+                      
+                      dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5
+                      transition-all duration-300 ease-in-out
+                    "
+                    >
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <h2 className="text-xs uppercase tracking-[0.3em] font-bold opacity-40">
+                  ● Cloud Platforms & Infrastructure
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "Data Structures & Algorithms",
-                    "UI/UX Design",
-                    "Leadership",
-                    "Communication",
-                    "Critical Thinking",
-                    "CI/CD Workflows",
+                    "AWS",
+                    "Microsoft Azure",
+                    "Docker",
+                    "CI/CD Pipelines",
+                    "Kubernetes",
                   ].map((skill) => (
                     <div
                       key={skill}
@@ -605,6 +630,32 @@ export default function Home() {
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
                       <img
+                        src="/images/ebay.png"
+                        alt="icon"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="lg:text-lg text-[16px] leading-none sm:text-sm">
+                        Entrepreneur
+                      </h3>
+                      <p className="text-[14px] lg:text-sm opacity-60 mt-2 leading-none">
+                        eBay Enterprise
+                      </p>
+                      <p className="text-[12px] font-medium opacity-40 mt-2 sm:hidden">
+                        Jan 2020 — Present
+                      </p>
+                    </div>
+                  </div>
+                  <span className="hidden sm:block text-xs font-medium opacity-40 pt-1 whitespace-nowrap">
+                    Jan 2020 — Present
+                  </span>
+                </div>
+                {/* Experience Item 2 */}
+                <div className="flex flex-col sm:flex-row sm:justify-between items-start group gap-4 sm:gap-0">
+                  <div className="flex gap-4">
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
+                      <img
                         src="/images/caci.png"
                         alt="icon"
                         className="w-full h-full object-cover"
@@ -630,7 +681,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                {/* Experience Item 2 */}
+                {/* Experience Item 3 */}
                 <div className="flex flex-col sm:flex-row sm:justify-between items-start group gap-4 sm:gap-0">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
@@ -657,7 +708,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                {/* Experience Item 3 */}
+                {/* Experience Item 4 */}
                 <div className="flex flex-col sm:flex-row sm:justify-between items-start group gap-4 sm:gap-0">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
