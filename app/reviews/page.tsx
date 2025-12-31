@@ -694,7 +694,7 @@ export default function Projects() {
                 onClick={() => setIsOpen(false)}
                 className="transition-colors"
               >
-                <RollingText>about</RollingText>
+                <RollingText>About</RollingText>
               </Link>
               <Link
                 href="/resume"
