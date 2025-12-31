@@ -180,7 +180,7 @@ export default function Home() {
       href: "/writing/discipline",
     },
     {
-      date: "2022 · Notes",
+      date: "SOON",
       title: "Grimace",
       description: "SOON",
       href: "/writing/learning",
@@ -469,7 +469,7 @@ export default function Home() {
           backdrop-blur-md
           dark:shadow-[0_0_20px_-5px_rgba(76,29,149,0.3)]
           transition-transform duration-300
-          flex flex-col justify-between p-4
+          flex flex-col justify-between p-4 shadow-lg
         "
             >
               {/* Top */}
