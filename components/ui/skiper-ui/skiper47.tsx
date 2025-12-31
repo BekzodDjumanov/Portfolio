@@ -21,28 +21,28 @@ import { cn } from "@/lib/utils";
 const Skiper47 = () => {
   const images = [
     {
-      src: "/images/hell.png",
-      alt: "Illustrations by my fav AarzooAly",
+      src: "/",
+      alt: "nun yet",
     },
     {
-      src: "/images/jester.png",
-      alt: "Illustrations by my fav AarzooAly",
+      src: "/",
+      alt: "nun yet",
     },
     {
-      src: "/images/nomouth.png",
-      alt: "Illustrations by my fav AarzooAly",
+      src: "/",
+      alt: "nun yet",
     },
     {
-      src: "/images/hell.png",
-      alt: "Illustrations by my fav AarzooAly",
+      src: "/",
+      alt: "nun yet",
     },
     {
-      src: "/images/nomouth.png",
-      alt: "Illustrations by my fav AarzooAly",
+      src: "/",
+      alt: "nun yet",
     },
     {
-      src: "/images/lucifer.png",
-      alt: "Illustrations by my fav AarzooAly",
+      src: "/",
+      alt: "nun yet",
     },
   ];
 
