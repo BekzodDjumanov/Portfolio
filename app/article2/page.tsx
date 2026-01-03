@@ -212,19 +212,155 @@ export default function Projects() {
           <div className="w-full flex flex-col gap-4 ml-8 mb-12">
             <h1 className="flex items-center gap-3 text-3xl">
               <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
-              The Prevelance of Modern AI
+              AI Interpretability and Trustworthiness
             </h1>
 
             <h3 className="text-sm uppercase tracking-[0.3em] font-bold opacity-40">
-              Insight 02 - 2 Minute read
+              Insight 02 - 3 Minute read
             </h3>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                <br />
+                When attempting to define trust within AI models, there are many
+                differing stances within the field.
+              </p>
+
+              <p>
+                <br />
+                As artificial intelligence becomes increasingly prolific in many
+                systems that once relied on human judgement, it's important to
+                examine its decision making and performance throughout its
+                processes. Accuracy is a critical factor, as it serves as a
+                benchmark for future use, whether through correlation with human
+                judgment or prior trials. Accuracy alone is insufficient when
+                models operate as opaque mechanisms, producing outcomes without
+                intelligible reasoning. For example, in medical diagnosis
+                systems, a model that predicts disease with high accuracy but
+                cannot explain which clinical features influenced its decision
+                limits a clinician’s ability to validate, trust, and safely act
+                on its output. Interpretability becomes not a supplementary
+                feature, but a prerequisite for responsible deployment.
+              </p>
+            </div>
+
+            <h2 className="text-2xl">
+              <br /> The Black Box Problem
+            </h2>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Black Box models are those whose internal decision-making
+                processes are obscured or incomprehensible to humans. Though
+                their deep and complex neural networks offer high accuracy,
+                which is objectively quite rewarding, it lacks a fundamental
+                component aforementioned.
+              </p>
+
+              <p>
+                <br />
+                Below is a figure that highlights the importance of transparency
+                within artificial agents.
+              </p>
+
+              <figure className="mt-10 max-w-4xl mx-auto">
+                <div className="rounded-xl overflow-hidden border border-zinc-800 dark:border-zinc-700">
+                  <img
+                    src="/images/fig1-interpretability-joyplot.png"
+                    alt="Joyplot showing distributions of interpretability importance ratings across AI applications"
+                    className="w-full object-contain bg-zinc-950"
+                  />
+                </div>
+
+                <figcaption className="mt-4 text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                  <span className="font-medium dark:text-zinc-300">
+                    Fig. 1: Attitudes towards interpretability across real-world
+                    AI applications.
+                  </span>{" "}
+                  Joyplot visualizes the distributions of interpretability
+                  ratings, averaged across recommend and decide versions.
+                  Participants (N = 170) responded to the question “How
+                  important is it that the AI in this application is
+                  explainable, even if it performs accurately?” on a 5-point
+                  rating scale (1 = not at all important, 5 = extremely
+                  important).
+                  <br />
+                  <span className="italic">
+                    Source: Nussberger et al., Nature Communications (2022).
+                  </span>
+                </figcaption>
+              </figure>
+
+              <p>
+                <br />
+                When analyzing the data, a prominent question emerges.
+              </p>
+
+              <p>
+                <br />
+                How can reliable behavior be differentiated from coincidental
+                correlation?
+              </p>
+            </div>
+
+            <h2 className="text-2xl">
+              <br />
+              Transparency as a Form of Epistemology
+            </h2>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Transparency and trust become key factors for dismantling the
+                black box system, a way for practitioners in the field of
+                machine learning to gain a deeper understanding for an AI's
+                decision making. Often implemented through post-hoc
+                explanations, methods that illuminate an agent’s internal
+                structure are essential for future development.
+              </p>
+
+              <p>
+                <br />
+                Without causal insight, errors remain unexplained, biases
+                undetected, and failures unpredictable. Interpretability seeks
+                to recover this missing structure by revealing how inputs
+                influence outcomes, restoring a degree of epistemic
+                accountability to algorithmic decision-making.
+              </p>
+            </div>
+
+            <h2 className="text-2xl">
+              <br />
+              Interpretability as a Catalyst for Modern AI Agents
+            </h2>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Interpretability is not a solution, but a critical component
+                when identifying a machine’s inner workings; a necessary
+                condition for trust.
+              </p>
+
+              <p>
+                <br />A system that cannot justify its decisions cannot be fully
+                trusted, regardless of its empirical performance.
+              </p>
+
+              <p>
+                <br />
+                The framework of trust within machine learning is an ever
+                expanding field. When machines are embedded in domains where
+                error carries irreversible consequences, interpretability
+                becomes a primary focus when separating accuracy to coincidental
+                correlation.
+              </p>
+            </div>
           </div>
         </section>
       </main>
 
       <footer
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-col md:flex-row flex-wrap justify-between items-start gap-y-8 w-full relative 
-  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
+  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -mt-25"
       >
         {/* Brand Section */}
         <div className="footer-brand">

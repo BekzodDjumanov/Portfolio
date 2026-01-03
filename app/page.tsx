@@ -110,7 +110,6 @@ export default function Home() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // 🔴 REQUIRED FOR NETLIFY
     formData.append("form-name", "feedback");
 
     try {
@@ -162,28 +161,31 @@ export default function Home() {
 
   const cards = [
     {
-      date: "Report - January 1st, 2025",
-      title: "A Fragile Foundation",
+      date: "Report - December 14th, 2025",
+      title: "Purpose & Reason in Traditional Work",
       description:
-        "An insight into the AWS outage of October 20th, 2025 and its implications for the technological landscape.",
+        "An insight into how traditional work becomes a medium through which individuals assert agency and confront adversity.",
       href: "/article1",
     },
     {
-      date: "SOON",
-      title: "Ephemeral",
-      description: "SOON",
+      date: "Report - December 17th, 2025",
+      title: "AI Interpretability and Trustworthiness",
+      description:
+        "An exploration of black-box models, the limits of understanding, and how uncovering causality reveals the core integrity of algorithms.",
       href: "/article2",
     },
     {
-      date: "SOON",
-      title: "Despondence",
-      description: "SOON",
+      date: "Report - Decembeer 19th, 2025",
+      title: "The Equivocal Definition of Consciousness",
+      description:
+        "An examination of LoveLace's argument and how it applies to contemporary AI.",
       href: "/article3",
     },
     {
-      date: "SOON",
-      title: "Grimace",
-      description: "SOON",
+      date: "Report - December 24th, 2025",
+      title: "The Constraints of AI in Transformational Creativity",
+      description:
+        "The misrepresented paradigm of AI in creative endeavors, and its fallacy in searching conceptual dimensions.",
       href: "/article4",
     },
   ];
@@ -464,17 +466,18 @@ export default function Home() {
             <div
               key={index}
               className="
-          h-42.5 rounded-xl border
-          dark:border-[#4c1d95]/60
-          dark:bg-[#4c1d95]/20
-          backdrop-blur-md
-          dark:shadow-[0_0_20px_-5px_rgba(76,29,149,0.3)]
-          transition-transform duration-300
-          flex flex-col justify-between p-4 shadow-lg
-        "
+              rounded-xl border
+              dark:border-[#4c1d95]/60
+              dark:bg-[#4c1d95]/20
+              backdrop-blur-md
+              dark:shadow-[0_0_20px_-5px_rgba(76,29,149,0.3)]
+              transition-transform duration-300
+              flex flex-col justify-between p-4 shadow-lg
+              min-h-[10rem]
+            "
             >
               {/* Top */}
-              <span className="text-[10px] uppercase tracking-widest text-gray-500 dark:text-[#a855f7]/60">
+              <span className="text-[10px] uppercase tracking-widest text-gray-500 dark:text-[#a855f7]/60 mb-1">
                 {card.date}
               </span>
 
@@ -492,7 +495,7 @@ export default function Home() {
               <Link
                 href={card.href}
                 className="text-xs font-semibold text-black dark:text-[#c084fc]
-                     flex items-center gap-1 transition-all hover:gap-2 duration-300 ease-in-out"
+                     flex items-center gap-1 transition-all hover:gap-2 duration-300 ease-in-out mt-1"
               >
                 Read Article <IoIosArrowDropright />
               </Link>
@@ -593,6 +596,8 @@ export default function Home() {
                     "Docker",
                     "CI/CD Pipelines",
                     "Kubernetes",
+                    "Google Cloud",
+                    "Virtual Machines",
                   ].map((skill) => (
                     <div
                       key={skill}

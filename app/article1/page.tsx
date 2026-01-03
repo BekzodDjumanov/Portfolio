@@ -212,19 +212,164 @@ export default function Projects() {
           <div className="w-full flex flex-col gap-4 ml-8 mb-12">
             <h1 className="flex items-center gap-3 text-3xl">
               <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
-              The AWS Outage of October 20th, December 2025
+              Purpose & Reason in Traditional Work
             </h1>
 
             <h3 className="text-sm uppercase tracking-[0.3em] font-bold opacity-40">
-              Insight 01 - 2 Minute read
+              Insight 01 - 4 Minute read
             </h3>
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Purpose is rarely found in comfort. Historically, the most
+                prominent inventions and discoveries have been marked by
+                obligation, resistance, and sustained confrontation. With the
+                prevalence of traditional work and its compulsory tasks, it
+                becomes apparent that the axioms stemming from labour compel
+                individuals toward a sense of urgency, strengthening their
+                knowledge and tolerance for adversity.
+              </p>
+
+              <p>
+                <br />
+                Traditional work, with all its constraints and demands, becomes
+                one of the few remaining structures through which individuals
+                are compelled to act, persist, and assert agency against
+                entropy.
+              </p>
+
+              <p>
+                <br />A seemingly obscure truth emerges: without work, how else
+                would individuals replicate this sense of hardship and
+                resistance?
+              </p>
+            </div>
+
+            <h2 className="text-2xl">
+              <br /> A World Without Work
+            </h2>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Suppose an artificial agent were to deem all notions of
+                traditional work obsolete.
+              </p>
+
+              <p>
+                <br />
+                It's a completely plausible assertion that this hypothetical
+                reality would in some ways be advantageous for the general
+                public. Paradigms such as higher overall happiness, cultural
+                shifts in creativity, and increased emphasis on personal
+                endeavors would be adopted.
+              </p>
+
+              <p>
+                <br />
+                However, there's a nuance that has yet to be addressed.
+              </p>
+            </div>
+
+            <h2 className="text-2xl">
+              <br /> Obligatory vs. Voluntary Work
+            </h2>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Without a sense of urgency, what compels one toward performing
+                an action or a favor that displaces them from their comfort?
+              </p>
+
+              <p>
+                <br />
+                Under traditional conceptions of work, individuals are compelled
+                toward action and subsequently removed from comfort. This
+                imposed necessity creates conditions that voluntary work
+                struggles to replicate.
+              </p>
+
+              <p>
+                <br />
+                Voluntary engagement, while valuable, is inherently conditional.
+                Because it can be withdrawn at will, it lacks the coercive
+                continuity that obligates sustained effort through difficulty.
+                In contrast, compulsory work enforces persistence beyond initial
+                motivation, exposing individuals to prolonged resistance, the
+                very condition under which discipline, competence, and purpose
+                are formed.
+              </p>
+
+              <p>
+                {" "}
+                <br />
+                Anything beyond force is simply volition. When action is left
+                entirely to choice, it becomes contingent on mood, desire, and
+                convenience. What distinguishes obligatory work is not merely
+                that it demands effort, but that it removes the option of
+                retreat, compelling persistence even when motivation collapses.
+              </p>
+
+              <p>
+                <br />
+                The following is structured in premise-conclusion form.
+              </p>
+
+              <p className="ml-5">
+                <br />
+                P1: Resistance, hardship, and conflict of one’s character
+                cultivates a higher tolerance for suffering, thereby promoting
+                growth and tenacity.
+              </p>
+
+              <p className="ml-5">
+                <br />
+                P2: Traditional work compels one toward action and intentionally
+                manifests an enduring and difficult environment, directly
+                promoting suffering.
+              </p>
+
+              <p className="ml-5">
+                <br />
+                C: Traditional work fosters growth, tenacity, and refining the
+                character in its adaptations to discomfort.
+              </p>
+            </div>
+
+            <h2 className="text-2xl">
+              <br />
+              An Uncertain Landscape
+            </h2>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                With the prevalence of artificial intelligence, civilization
+                must keep this ideology close and seek to adapt when necessary.
+              </p>
+
+              <p>
+                <br />
+                This article does not undermine free will, rather it affirms
+                that it is through traditional work that individuals flourish
+                and adapt when motivation fails (which it inevitably does).
+              </p>
+            </div>
+            <blockquote className="text-sm max-w-prose dark:text-zinc-400 border-l-2 border-zinc-800 pl-4 mt-4 italic">
+              <p>
+                "Invention is the most important product of man's creative
+                brain. The ultimate purpose is the complete mastery of mind over
+                the material world, the harnessing of human nature to human
+                needs."
+              </p>
+              <cite className="block mt-2 text-xs not-italic text-zinc-500 dark:text-purple-400">
+                — Nikola Tesla
+              </cite>
+            </blockquote>
           </div>
         </section>
       </main>
 
       <footer
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-col md:flex-row flex-wrap justify-between items-start gap-y-8 w-full relative 
-  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
+  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -mt-25"
       >
         {/* Brand Section */}
         <div className="footer-brand">

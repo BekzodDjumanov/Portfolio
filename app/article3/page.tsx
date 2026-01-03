@@ -212,19 +212,134 @@ export default function Projects() {
           <div className="w-full flex flex-col gap-4 ml-8 mb-12">
             <h1 className="flex items-center gap-3 text-3xl">
               <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
-              The Prevelance of Modern AI
+              The Equivocal Definition of Consciousness
             </h1>
 
             <h3 className="text-sm uppercase tracking-[0.3em] font-bold opacity-40">
-              Insight 03 - 2 Minute read
+              Insight 03 - 3 Minute read
             </h3>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Consciousness resists a singular definition, instead emerging
+                from a network of philosophical assumptions that shift across
+                historical contexts. When analyzing consciousness from a
+                historical perspective, its connotation has undergone
+                significant changes, much like contemporary physics or the
+                formal understanding of the atom.
+              </p>
+
+              <p>
+                <br />
+                Lady Lovelace was among the first to articulate a principled
+                boundary between mechanical computation and genuine thought,
+                arguing that machines could only do what they were explicitly
+                instructed to perform. Her objection was not a denial of
+                complexity or sophistication, but a claim about originality:
+                that a system incapable of generating intentions beyond its
+                design could not be said to possess consciousness.
+              </p>
+
+              <p>
+                <br />
+                Since it could be argued that consciousness must be an
+                independent construct, more specifically, it functions without
+                external influence. Lovelace's claim regarding artificial
+                intelligence was certainly not otherworldly.
+              </p>
+            </div>
+
+            <h2 className="text-2xl">
+              <br /> Lady Lovelace's Objection
+            </h2>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Lady Lovelace’s objection emerges not as a rejection of
+                computational power, but as a challenge to attribution. In her
+                analysis of Babbage’s Analytical Engine, she argued that
+                machines “have no pretensions whatever to originate anything.”
+                This claim does not deny that machines can produce novel
+                outputs, but rather that such outputs are derivative—constrained
+                by prior instruction, representation, and rule.
+              </p>
+
+              <p>
+                Contemporary AI agents operate on a creatively constrained
+                basis, searching pre-defined conceptual spaces and adhering to
+                certain statistical patterns to create generative output.
+                Although these systems may appear adaptive or inventive, their
+                operations remain tethered to external inputs and learned
+                distributions. The distinction is subtle but decisive:
+                generation is not equivalent to comprehension.
+              </p>
+            </div>
+
+            <h2 className="text-2xl">
+              <br /> Equivocality of Consciousness
+            </h2>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Distinguishing consciousness arises precisely at this boundary.
+              </p>
+
+              <p>
+                <br />
+                Is consciousness the outward resemblance of understanding or an
+                inner working that must possess intention for understanding?{" "}
+              </p>
+
+              <p>
+                <br />
+                While contemporary AI agents certainly resemble a form of
+                understanding when directed with instructions or a prompt, it
+                cannot be clearly distinguished whether this is a form of true
+                assimilation and comprehension. Lovelace attempts to provide a
+                cohesive framework to this idea: what is observed is not
+                consciousness itself, but a functional resemblance to its
+                outward expressions.
+              </p>
+            </div>
+
+            <h2 className="text-2xl">
+              <br /> A Future Outlook within Modern AI
+            </h2>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                As with historical shifts in the understanding of matter or
+                motion, the definition of consciousness may continue to evolve.
+                However, redefining the term to accommodate increasingly capable
+                machines risks dissolving its explanatory power. Without a
+                coherent account of intention, awareness, or self-directed
+                agency, claims of artificial consciousness remain conceptually
+                premature.
+              </p>
+
+              <p>
+                <br />
+                Lovelace’s objection remains a meaningful philosophical
+                benchmark, grounding contemporary discussions of artificial
+                intelligence in a distinction between mechanical capability and
+                genuine understanding.
+              </p>
+
+              <p>
+                <br />
+                As science continues to advance, the emulation of consciousness
+                by artificial systems is becoming increasingly plausible;
+                however, whether such emulation constitutes consciousness itself
+                remains an open and unresolved question.
+              </p>
+            </div>
           </div>
         </section>
       </main>
 
       <footer
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-col md:flex-row flex-wrap justify-between items-start gap-y-8 w-full relative 
-  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
+  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -mt-25"
       >
         {/* Brand Section */}
         <div className="footer-brand">

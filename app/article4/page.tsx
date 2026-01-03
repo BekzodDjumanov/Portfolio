@@ -7,6 +7,7 @@ import { RollingText } from "@/components/ui/skiper-ui/skiper58";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { FaChevronDown } from "react-icons/fa6";
 import { Link001 } from "@/components/ui/skiper-ui/skiper40";
+import { Layers, GitBranch, ArrowDown, Repeat, TrendingUp } from "lucide-react";
 
 import Link from "next/link";
 
@@ -212,19 +213,287 @@ export default function Projects() {
           <div className="w-full flex flex-col gap-4 ml-8 mb-12">
             <h1 className="flex items-center gap-3 text-3xl">
               <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
-              The Prevelance of Modern AI
+              The Constraints of AI in Transformational Creativity
             </h1>
 
             <h3 className="text-sm uppercase tracking-[0.3em] font-bold opacity-40">
-              Insight 04 - 2 Minute read
+              Insight 04 - 5 Minute read
             </h3>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Creativity is often characterized by qualities such as surprise,
+                value, novelty, and individual expression. Although not as
+                subjective as consciousness, creativity has transformed
+                throughout history, bringing about flourishing ideas that still
+                exist within the present day.
+              </p>
+
+              <p>
+                <br />
+                Understanding creativity requires a nuanced account of how ideas
+                are conceived and how creative processes unfold.
+              </p>
+
+              <p>
+                <br /> This article is an analysis of AI’s limitations in
+                transformational creativity and its inability to transcend
+                predefined conceptual spaces.
+              </p>
+            </div>
+
+            <h3 className="text-2xl">
+              <br />
+              The Three Constructs of Creativity
+            </h3>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Margaret Boden provides a framework that ascribes different
+                forms of creativity: combinational, exploratory, and
+                transformational creativity to contrast forms of creative
+                processes and the different ways novel ideas can emerge
+              </p>
+
+              <p>
+                <br /> When discussing how an artificial agent can be creative,
+                it certainly can fulfill these criteria, but to a partial or
+                limited extent.
+              </p>
+            </div>
+
+            <h3 className="text-2xl">
+              <br />
+              Combinational Creativity
+            </h3>
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Combinational creativity is deriving a central idea based upon
+                familiar concepts. This is often illustrated by AI, connecting
+                multiple pieces of literature to form a seemingly new literary
+                composition learned from different authors, recombining familiar
+                elements that fit in an existing conceptual space. In
+                computational terms, combinational creativity can often be
+                implemented through algorithms that recombine stored elements
+                according to syntactic or semantic rules.
+              </p>
+
+              <p>
+                <br />
+                It's important to emphasize that contemporary AI agents can
+                embody this form of creativity, as it simply requires two
+                converging ideas and a set of instructions. This allows agents
+                to generate novel combinations, though not ideas that depart
+                from the underlying conceptual framework.
+              </p>
+            </div>
+
+            <h3 className="text-2xl">
+              <br />
+              Exploratory Creativity
+            </h3>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Exploratory creativity explains that ideas can be created by
+                systematically searching through conceptual spaces defined by
+                limitations, boundaries, and existing ideals. An agent displays
+                creativity in this sense by contriving postulates in a
+                structured, organized manner, seeking to explore possibilities
+                within its confined space. This is exemplified in AI by creating
+                new novel routes by searching within a structured map defined by
+                coordinates and traversal rules, generating new solutions within
+                a problem space.
+              </p>
+
+              <p>
+                <br />
+                Once again, current AI models possess the capability of
+                exploring conceptual spaces, locating the desired route or
+                location dependent on a prompt. Below are instances of how AI
+                encapsulates exploratory capabilities, thereby exemplifying
+                creativity in defining new or valuable routes.
+              </p>
+
+              <ul className="space-y-3">
+                <br />
+                <li className="flex gap-3 items-start">
+                  <Layers className="w-6 h-6 mt-1 text-zinc-500 dark:text-zinc-400" />
+                  <span>
+                    <strong>Breadth-First Search (BFS):</strong> Explores the
+                    search space level by level; complete and optimal when step
+                    costs are uniform.
+                  </span>
+                </li>
+
+                <li className="flex gap-3 items-start">
+                  <GitBranch className="w-6 h-6 mt-1 text-zinc-500 dark:text-zinc-400" />
+                  <span>
+                    <strong>Depth-First Search (DFS):</strong> Explores a single
+                    branch to its deepest point before backtracking; not
+                    guaranteed to be optimal.
+                  </span>
+                </li>
+
+                <li className="flex gap-3 items-start">
+                  <ArrowDown className="w-6 h-6 mt-1 text-zinc-500 dark:text-zinc-400" />
+                  <span>
+                    <strong>Depth-Limited Search (DLS):</strong> A depth-first
+                    strategy with a predefined cutoff to prevent unbounded
+                    exploration.
+                  </span>
+                </li>
+
+                <li className="flex gap-3 items-start">
+                  <Repeat className="w-6 h-6 mt-1 text-zinc-500 dark:text-zinc-400" />
+                  <span>
+                    <strong>Iterative Deepening DFS (IDDFS):</strong> Repeatedly
+                    applies depth-limited search with increasing limits,
+                    combining DFS memory efficiency with BFS completeness.
+                  </span>
+                </li>
+
+                <li className="flex gap-3 items-start">
+                  <TrendingUp className="w-6 h-6 mt-1 text-zinc-500 dark:text-zinc-400" />
+                  <span>
+                    <strong>Uniform-Cost Search (UCS):</strong> Expands nodes in
+                    order of lowest cumulative path cost, guaranteeing optimal
+                    solutions when costs are non-negative.
+                  </span>
+                </li>
+              </ul>
+
+              <p>
+                <br />
+                While these algorithms can discover optimal or unexpected
+                solutions, they remain confined to the predefined structure of
+                the search space itself.
+              </p>
+            </div>
+
+            <h3 className="text-2xl">
+              <br />
+              Transformational Creativity
+            </h3>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Transformational creativity involves altering the structure of a
+                conceptual space, pursuing new ideas that have not arisen
+                before. This connotation requires an agent to traverse beyond a
+                given constraint or boundary. Rather than merely exploring or
+                combining ideas, it requires modifying the underlying rules,
+                constraints, or generative principles that determine what kinds
+                of ideas are possible in the first place.
+              </p>
+
+              <p>
+                <br />
+                When applying this form of creativity, a critical discrepancy
+                arises.
+              </p>
+            </div>
+
+            <h3 className="text-2xl">
+              <br />
+              Why Contemporary AI Lacks Transformational Creativity
+            </h3>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                Contemporary AI systems satisfy only two of the three criteria
+                commonly associated with creativity, rendering them insufficient
+                to be considered fully creative, under the aforementioned
+                guidelines. While such systems may exhibit combinational or
+                exploratory creativity within constrained frameworks, they fail
+                to achieve transformational creativity—an essential condition
+                for originality and the ascription of individual authorship.
+              </p>
+
+              <p>
+                <br />
+                When searching through a defined conceptual space, humans
+                possess the ability to alter that dimension, reformulating its
+                boundaries to create novel or unexpected ideas. When an
+                artificial agent performs an exploratory or combinatory search,
+                it references a finite conceptual space predetermined by
+                previous inputs (statistical data); therefore, it can only be
+                limited to generating outputs that simply represent rules
+                defined by its inner workings. From this perspective,
+                transformational creativity is not merely difficult for AI; it
+                is effectively precluded by the architecture of current systems,
+                highlighting the fundamental gap between human-like innovation
+                and machine creativity.
+              </p>
+
+              <p>
+                <br />
+                The following premise-conclusion argument emerges.
+              </p>
+
+              <p className="ml-5">
+                <br />
+                P1: Transformational creativity is the ability to change rules
+                and constraints that define a given conceptual space.
+              </p>
+
+              <p className="ml-5">
+                <br />
+                P2: Current AI systems operate by searching within a conceptual
+                space whose rules and structures are fixed prior to the search.
+              </p>
+
+              <p className="ml-5">
+                <br />
+                P3: A system that cannot change the rules of its conceptual
+                space cannot engage in transformational creativity.
+              </p>
+
+              <p className="ml-5">
+                <br />
+                C: Therefore, current AI systems cannot reach transformational
+                creativity.
+              </p>
+            </div>
+
+            <h3 className="text-2xl">
+              <br />
+              Artificial Intelligence's Route Toward Creativity
+            </h3>
+
+            <div className="max-w-3xl dark:text-zinc-300">
+              <p>
+                While this article outlines many discrepancies of AI and its
+                ability to be creative, many techniques like meta-learning and
+                recursive self-improvement allow agents to dynamically redefine
+                their conceptual spaces. Meta-learning implies that the
+                conceptual space is the learning strategies themselves, rather
+                than the outputs given by the space. If an agent were to
+                recursively self-improve and dynamically alter its
+                self-modifying constraints, an AI agent would theoretically
+                attain transformational creativity, bridging the gap between
+                computational power and human-directed intelligence.
+              </p>
+
+              <p>
+                <br />
+                Such a development, however, remains speculative. Until
+                artificial systems demonstrate the capacity to originate and
+                revise the conceptual frameworks that govern their own learning,
+                independent of human design, their creativity remains an
+                extension of human intention rather than an autonomous faculty.
+                What may emerge is not machine creativity in the human sense,
+                but an increasingly sophisticated amplification of
+                human-directed intelligence.
+              </p>
+            </div>
           </div>
         </section>
       </main>
 
       <footer
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-col md:flex-row flex-wrap justify-between items-start gap-y-8 w-full relative 
-  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
+  shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -mt-25"
       >
         {/* Brand Section */}
         <div className="footer-brand">
