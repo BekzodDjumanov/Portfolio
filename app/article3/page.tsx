@@ -260,7 +260,7 @@ export default function Projects() {
                 analysis of Babbage’s Analytical Engine, she argued that
                 machines “have no pretensions whatever to originate anything.”
                 This claim does not deny that machines can produce novel
-                outputs, but rather that such outputs are derivative—constrained
+                outputs, but rather that such outputs are derivative-constrained
                 by prior instruction, representation, and rule.
               </p>
 
