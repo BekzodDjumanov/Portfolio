@@ -406,7 +406,7 @@ export default function Projects() {
                 to be considered fully creative, under the aforementioned
                 guidelines. While such systems may exhibit combinational or
                 exploratory creativity within constrained frameworks, they fail
-                to achieve transformational creativity—an essential condition
+                to achieve transformational creativity, an essential condition
                 for originality and the ascription of individual authorship.
               </p>
 
