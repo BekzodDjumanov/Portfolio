@@ -464,16 +464,14 @@ export default function Home() {
         <div className="opacity-0 fade-in grid grid-cols-1 md:grid-cols-4 gap-4 px-4 max-w-7xl mx-auto">
           {cards.map((card, index) => (
             <div
-              key={index}
               className="
-              rounded-xl border
-              dark:border-[#4c1d95]/60
-              dark:bg-[#4c1d95]/20
-              backdrop-blur-md
-              dark:shadow-[0_0_20px_-5px_rgba(76,29,149,0.3)]
-              transition-transform duration-300
-              flex flex-col justify-between p-4 shadow-lg
-              min-h-[10rem]
+              group relative rounded-xl border
+              bg-zinc-100 dark:bg-[#0b0416]/90
+              border-black/5 dark:border-violet-900/60
+              backdrop-blur-xl
+              transition-all duration-500 ease-out
+              flex flex-col justify-between p-5 shadow-lg
+              min-h-[11rem] overflow-hidden
             "
             >
               {/* Top */}
