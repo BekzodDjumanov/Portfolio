@@ -211,9 +211,9 @@ export default function Projects() {
         <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center py-20 md:py-32 px-4">
           {/* Heading & Subtext - Using ml-8 to match your Reviews style */}
           <div className="w-full flex flex-col gap-4 ml-8 mb-12">
-            <h1 className="flex items-center gap-3 text-3xl">
-              <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
-              The Constraints of AI in Transformational Creativity
+            <h1 className="flex items-stretch gap-3 text-2xl sm:text-3xl">
+              <span className="w-[4px] dark:bg-white bg-black rounded-full" />
+              <span>The Constraints of AI in Transformational Creativity</span>
             </h1>
 
             <h3 className="text-sm uppercase tracking-[0.3em] font-bold opacity-40">

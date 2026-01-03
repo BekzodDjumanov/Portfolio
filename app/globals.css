@@ -48,10 +48,12 @@
 html,
 body {
   overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 @theme inline {

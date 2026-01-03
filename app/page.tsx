@@ -883,7 +883,7 @@ export default function Home() {
               >
                 <div className="relative z-20 flex items-center justify-center w-full tracking-[.1em]">
                   <p>Submit</p>
-                  <IoIosArrowForward className="absolute right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-purple-500" />
+                  <IoIosArrowForward className="absolute right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 dark:text-purple-500 text-black" />
                 </div>
               </button>
             </div>
