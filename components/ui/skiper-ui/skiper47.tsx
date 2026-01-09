@@ -21,27 +21,27 @@ import { cn } from "@/lib/utils";
 const Skiper47 = () => {
   const images = [
     {
-      src: "/",
+      src: "/images/main.png",
       alt: "nun yet",
     },
     {
-      src: "/",
+      src: "/images/hero2.png",
       alt: "nun yet",
     },
     {
-      src: "/",
+      src: "/images/hero3.png",
       alt: "nun yet",
     },
     {
-      src: "/",
+      src: "/images/hero4.png",
       alt: "nun yet",
     },
     {
-      src: "/",
+      src: "/images/hero5.png",
       alt: "nun yet",
     },
     {
-      src: "/",
+      src: "/images/hero6.png",
       alt: "nun yet",
     },
   ];
@@ -130,9 +130,12 @@ const Carousel_001 = ({
         modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index} className="!h-[320px] w-full border">
+          <SwiperSlide
+            key={index}
+            className="!h-[320px] w-full border rounded-2xl"
+          >
             <img
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-2xl"
               src={image.src}
               alt={image.alt}
             />
