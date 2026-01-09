@@ -598,7 +598,7 @@ export default function Home() {
                     "CI/CD Pipelines",
                     "Kubernetes",
                     "Google Cloud",
-                    "Virtual Machines",
+                    "Amazon EC2",
                   ].map((skill) => (
                     <div
                       key={skill}
