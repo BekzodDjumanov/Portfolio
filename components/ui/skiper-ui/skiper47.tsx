@@ -130,12 +130,9 @@ const Carousel_001 = ({
         modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
       >
         {images.map((image, index) => (
-          <SwiperSlide
-            key={index}
-            className="!h-[320px] w-full border rounded-2xl"
-          >
+          <SwiperSlide key={index} className="!h-[320px] w-full border">
             <img
-              className="h-full w-full object-cover rounded-2xl"
+              className="h-full w-full object-cover"
               src={image.src}
               alt={image.alt}
             />
