@@ -352,7 +352,7 @@ export default function Home() {
 
             <div className="space-y-4 max-w-xl mx-auto md:mx-0 opacity-0 fade-in">
               <p className="text-lg md:text-xl leading-relaxed -mt-2">
-                Current student at the University of Maryland, specializing in
+                Current student at the University of Maryland, majoring in
                 Computer Engineering.
               </p>
               <p className="text-sm md:text-base text-black/50 dark:text-zinc-500 leading-relaxed opacity-0 fade-in">
@@ -878,7 +878,7 @@ export default function Home() {
                 type="submit"
                 className="group relative flex items-center justify-center w-[150px] h-[52px] text-zinc-500
       transition-all duration-500 active:scale-95 cursor-pointer outline-none
-      rounded-xl overflow-hidden dark:bg-[#0A0118]
+      rounded-xl overflow-hidden bg-white/50 dark:bg-white/5
       border border-black/10 dark:border-white/10
       dark:hover:border-purple-500 shadow-lg dark:hover:text-purple-500"
               >
