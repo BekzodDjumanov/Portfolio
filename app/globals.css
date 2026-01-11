@@ -11,6 +11,14 @@
     overflow-x: hidden;
   }
 }
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 @custom-variant dark (&:is(.dark *));
 
