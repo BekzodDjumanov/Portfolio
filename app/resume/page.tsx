@@ -101,7 +101,7 @@ export default function Projects() {
       company: "Cummings & Co. Realtors",
       logo: "/images/cummings.png",
       description:
-        "Working closely with core employees in order to deliver impactful results to our clients. Handling consumer data and increasing user metrics.",
+        "Partnered with clients to optimize SEO strategies and data processing, significantly improving property engagement and client response rates.",
       website: "https://www.cummingsrealtors.com",
     },
     {
@@ -110,7 +110,7 @@ export default function Projects() {
       company: "First Financial Federal Credit Union",
       logo: "/images/fffcu.png",
       description:
-        "Played significant role in evaluating statewide cybersecurity awareness and working closely with associate members, providing effective and steadfast solutions.",
+        "Played a key role in assessing statewide cybersecurity policies and enforcing secure data destruction standards, strengthening protection of First Financial’s assets.",
       website: "https://www.firstfinancial.org",
     },
   ];
