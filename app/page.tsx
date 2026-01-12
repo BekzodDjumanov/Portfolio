@@ -467,8 +467,8 @@ export default function Home() {
               key={index}
               className="
               rounded-xl border
-              bg-zinc-100 dark:bg-[#0b0416]/90
-              border-black/5 dark:border-violet-900/60
+              bg-zinc-100/50 dark:bg-white/[0.02]
+              border-black/5 dark:border-white/10
               backdrop-blur-xl
               backdrop-blur-md
               dark:shadow-[0_0_20px_-5px_rgba(76,29,149,0.3)]
@@ -478,13 +478,13 @@ export default function Home() {
             "
             >
               {/* Top */}
-              <span className="text-[10px] uppercase tracking-widest text-gray-500 dark:text-[#a855f7]/60 mb-1">
+              <span className="text-[10px] uppercase tracking-widest text-gray-500 dark:text-zinc-700 mb-1">
                 {card.date}
               </span>
 
               {/* Middle */}
               <div>
-                <h2 className="text-sm font-medium text-black dark:text-[#f3e8ff]">
+                <h2 className="text-sm font-medium text-black dark:text-white">
                   {card.title}
                 </h2>
                 <p className="text-[11px] text-gray-700 dark:text-zinc-400 mt-1">
@@ -495,7 +495,7 @@ export default function Home() {
               {/* Bottom */}
               <Link
                 href={card.href}
-                className="text-xs font-semibold text-black dark:text-[#c084fc]
+                className="text-xs font-semibold text-black dark:text-purple-300
                      flex items-center gap-1 transition-all hover:gap-2 duration-300 ease-in-out mt-1"
               >
                 Read Article <IoIosArrowDropright />
