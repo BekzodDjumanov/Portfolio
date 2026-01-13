@@ -231,16 +231,17 @@ export default function Projects() {
                 As artificial intelligence becomes increasingly prolific in many
                 systems that once relied on human judgement, it's important to
                 examine its decision making and performance throughout its
-                processes. Accuracy is a critical factor, as it serves as a
-                benchmark for future use, whether through correlation with human
-                judgment or prior trials. Accuracy alone is insufficient when
-                models operate as opaque mechanisms, producing outcomes without
-                intelligible reasoning. For example, in medical diagnosis
-                systems, a model that predicts disease with high accuracy but
-                cannot explain which clinical features influenced its decision
-                limits a clinician’s ability to validate, trust, and safely act
-                on its output. Interpretability becomes not a supplementary
-                feature, but a prerequisite for responsible deployment.
+                processes. Accuracy is a critical factor when emphasizing AI
+                capabilities, as it serves as a benchmark for future use,
+                whether through correlation with human judgment or prior trials.
+                However, accuracy alone is insufficient when models operate as
+                opaque mechanisms, producing outcomes without intelligible
+                reasoning. For example, in medical diagnosis systems, a model
+                that predicts disease with high accuracy but cannot explain
+                which clinical features influenced its decision limits a
+                clinician’s ability to validate, trust, and safely act on its
+                output. Interpretability becomes not a supplementary feature,
+                but a prerequisite for responsible deployment.
               </p>
             </div>
 
