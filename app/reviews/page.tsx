@@ -781,10 +781,6 @@ export default function Projects() {
                   bg-zinc-100/50 dark:bg-white/[0.03]
                   border border-black/5 dark:border-white/10
                   text-sm font-medium
-                  dark:hover:border-[#7c3aed]/40
-                  dark:hover:text-[#c084fc]
-                  dark:hover:bg-[#7c3aed]/5
-                  transition-all duration-300 ease-in-out
                   lg:max-w-[260px] w-full
                 "
                 >

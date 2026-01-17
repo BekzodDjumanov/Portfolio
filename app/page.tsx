@@ -75,7 +75,7 @@ export default function Home() {
 
     gsap.to(chevronRef.current, {
       rotate: isOpen ? 180 : 0,
-      duration: 0.3,
+      duration: 0.4,
       ease: "power2.inOut",
     });
   }, [isOpen]);

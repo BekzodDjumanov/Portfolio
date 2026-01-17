@@ -304,6 +304,8 @@ export default function Projects() {
                       border border-black/5 dark:border-white/10 
                       
                       text-sm font-medium 
+
+                      transition-all duration-300 ease-in-out
                       
                       dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5"
                     >
@@ -441,6 +443,8 @@ export default function Projects() {
                       border border-black/5 dark:border-white/10 
                       
                       text-sm font-medium 
+                      
+                      transition-all duration-300 ease-in-out
                       
                       dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5"
                       >
@@ -584,6 +588,8 @@ export default function Projects() {
                       border border-black/5 dark:border-white/10 
                       
                       text-sm font-medium 
+
+                      transition-all duration-300 ease-in-out
                       
                       dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5"
                     >
@@ -726,6 +732,8 @@ export default function Projects() {
                       border border-black/5 dark:border-white/10 
                       
                       text-sm font-medium 
+
+                      transition-all duration-300 ease-in-out
                       
                       dark:hover:border-[#7c3aed]/40 dark:hover:text-[#c084fc] dark:hover:dark:bg-[#7c3aed]/5"
                     >
