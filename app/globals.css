@@ -56,11 +56,15 @@ html,
 body {
   overscroll-behavior: none;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: auto; /* ALLOWS vertical scrolling */
+  overscroll-behavior: auto; /* IMPORTANT */
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto; /* ALLOWS vertical scrolling */
+  overscroll-behavior: auto; /* IMPORTANT */
 }
 
 @theme inline {
