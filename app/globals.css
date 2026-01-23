@@ -54,7 +54,7 @@ html {
 }
 html,
 body {
-  overscroll-behavior: none;
+  overscroll-behavior: contain;
   overflow-x: hidden;
   overflow-y: auto;
 }
