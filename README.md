@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Professional Portfolio
 
-## Getting Started
+A modern, animation-heavy professional portfolio built with **Next.js**, **React**, **Tailwind CSS**, and **GSAP**.  
+Designed around a **deep purple & black** aesthetic with an emphasis on clarity, motion, and restraint.
 
-First, run the development server:
+This site serves as both a professional profile and a living archive of work, writing, and experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✦ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- ⚡ **Next.js (App Router)** for performance and structure
+- 🎨 **Tailwind CSS** with a dark-first, purple-accented design system
+- 🧠 **GSAP animations** (page entrances, UI motion, micro-interactions)
+- 🌙 **Animated theme toggler** (light / dark)
+- 📱 **Fully responsive** (desktop → mobile)
+- 🧩 Modular component architecture
+- 📝 Articles & reports section
+- 🛠 Experience & skills timeline
+- 📬 Contact form with animated toast feedback
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✦ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+**Frontend**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Animation & UI**
 
-## Deploy on Vercel
+- GSAP
+- Framer Motion
+- Custom UI components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Deployment**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Netlify / Vercel compatible
+
+---
+
+## ✦ Design Philosophy
+
+With a focus on a modern theme color and robust typography system, the portfolio is able to achieve a harmony of both appeal and unison. This site was originally derived from a collection of modern templates and incorporated many UI/UX elements that adhere to custom conventions of attentive website development.
+
+## ✦ Author
+
+Bekzod Djumanov
+Computer Engineering @ University of Maryland
+
+GitHub: github.com/BekzodDjumanov
+
+LinkedIn: linkedin.com/in/bekzod-djumanov
