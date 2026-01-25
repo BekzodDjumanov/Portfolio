@@ -747,13 +747,11 @@ export default function Projects() {
       >
         <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center gap-12 py-20 md:py-32 px-4">
           <div className="w-full flex flex-col gap-4 ml-8">
-            {/* Heading Logic: Kept the dot-indicator style */}
             <h1 className="flex items-center gap-3 text-3xl">
               <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
               reviews & references
             </h1>
 
-            {/* Subtext Logic: Kept your specific alignment and opacity */}
             <p className="text-md text-zinc-500 max-w-prose">
               A comprehensive list of buyers who have engaged in business
               exchanges throughout my time as an entrepreneur. Prioritizing
@@ -784,7 +782,6 @@ export default function Projects() {
                   lg:max-w-[260px] w-full
                 "
                 >
-                  {/* Avatar */}
                   <div className="flex flex-col items-center text-center gap-3">
                     <img
                       src={item.image}
@@ -792,19 +789,16 @@ export default function Projects() {
                       className="w-12 h-12 rounded-full object-cover border border-black/10"
                     />
 
-                    {/* Name */}
                     <h4 className="text-sm dark:text-[#ffffff] text-[#000000]">
                       {item.name}
                     </h4>
 
-                    {/* Stars */}
                     <div className="flex gap-1 text-[#f5c26b]">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <IoMdStar key={i} className="w-4 h-4" />
                       ))}
                     </div>
 
-                    {/* Review */}
                     <p className="text-xs leading-relaxed pt-2 font-normal whitespace-pre-line">
                       {item.review}
                     </p>
@@ -820,7 +814,6 @@ export default function Projects() {
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-col md:flex-row flex-wrap justify-between items-start gap-y-8 w-full relative 
   shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
       >
-        {/* Brand Section */}
         <div className="footer-brand">
           <div className="mt-2 flex gap-2 items-center">
             <ShinyButton className="flex items-center gap-2">
@@ -834,7 +827,6 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Navigation Section */}
         <div
           className="footer-nav flex flex-nowrap gap-4 items-center mt-2 text-xs md:text-sm
           justify-center
@@ -856,7 +848,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Social Section */}
         <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
           <Link
             href="https://github.com/BekzodDjumanov"
@@ -873,10 +864,8 @@ export default function Projects() {
           </Link>
         </div>
 
-        {/* Line */}
         <div className="footer-line w-full h-[1px] bg-white/10 my-4"></div>
 
-        {/* Ending Credit */}
         <div className="ending-credit w-full text-center text-[#7b7c8c] text-xs">
           Curated with Next.js, React, Tailwind CSS, Framer Motion, GSAP, &
           Figma.

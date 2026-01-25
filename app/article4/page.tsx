@@ -209,7 +209,6 @@ export default function Projects() {
         className="flex-1 flex flex-col items-center mt-10 px-4 py-1"
       >
         <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center py-20 md:py-32 px-4">
-          {/* Heading & Subtext - Using ml-8 to match your Reviews style */}
           <div className="w-full flex flex-col gap-4 ml-8 mb-12">
             <h1 className="flex items-stretch gap-3 text-2xl sm:text-3xl">
               <span className="w-[4px] dark:bg-white bg-black rounded-full" />

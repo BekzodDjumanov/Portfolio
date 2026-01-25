@@ -344,7 +344,6 @@ export default function Home() {
                 <div className="opacity-0 fade-in">Washington, DC</div>
               </div>
 
-              {/* Forced to one line with whitespace-nowrap */}
               <div className="opacity-0 fade-in text-4xl">
                 <h1>self-proclaimed developer.</h1>
               </div>
@@ -362,7 +361,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Luxury Style Badges */}
             <div className="opacity-0 fade-in flex flex-wrap justify-center md:justify-start gap-3 pt-2 -mt-4">
               {["Frontend Developer", "UI/UX Specialist", "Full Ride"].map(
                 (badge) => (
@@ -427,7 +425,6 @@ export default function Home() {
           </div>
 
           <div className="opacity-0 fade-in flex-1 order-1 md:order-2 flex justify-center md:justify-end w-full">
-            {/* 1. Ensure overflow-visible so the badge can 'hang' outside the box */}
             <div className="relative group w-[90%] sm:w-full max-w-[320px] md:max-w-[400px] lg:max-w-[480px] xl:max-w-[520px] transition-all duration-700 ease-in-out overflow-visible">
               <div className="absolute -inset-4 bg-[#ffffff]/5 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-1000" />
 
@@ -477,12 +474,10 @@ export default function Home() {
               min-h-[10rem]
             "
             >
-              {/* Top */}
               <span className="text-[10px] uppercase tracking-widest text-gray-500 dark:text-zinc-700 mb-1">
                 {card.date}
               </span>
 
-              {/* Middle */}
               <div>
                 <h2 className="text-sm font-medium text-black dark:text-white">
                   {card.title}
@@ -492,7 +487,6 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Bottom */}
               <Link
                 href={card.href}
                 className="text-xs font-semibold text-black dark:text-purple-300
@@ -507,7 +501,6 @@ export default function Home() {
 
       <main>
         <section className="w-full max-w-6xl mx-auto flex flex-col py-12 px-4">
-          {/* SECTION HEADER - Now inside the section */}
           <div className="w-full flex justify-start text-left text-3xl mb-12">
             <h1 className="flex items-center gap-3">
               <span className="w-[4px] h-8 dark:bg-[#ffffff] bg-[#000000] rounded-full inline-block" />
@@ -515,11 +508,8 @@ export default function Home() {
             </h1>
           </div>
 
-          {/* CONTENT GRID */}
           <div className="flex flex-col lg:flex-row gap-16">
-            {/* LEFT SIDE: STACKED SECTIONS */}
             <div className="flex-1 flex flex-col gap-12">
-              {/* Technical Skills Block */}
               <div className="space-y-6">
                 <div className="flex items-center gap-2">
                   <h2 className="text-xs uppercase tracking-[0.3em] font-bold opacity-40">
@@ -557,7 +547,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Soft Skills Block */}
               <div className="space-y-6">
                 <h2 className="text-xs uppercase tracking-[0.3em] font-bold opacity-40">
                   ● Frameworks & Libraries
@@ -632,7 +621,6 @@ export default function Home() {
               </div>
 
               <div className="space-y-10">
-                {/* Experience Item 1 */}
                 <div className="flex flex-col sm:flex-row sm:justify-between items-start group gap-4 sm:gap-0">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
@@ -658,7 +646,6 @@ export default function Home() {
                     Jan 2020 — Present
                   </span>
                 </div>
-                {/* Experience Item 2 */}
                 <div className="flex flex-col sm:flex-row sm:justify-between items-start group gap-4 sm:gap-0">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
@@ -676,19 +663,16 @@ export default function Home() {
                       <p className="text-[14px] lg:text-sm opacity-60 mt-2 leading-none">
                         CACI International
                       </p>
-                      {/* This shows ONLY on mobile (below 'sm' breakpoint) */}
                       <p className="text-[12px] font-medium opacity-40 mt-2 sm:hidden">
                         May 2026 — ???
                       </p>
                     </div>
                   </div>
-                  {/* This shows ONLY on tablet/desktop (from 'sm' up) */}
                   <span className="hidden sm:block text-xs font-medium opacity-40 pt-1 whitespace-nowrap">
                     May 2026 — ???
                   </span>
                 </div>
 
-                {/* Experience Item 3 */}
                 <div className="flex flex-col sm:flex-row sm:justify-between items-start group gap-4 sm:gap-0">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
@@ -715,7 +699,6 @@ export default function Home() {
                   </span>
                 </div>
 
-                {/* Experience Item 4 */}
                 <div className="flex flex-col sm:flex-row sm:justify-between items-start group gap-4 sm:gap-0">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
@@ -780,7 +763,6 @@ export default function Home() {
               contact
             </h1>
           </div>
-          {/* Content Wrapper - Using Form as the grid container */}
           <form
             ref={formRef}
             name="feedback"
@@ -788,12 +770,9 @@ export default function Home() {
             onSubmit={handleFormSubmit}
             className="grid grid-cols-1 lg:grid-cols-2 gap-16"
           >
-            {/* REQUIRED FOR NETLIFY */}
             <input type="hidden" name="form-name" value="feedback" />
 
-            {/* LEFT — Form Fields */}
             <div className="space-y-6">
-              {/* Name */}
               <div>
                 <label className="block text-xs uppercase tracking-widest dark:text-white/60 text-black/50 mb-2">
                   Name
@@ -809,7 +788,6 @@ export default function Home() {
                 />
               </div>
 
-              {/* Email */}
               <div>
                 <label className="block text-xs uppercase tracking-widest dark:text-white/60 text-black/50 mb-2">
                   Email
@@ -825,7 +803,6 @@ export default function Home() {
                 />
               </div>
 
-              {/* Subject */}
               <div>
                 <label className="block text-xs uppercase tracking-widest dark:text-white/60 text-black/50 mb-2">
                   Subject
@@ -841,7 +818,6 @@ export default function Home() {
                 />
               </div>
 
-              {/* Phone */}
               <div>
                 <label className="block text-xs uppercase tracking-widest dark:text-white/60 text-black/50 mb-2">
                   Phone
@@ -857,7 +833,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* RIGHT — Message + Submit */}
             <div className="flex flex-col justify-between gap-6">
               <div>
                 <label className="block text-xs uppercase tracking-widest dark:text-white/60 text-black/50 mb-2">
@@ -896,7 +871,6 @@ export default function Home() {
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-col md:flex-row flex-wrap justify-between items-start gap-y-8 w-full relative 
   shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none mt-5"
       >
-        {/* Brand Section */}
         <div className="footer-brand">
           <div className="mt-2 flex gap-2 items-center">
             <ShinyButton className="flex items-center gap-2">
@@ -910,7 +884,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Navigation Section */}
         <div
           className="footer-nav flex flex-nowrap gap-4 items-center mt-2 text-sm
           justify-center
@@ -932,7 +905,6 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Social Section */}
         <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
           <Link
             href="https://github.com/BekzodDjumanov"
@@ -949,10 +921,8 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Line */}
         <div className="footer-line w-full h-[1px] bg-white/10 my-4"></div>
 
-        {/* Ending Credit */}
         <div className="ending-credit w-full text-center text-[#7b7c8c] text-xs">
           Curated with Next.js, React, Tailwind CSS, Framer Motion, GSAP, &
           Figma.

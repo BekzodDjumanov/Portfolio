@@ -208,7 +208,6 @@ export default function Projects() {
         className="flex-1 flex flex-col items-center mt-10 px-4 py-1"
       >
         <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center py-20 md:py-32 px-4">
-          {/* Heading & Subtext - Using ml-8 to match your Reviews style */}
           <div className="w-full flex flex-col gap-4 ml-8 mb-12">
             <h1 className="flex items-center gap-3 text-3xl">
               <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
@@ -272,7 +271,6 @@ export default function Projects() {
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-col md:flex-row flex-wrap justify-between items-start gap-y-8 w-full relative 
   shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -mt-25"
       >
-        {/* Brand Section */}
         <div className="footer-brand">
           <div className="mt-2 flex gap-2 items-center">
             <ShinyButton className="flex items-center gap-2">
@@ -286,7 +284,6 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Navigation Section */}
         <div
           className="footer-nav flex flex-nowrap gap-4 items-center mt-2 text-sm
           justify-center
@@ -325,10 +322,8 @@ export default function Projects() {
           </Link>
         </div>
 
-        {/* Line */}
         <div className="footer-line w-full h-[1px] bg-white/10 my-4"></div>
 
-        {/* Ending Credit */}
         <div className="ending-credit w-full text-center text-[#7b7c8c] text-xs">
           Curated with Next.js, React, Tailwind CSS, Framer Motion, GSAP, &
           Figma.

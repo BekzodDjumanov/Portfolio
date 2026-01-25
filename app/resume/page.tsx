@@ -250,7 +250,6 @@ export default function Projects() {
         className="flex-1 flex flex-col items-center mt-10 px-4 py-1 overflow-x-hidden" // Added overflow-x-hidden
       >
         <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center py-20 md:py-32">
-          {/* Heading & Subtext - Using ml-8 to match your Reviews style */}
           <div className="w-full flex flex-col gap-4 ml-2 md:ml-8 mb-12 px-4">
             <h1 className="flex items-center gap-3 text-3xl">
               <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
@@ -268,10 +267,8 @@ export default function Projects() {
             {timeline.map((item, index) => (
               <div
                 key={index}
-                /* md:flex-row keeps your desktop look; flex-col stacks it for mobile */
                 className="relative flex flex-col md:flex-row items-start gap-6 mb-16 group"
               >
-                {/* Logo / Node */}
                 <div
                   className="relative z-10 flex items-center justify-center
         w-14 h-14 md:w-16 md:h-16 shrink-0
@@ -288,7 +285,6 @@ export default function Projects() {
                   />
                 </div>
 
-                {/* Stacked Content - flex-1 allows it to grow/shrink properly */}
                 <div className="flex flex-col gap-1 text-left flex-1 min-w-0">
                   <span className="text-xs font-medium opacity-40 whitespace-nowrap">
                     {item.date}
@@ -305,7 +301,6 @@ export default function Projects() {
                   </p>
                 </div>
 
-                {/* Buttons Row - flex-wrap prevents the 'cutting off' on mobile */}
                 <div className="flex flex-row md:flex-col lg:flex-row flex-wrap gap-3 mt-2 md:mt-0">
                   {item.website && (
                     <Link
@@ -342,7 +337,6 @@ export default function Projects() {
         className="dark:bg-[#000000] dark:text-[#ffffff] px-8 py-12 md:py-16 flex flex-col md:flex-row flex-wrap justify-between items-start gap-y-8 w-full relative 
   shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-none -mt-20"
       >
-        {/* Brand Section */}
         <div className="footer-brand">
           <div className="mt-2 flex gap-2 items-center">
             <ShinyButton className="flex items-center gap-2">
@@ -356,7 +350,6 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Navigation Section */}
         <div
           className="footer-nav flex flex-nowrap gap-4 items-center mt-2 text-sm
           justify-center
@@ -378,7 +371,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Social Section */}
         <div className="footer-social flex flex-wrap gap-6 items-center mt-2 text-lg dark:text-[#ffffff]">
           <Link
             href="https://github.com/BekzodDjumanov"
@@ -395,10 +387,8 @@ export default function Projects() {
           </Link>
         </div>
 
-        {/* Line */}
         <div className="footer-line w-full h-[1px] bg-white/10 my-4"></div>
 
-        {/* Ending Credit */}
         <div className="ending-credit w-full text-center text-[#7b7c8c] text-xs">
           Curated with Next.js, React, Tailwind CSS, Framer Motion, GSAP, &
           Figma.

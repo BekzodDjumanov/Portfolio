@@ -110,7 +110,6 @@ export default function Projects() {
   `}
       >
         <div className="flex items-center w-full justify-center lg:justify-center">
-          {/* Mobile Toggle Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="flex lg:hidden items-center gap-2 text-sm z-50 opacity-80 hover:opacity-100 transition-all duration-300 cursor-pointer"
@@ -212,7 +211,6 @@ export default function Projects() {
         className="flex-1 flex flex-col items-center mt-10 px-4 py-1"
       >
         <section className="opacity-0 fade-in w-full max-w-6xl mx-auto flex flex-col items-center py-20 md:py-32 px-4">
-          {/* Heading & Subtext - Using ml-8 to match your Reviews style */}
           <div className="w-full flex flex-col gap-4 ml-8 mb-12">
             <h1 className="flex items-center gap-3 text-3xl">
               <span className="w-[4px] h-8 dark:bg-white bg-black rounded-full inline-block" />
@@ -244,7 +242,6 @@ export default function Projects() {
               w-full max-w-5xl mx-auto lg:ml-4 shadow-lg
           "
           >
-            {/* Left Side - Project Video/Preview */}
             <div className="relative w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-200 dark:bg-zinc-900">
               <video
                 src="/videos/project2.webm"
@@ -255,15 +252,12 @@ export default function Projects() {
                 className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
               />
             </div>
-
-            {/* Right Side - Content */}
             <div className="flex flex-col justify-between w-full lg:w-1/2 space-y-6">
               <div>
                 <h3 className="text-xl text-[#000000] dark:text-[#ffffff] lg:text-left text-center">
                   AI Speech-to-Text Converter
                 </h3>
 
-                {/* Bullet Points */}
                 <ul className="mt-4 space-y-3">
                   {[
                     "Architected a Flask REST API utilizing OpenAI’s Whisper models to deliver high-accuracy transcription across 99+ languages",
@@ -282,7 +276,6 @@ export default function Projects() {
                   ))}
                 </ul>
 
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-6 lg:justify-start justify-center">
                   {[
                     "Python",
@@ -315,9 +308,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Action Button */}
               <div className="flex gap-3 lg:justify-start justify-center">
-                {/* Source Code Button */}
                 <button
                   className="
                   group/btn flex items-center justify-center gap-2 
@@ -341,7 +332,6 @@ export default function Projects() {
                   </Link>
                 </button>
 
-                {/* Live Demo Button (Primary Action) */}
                 <button
                   className="
                     group/btn flex items-center justify-center gap-2 
@@ -391,7 +381,6 @@ export default function Projects() {
             w-full max-w-5xl mx-auto lg:ml-4 shadow-lg
 "
           >
-            {/* Left Side - Project Video/Preview */}
             <div className="relative w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-200 dark:bg-zinc-900">
               <video
                 src="/videos/project4.webm"
@@ -403,14 +392,12 @@ export default function Projects() {
               />
             </div>
 
-            {/* Right Side - Content */}
             <div className="flex flex-col justify-between w-full lg:w-1/2 space-y-6">
               <div>
                 <h3 className="text-xl text-[#000000] dark:text-[#ffffff] lg:text-left text-center">
                   GitLearn | Git & GitHub Academy
                 </h3>
 
-                {/* Bullet Points */}
                 <ul className="mt-4 space-y-3">
                   {[
                     "Deployed a fully responsive educational platform focused on Git and GitHub fundamentals, with purpose-driven, curated learning modules",
@@ -429,7 +416,6 @@ export default function Projects() {
                   ))}
                 </ul>
 
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-6 lg:justify-start justify-center">
                   {["HTML", "CSS", "JavaScript", "GSAP", "Figma"].map(
                     (tech) => (
@@ -455,9 +441,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Action Button */}
               <div className="flex gap-3 lg:justify-start justify-center">
-                {/* Source Code Button */}
                 <button
                   className="
                   group/btn flex items-center justify-center gap-2 
@@ -481,7 +465,6 @@ export default function Projects() {
                   </Link>
                 </button>
 
-                {/* Live Demo Button (Primary Action) */}
                 <button
                   className="
                     group/btn flex items-center justify-center gap-2 
@@ -529,7 +512,6 @@ export default function Projects() {
             w-full max-w-5xl mx-auto lg:ml-4 shadow-lg
 "
           >
-            {/* Left Side - Project Video/Preview */}
             <div className="relative w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-200 dark:bg-zinc-900">
               <video
                 src="/videos/project3.webm"
@@ -541,14 +523,12 @@ export default function Projects() {
               />
             </div>
 
-            {/* Right Side - Content */}
             <div className="flex flex-col justify-between w-full lg:w-1/2 space-y-6">
               <div>
                 <h3 className="text-xl text-[#000000] dark:text-[#ffffff] lg:text-left text-center">
                   Online IDE Compiler
                 </h3>
 
-                {/* Bullet Points */}
                 <ul className="mt-4 space-y-3">
                   {[
                     "Architected a real-time IDE using Flask and JavaScript, enabling seamless server-side execution of Python code",
@@ -566,8 +546,6 @@ export default function Projects() {
                     </li>
                   ))}
                 </ul>
-
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-6 lg:justify-start justify-center">
                   {[
                     "Python",
@@ -599,9 +577,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Action Button */}
               <div className="flex gap-3 lg:justify-start justify-center">
-                {/* Source Code Button */}
                 <button
                   className="
                   group/btn flex items-center justify-center gap-2 
@@ -625,7 +601,6 @@ export default function Projects() {
                   </Link>
                 </button>
 
-                {/* Live Demo Button (Primary Action) */}
                 <button
                   className="
                     group/btn flex items-center justify-center gap-2 
@@ -657,8 +632,6 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* FOURTH PROJECT */}
-
           <div className="w-full max-w-5xl mx-auto lg:ml-8 flex items-center gap-4 my-12 translate-y-7 opacity-50">
             <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-zinc-500">
               Project 4 — Machine Learning & Reinforcement Learning
@@ -675,7 +648,6 @@ export default function Projects() {
             w-full max-w-5xl mx-auto lg:ml-4 shadow-lg
 "
           >
-            {/* Left Side - Project Video/Preview */}
             <div className="relative w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-black/5 dark:border-white/10 bg-zinc-200 dark:bg-zinc-900">
               <video
                 src="/videos/project1.webm"
@@ -687,14 +659,14 @@ export default function Projects() {
               />
             </div>
 
-            {/* Right Side - Content */}
+            {/* FOURTH PROJECT */}
+
             <div className="flex flex-col justify-between w-full lg:w-1/2 space-y-6">
               <div>
                 <h3 className="text-xl text-[#000000] dark:text-[#ffffff] lg:text-left text-center">
                   EPL Football Match Predictor
                 </h3>
 
-                {/* Bullet Points */}
                 <ul className="mt-4 space-y-3">
                   {[
                     "Engineered an ML pipeline to forecast EPL outcomes using team metrics and schedule dynamics",
@@ -713,7 +685,6 @@ export default function Projects() {
                   ))}
                 </ul>
 
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-6 lg:justify-start justify-center">
                   {[
                     "Python",
