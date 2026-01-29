@@ -754,7 +754,6 @@ export default function Home() {
             </div>
           </div>
         )}
-
         <div className="max-w-6xl mx-auto px-4">
           {/* Header */}
           <div className="w-full flex justify-start text-left text-3xl mb-12">
@@ -832,7 +831,6 @@ export default function Home() {
                 />
               </div>
             </div>
-
             <div className="flex flex-col justify-between gap-6">
               <div>
                 <label className="block text-xs uppercase tracking-widest dark:text-white/60 text-black/50 mb-2">

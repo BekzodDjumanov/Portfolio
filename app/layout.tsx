@@ -11,6 +11,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata = {
+  title: "BEKZOD DJUMANOV",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
