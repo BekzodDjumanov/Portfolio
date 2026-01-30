@@ -14,6 +14,7 @@ import { FaGithub } from "react-icons/fa";
 import { AiFillSketchCircle } from "react-icons/ai";
 import { FiGlobe } from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
+import { ShaderGradientCanvas, ShaderGradient } from "@shadergradient/react";
 
 export default function Projects() {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -82,6 +83,49 @@ export default function Projects() {
     dark:bg-[#000000] dark:text-[#ffffff]
   "
     >
+      <div className="dark:block hidden">
+        <ShaderGradientCanvas
+          style={{
+            position: "absolute",
+            inset: 0,
+            pointerEvents: "none",
+          }}
+          fov={45}
+          pixelDensity={1}
+        >
+          <ShaderGradient
+            animate="on"
+            brightness={0.6}
+            cAzimuthAngle={270}
+            cDistance={0.5}
+            cPolarAngle={180}
+            cameraZoom={15.1}
+            color1="#2a0e3f"
+            color2="#07040c"
+            color3="#8b1232"
+            envPreset="city"
+            lightType="env"
+            grain="on"
+            grainBlending={0.35}
+            positionX={-0.1}
+            positionY={0}
+            positionZ={0}
+            reflection={0.38}
+            rotationX={0}
+            rotationY={130}
+            rotationZ={70}
+            shader="defaults"
+            type="sphere"
+            uAmplitude={3.4}
+            uDensity={0.9}
+            uFrequency={5.8}
+            uSpeed={0.25}
+            uStrength={0.35}
+            uTime={0}
+            wireframe={false}
+          />
+        </ShaderGradientCanvas>
+      </div>
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
