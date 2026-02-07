@@ -355,9 +355,9 @@ export default function Home() {
                 Computer Engineering.
               </p>
               <p className="text-sm md:text-base text-black/50 dark:text-zinc-500 leading-relaxed opacity-0 fade-in">
-                Carroll Community College Summa Cum Laude Alumni,{" "}
-                <br className="hidden md:block" /> holding an Associate of Arts
-                in Computer Science.
+                I build full-stack applications and work in cloud
+                infrastructure.
+                <br className="hidden md:block" />
               </p>
             </div>
 
