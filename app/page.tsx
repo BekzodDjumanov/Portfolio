@@ -344,7 +344,7 @@ export default function Home() {
                 <div className="opacity-0 fade-in">Washington, DC</div>
               </div>
 
-              <div className="opacity-0 fade-in text-4xl">
+              <div className="opacity-0 fade-in text-4xl font-normal">
                 <h1>self-proclaimed developer.</h1>
               </div>
             </div>
