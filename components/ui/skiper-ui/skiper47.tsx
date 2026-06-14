@@ -21,7 +21,7 @@ import { cn } from "@/lib/utils";
 const Skiper47 = () => {
   const images = [
     {
-      src: "/images/geeked.png",
+      src: "/images/grey.jpg",
       alt: "nun yet",
     },
     {
