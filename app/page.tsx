@@ -669,7 +669,7 @@ export default function Home() {
                     </div>
                   </div>
                   <span className="hidden sm:block text-xs font-medium opacity-40 pt-1 whitespace-nowrap">
-                    May 2026 — ???
+                    May 2026 — Present
                   </span>
                 </div>
 
