@@ -86,7 +86,7 @@ export default function Projects() {
       stock: "https://finance.yahoo.com/quote/EBAY",
     },
     {
-      date: "May 2026 — ???",
+      date: "May 2026 — Present",
       role: "Cloud Software Developer Intern",
       company: "CACI International",
       logo: "/images/caci.png",

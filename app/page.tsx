@@ -664,7 +664,7 @@ export default function Home() {
                         CACI International
                       </p>
                       <p className="text-[12px] font-medium opacity-40 mt-2 sm:hidden">
-                        May 2026 — ???
+                        May 2026 — Present
                       </p>
                     </div>
                   </div>
