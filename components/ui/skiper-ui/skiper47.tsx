@@ -37,8 +37,9 @@ const Skiper47 = () => {
       alt: "nun yet",
     },
     {
-      src: "/images/hero5.png",
+      src: "/images/hero5.jpg",
       alt: "nun yet",
+      objectPosition: "bottom",
     },
     {
       src: "/images/hero6.png",
@@ -64,7 +65,7 @@ const Carousel_001 = ({
   autoplay = false,
   spaceBetween = 40,
 }: {
-  images: { src: string; alt: string }[];
+  images: { src: string; alt: string; objectPosition?: string }[];
   className?: string;
   showPagination?: boolean;
   showNavigation?: boolean;
@@ -135,6 +136,7 @@ const Carousel_001 = ({
               className="h-full w-full object-cover"
               src={image.src}
               alt={image.alt}
+              style={{ objectPosition: image.objectPosition ?? "center" }}
             />
           </SwiperSlide>
         ))}
