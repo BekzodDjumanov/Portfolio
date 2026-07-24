@@ -91,7 +91,7 @@ export default function Projects() {
       company: "CACI International",
       logo: "/images/caci.png",
       description:
-        "Proposed a more optimized and efficient solution for deploying company services, bypassing upstream bottlenecks and significantly improving deployment speed.",
+        "Proposed a more optimized and efficient solution for deploying company services, bypassing upstream bottlenecks and significantly improving orchestration for future developers.",
       website: "https://www.caci.com",
       stock: "https://finance.yahoo.com/quote/CACI",
     },
