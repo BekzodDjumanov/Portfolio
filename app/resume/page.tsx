@@ -91,7 +91,7 @@ export default function Projects() {
       company: "CACI International",
       logo: "/images/caci.png",
       description:
-        "Internship for Summer 2026, where I will be contributing to cloud initiatives lead by CACI and their innovations.",
+        "Proposed a more optimized and efficient solution for deploying company services, bypassing upstream bottlenecks and significantly improving deployment speed.",
       website: "https://www.caci.com",
       stock: "https://finance.yahoo.com/quote/CACI",
     },
