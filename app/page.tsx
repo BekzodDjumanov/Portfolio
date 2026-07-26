@@ -661,7 +661,7 @@ export default function Home() {
                         Cloud Software Developer Intern
                       </h3>
                       <p className="text-[14px] lg:text-sm opacity-60 mt-2 leading-none">
-                        CACI International
+                        CACI
                       </p>
                       <p className="text-[12px] font-medium opacity-40 mt-2 sm:hidden">
                         May 2026 — Present

@@ -88,7 +88,7 @@ export default function Projects() {
     {
       date: "May 2026 — Present",
       role: "Cloud Software Developer Intern",
-      company: "CACI International",
+      company: "CACI",
       logo: "/images/caci.png",
       description:
         "Proposed a more optimized and efficient solution for deploying company services, bypassing upstream bottlenecks and significantly improving orchestration for future developers.",
