@@ -677,6 +677,33 @@ export default function Home() {
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
                       <img
+                        src="/images/handshake.png"
+                        alt="icon"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    <div>
+                      <h3 className="lg:text-lg text-[16px] leading-none sm:text-sm">
+                        AI Engineer
+                      </h3>
+                      <p className="text-[14px] lg:text-sm opacity-60 mt-2 leading-none">
+                        Handshake
+                      </p>
+                      <p className="text-[12px] font-medium opacity-40 mt-2 sm:hidden">
+                        June 2026 — Present
+                      </p>
+                    </div>
+                  </div>
+                  <span className="hidden sm:block text-xs font-medium opacity-40 pt-1 whitespace-nowrap">
+                    June 2026 — Present
+                  </span>
+                </div>
+
+                <div className="flex flex-col sm:flex-row sm:justify-between items-start group gap-4 sm:gap-0">
+                  <div className="flex gap-4">
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
+                      <img
                         src="/images/cummings.png"
                         alt="icon"
                         className="w-full h-full object-cover"

@@ -96,6 +96,15 @@ export default function Projects() {
       stock: "https://finance.yahoo.com/quote/CACI",
     },
     {
+      date: "June 2026 — Present",
+      role: "AI Engineer",
+      company: "Handshake",
+      logo: "/images/handshake.png",
+      description:
+        "Facilitated and integrated agentic workflows, partnering with major corporations through contracted work.",
+      website: "https://joinhandshake.com/",
+    },
+    {
       date: "May 2025 — Sep 2025",
       role: "Software Engineer Intern",
       company: "Cummings & Co. Realtors",
