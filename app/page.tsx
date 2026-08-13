@@ -316,7 +316,7 @@ export default function Home() {
         duration-300 ease-in-out cursor-pointer
         shadow-md z-50 backdrop-blur"
       >
-        <AnimatedThemeToggler className="cursor-pointer" />
+        <AnimatedThemeToggler className="cursor-pointer" variant="circle" />
       </div>
 
       <Link
