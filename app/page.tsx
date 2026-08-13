@@ -361,7 +361,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="opacity-0 fade-in flex flex-wrap justify-center md:justify-start gap-3 pt-2 -mt-4">
+            {/*<div className="opacity-0 fade-in flex flex-wrap justify-center md:justify-start gap-3 pt-2 -mt-4">
               {["Frontend Developer", "UI/UX Specialist", "Full Ride"].map(
                 (badge) => (
                   <span
@@ -388,7 +388,8 @@ export default function Home() {
                 )
               )}
             </div>
-            <div className="opacity-0 fade-in flex justify-center md:justify-center lg:justify-start gap-4 w-full pt-4 -mt-4">
+            */}
+            <div className="opacity-0 fade-in flex justify-center md:justify-center lg:justify-start gap-4 w-full pt-4 -mt-6">
               <Link
                 href="https://github.com/BekzodDjumanov"
                 className="group flex items-center justify-center w-11 h-11 
