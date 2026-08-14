@@ -367,7 +367,7 @@ export default function Projects() {
           <div className="mt-2 flex gap-2 items-center">
             <ShinyButton className="flex items-center gap-2">
               <AiFillSketchCircle className="text-2xl" />
-              <span className="inline-block">Sustainable Solutions</span>
+              <span className="inline-block">Curating Solutions</span>
             </ShinyButton>
           </div>
 

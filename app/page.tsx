@@ -10,6 +10,7 @@ import { Link001 } from "@/components/ui/skiper-ui/skiper40";
 import { ShineBorder } from "@/components/ui/shine-border";
 import { IoIosArrowDropright } from "react-icons/io";
 import { FaCheck } from "react-icons/fa6";
+import ShinyText from "@/components/ShinyText";
 
 import Link from "next/link";
 
@@ -901,7 +902,7 @@ export default function Home() {
           <div className="mt-2 flex gap-2 items-center">
             <ShinyButton className="flex items-center gap-2">
               <AiFillSketchCircle className="text-2xl" />
-              <span className="inline-block">Sustainable Solutions</span>
+              <span className="inline-block">Curating Solutions</span>
             </ShinyButton>
           </div>
 
