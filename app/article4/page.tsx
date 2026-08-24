@@ -122,21 +122,33 @@ export default function Projects() {
           <nav className="hidden lg:flex gap-8 text-sm opacity-80">
             <Link
               href="/"
-              className="transition-all duration-300 flex items-center"
+              className="transition-all duration-300 dark:hover:text-purple-300"
             >
-              <RollingText>Home</RollingText>
+              Home
             </Link>
-            <Link href="/about" className="transition-all duration-300">
-              <RollingText>About</RollingText>
+            <Link
+              href="/about"
+              className="transition-all duration-300 dark:hover:text-purple-300"
+            >
+              About
             </Link>
-            <Link href="/resume" className="transition-all duration-300">
-              <RollingText>Resume</RollingText>
+            <Link
+              href="/resume"
+              className="transition-all duration-300 dark:hover:text-purple-300"
+            >
+              Resume
             </Link>
-            <Link href="/projects" className="transition-all duration-300">
-              <RollingText>Projects</RollingText>
+            <Link
+              href="/projects"
+              className="transition-all duration-300 dark:hover:text-purple-300"
+            >
+              Projects
             </Link>
-            <Link href="/reviews" className="transition-all duration-300">
-              <RollingText>Reviews</RollingText>
+            <Link
+              href="/reviews"
+              className="transition-all duration-300 dark:hover:text-purple-300"
+            >
+              Reviews
             </Link>
           </nav>
         </div>
@@ -144,41 +156,41 @@ export default function Projects() {
         {/* Mobile Dropdown */}
         {isOpen && (
           <div className="lg:hidden flex flex-col items-center w-full mt-4 pt-4 mb-2 border-t border-white/10 gap-6 transition-all duration-300 ease-in-out">
-            <nav className="flex flex-col items-center gap-5 text-base">
+            <nav className="flex flex-col items-center gap-2 text-base">
               <Link
                 href="/"
                 onClick={() => setIsOpen(false)}
-                className="transition-colors"
+                className="transition-all duration-300 dark:hover:text-purple-300"
               >
-                <RollingText>Home</RollingText>
+                Home
               </Link>
               <Link
                 href="/about"
                 onClick={() => setIsOpen(false)}
-                className="transition-colors"
+                className="transition-all duration-300 dark:hover:text-purple-300"
               >
-                <RollingText>About</RollingText>
+                About
               </Link>
               <Link
                 href="/resume"
                 onClick={() => setIsOpen(false)}
-                className="transition-colors"
+                className="transition-all duration-300 dark:hover:text-purple-300"
               >
-                <RollingText>Resume</RollingText>
+                Resume
               </Link>
               <Link
                 href="/projects"
                 onClick={() => setIsOpen(false)}
-                className="transition-colors"
+                className="transition-all duration-300 dark:hover:text-purple-300"
               >
-                <RollingText>Projects</RollingText>
+                Projects
               </Link>
               <Link
                 href="/reviews"
                 onClick={() => setIsOpen(false)}
-                className="transition-colors"
+                className="transition-all duration-300 dark:hover:text-purple-300"
               >
-                <RollingText>Reviews</RollingText>
+                Reviews
               </Link>
             </nav>
           </div>
