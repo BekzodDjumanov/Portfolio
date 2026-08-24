@@ -368,7 +368,11 @@ export default function Projects() {
     "
                 >
                   <FaArrowUpRightFromSquare className="text-xs group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
-                  <Link href="https://speechtotext.up.railway.app/">
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://speechtotext.up.railway.app/"
+                  >
                     Live Demo
                   </Link>
                 </button>
@@ -501,7 +505,13 @@ export default function Projects() {
     "
                 >
                   <FaArrowUpRightFromSquare className="text-xs group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
-                  <Link href="https://gitlearn.org/">Live Demo</Link>
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://gitlearnofficial.netlify.app/"
+                  >
+                    Live Demo
+                  </Link>
                 </button>
               </div>
             </div>
@@ -637,7 +647,11 @@ export default function Projects() {
     "
                 >
                   <FaArrowUpRightFromSquare className="text-xs group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
-                  <Link href="https://onlineide-main.onrender.com/">
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://onlineide-main.onrender.com/"
+                  >
                     Live Demo
                   </Link>
                 </button>
